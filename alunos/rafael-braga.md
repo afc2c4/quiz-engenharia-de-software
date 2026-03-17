@@ -1,6 +1,6 @@
-# Rafael Braga
+# Rafael Braga :alien:
 
-## 1. Requisitos Funcionais
+## 1. Requisitos Funcionais :dvd:
 
  - (US01)RF01: Usuario PROFESSOR poder cadastrar atividades atraves da interface.
 
@@ -34,7 +34,7 @@
 
 
 
-## 2. Requisistos Não Funcionais
+## 2. Requisistos Não Funcionais ⚙️
 
  - (US02)RNF01: Flexibilidade de configuração do tempo.
 
@@ -55,7 +55,7 @@
  - (US15)RNF09: Uso sem internet.
 
 
-## 3. Regras de Negócio
+## 3. Regras de Negócio 📜
 
   1.  Cadastrar usuarios
   2.  Logar os usuarios
@@ -64,16 +64,16 @@
   5.  Permitir que se resolva as questões (Aluno)
   6.  Deslogar os usuarios
         
-## 4. Detalhes(Acessórios)
+## 4. Detalhes(Acessórios) ☑️
 
     - A interface terá um login, onde será colocado os dados do usuários. E, após logar e autenticar o tipo de usuário que está logando, entrará na tela com o menu referente ao perfil do usuário. Esses dados estarão guardados em um banco de dados, onde estará bem organizado, e utilizando esses dados do banco de dados, teremos a autenticação correta.
 
-## 5. Análise de Modelo de Entrega (Cloud)
+## 5. Análise de Modelo de Entrega (Cloud) ☁️
 
     - Os usuários poderam acessar o "Mestre da Engenharia de Software 2.0" através de um host, a qual ainda será designado. O modelo escolhido será o SaaS. Assim, os usuários não terão que se preocupar com a infraestrutura do site, apenas em usar conforme desejado.
 
 
-## 6. O que o sistema NãO faz
+## 6. O que o sistema NãO faz ✖️
 
   1. O sistema não corrige as provas de forma automatica. O usuário PROFESSOR terá que o fazer de forma manual.
   2. O sistema não ranqueará os perfis dos alunos, para que não haja nenhuma forma de demerito ou discriminação com alunos que tem rendimento abaixo dos outros.
