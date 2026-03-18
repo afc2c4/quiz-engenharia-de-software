@@ -1,0 +1,86 @@
+1. Lista de Requisitos Funcionais (RF)
+
+RF01: Cadastro de questões pelo professor, incluindo enunciado, alternativas, indicação da resposta correta e uma explicação para auxiliar o aluno.
+
+RF02: Realização de quizzes pelos alunos com questões de múltipla escolha, permitindo interação com o conteúdo.
+
+RF03: Uso de cronômetro opcional durante o quiz, com possibilidade de escolher diferentes tempos para simular provas reais.
+
+RF04: Geração automática de provas com base no banco de questões disponíveis no sistema.
+
+RF05: Exportação de provas em formato PDF, já organizadas e prontas para uso em sala de aula.
+
+RF06: Restrição de acesso à área de professor apenas para usuários com autorização adequada, evitando acesso indevido.
+
+RF07: Exibição de estatísticas de desempenho do aluno, como pontuação, acertos por tema e tempo médio de resposta.
+
+RF08: Exportação das questões respondidas incorretamente para formatos externos, facilitando a revisão.
+
+RF09: Possibilidade de reportar erros nas questões diretamente no sistema, permitindo melhoria contínua do conteúdo.
+
+RF10: Exibição de ranking de alunos com base no desempenho em quizzes, incentivando a competitividade.
+
+RF11: Funcionalidade de favoritar questões para revisão posterior, ajudando no estudo individual.
+
+RF12: Filtro de questões por nível de dificuldade (iniciante, intermediário e avançado).
+
+RF13: Sistema de comentários nas questões, permitindo discussão e troca de conhecimento entre usuários.
+
+RF14: Disponibilização de API para exportação de resultados para sistemas externos, como plataformas educacionais.
+
+RF15: Compartilhamento de resultados em redes sociais, permitindo que o usuário divulgue seu desempenho.
+
+RF16: Suporte a formatação de código nas questões, melhorando a leitura de conteúdos técnicos.
+
+RF17: Funcionamento offline após download prévio de questões, permitindo uso sem internet.
+
+2. Lista de Requisitos Não Funcionais (RNF)
+
+RNF01: Carregamento rápido das informações, garantindo boa experiência mesmo com grande volume de dados.
+
+RNF02: Segurança no acesso ao sistema, com autenticação de usuários e controle de permissões por perfil.
+
+RNF03: Interface intuitiva e fácil de usar, facilitando a navegação tanto para alunos quanto para professores.
+
+RNF04: Compatibilidade com diferentes dispositivos e navegadores, incluindo celulares e computadores.
+
+RNF05: Alta disponibilidade do sistema, permitindo acesso frequente sem interrupções.
+
+RNF06: Capacidade de suportar múltiplos usuários simultaneamente sem perda de desempenho.
+
+3. Regras de Negócio
+
+Professores são responsáveis por cadastrar e manter as questões.
+
+Alunos utilizam o sistema para responder quizzes e acompanhar desempenho.
+
+Apenas usuários com perfil de professor podem acessar funcionalidades de criação.
+
+O sistema calcula automaticamente a pontuação com base nas respostas.
+
+O ranking é gerado com base no desempenho dos alunos.
+
+4. Detalhes (Acessórios)
+
+Os dados serão armazenados em banco de dados para garantir persistência.
+
+O sistema será acessado via navegador, sem necessidade de instalação.
+
+A interface será responsiva, adaptando-se a diferentes telas.
+
+Possibilidade de exportar dados em formatos como PDF e CSV.
+
+5. Análise de Modelo de Entrega (Cloud)
+
+Modelo escolhido: SaaS
+
+Justificativa:
+O sistema será acessado diretamente pelo navegador, o que facilita o uso por professores, já que não exige instalação nem conhecimento técnico. Além disso, permite atualizações automáticas e acesso de qualquer lugar.
+
+6. O que o sistema NÃO faz
+
+Não realiza correção automática de questões discursivas.
+
+Não substitui plataformas completas de ensino, como Moodle.
+
+Não oferece criação completa de cursos, apenas quizzes e provas.
