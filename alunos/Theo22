@@ -1,0 +1,105 @@
+## Theodoro Macedo 
+
+
+### 1. Requisitos Funcionais
+
+- **US01**: Cadastro de questões (enunciado, alternativas, resposta, explicação).  
+
+- **US02** : Seleção e disparo de cronômetro regressivo (15, 30, 60 min).
+
+- **US03** : Exportação de provas em PDF com template institucional (Logo/Cabeçalho).
+
+- **US04** : Controle de acesso por perfil (RBAC) restringindo área de "Professor".
+
+- **US05** : Dashboard semanal de desempenho (taxa de acerto e tempo médio).
+
+- **US06** : Exportação de questões erradas nos formatos .apkg ou .csv.
+
+- **US07**: Botão de "Reportar Erro" diretamente na interface da questão.
+
+- **US08** : Leaderboard (Ranking) global dividido por períodos (semanal/mensal).
+
+- **US09**: Funcionalidade de "Favoritar/Estrear" questões para revisão.
+
+- **US10**: Filtro de questões por nível de senioridade (Junior, Pleno, Senior).
+
+- **US11**: Seção de comentários/threads em cada questão para debate.
+
+- **US12**: API REST/Webhooks para exportação de notas para sistemas LMS.
+
+- **US13** : Botão de compartilhamento no LinkedIn para resultados > 80%.
+
+- **US14**: Renderização de Markdown e Syntax Highlighting em códigos.
+
+- **US15**: Modo offline (PWA) para download de questões e uso sem sinal.
+
+### 2. Requisito Não Funcionais
+
+- **US01** : Interface intuitiva para inserção rápida de dados.
+
+- **US02** : Contagem em tempo real com alta fidelidade.
+
+- **US03**: Documento gerado em formato universal e leve. 
+
+- **US04** : Autenticação robusta e bloqueio de rotas não autorizadas.
+
+- **US05** : Carregamento de gráficos em < 2 segundos (SLA).
+
+- **US06**: Compatibilidade com o padrão do software Anki. 
+
+- **US07**: Notificação imediata para a fila de moderação.
+
+-**US08**: Suporte a consultas em grandes volumes de usuários.
+
+- **US09**: Dados salvos permanentemente no perfil do aluno.
+
+- **US10**: Organização lógica e consistente dos metadados
+
+- **US11**: Sistema de moderação de conteúdo (anti-spam/toxicidade).
+
+- **US12**: Documentação clara do endpoint e autenticação.
+
+- **US13** : Integração estável com APIs de terceiros.
+
+- **US14**: Suporte visual para múltiplas linguagens técnicas.
+
+- **US15**: Modo offline (PWA) para download de questões e uso sem sinal.
+
+### 3. Regras de Negócio 
+
+- **a** : Gestão de Banco de Questões: Criação, armazenamento e categorização de perguntas, alternativas e gabaritos. 
+
+### 4. Detalhes (Acessórios) 
+
+### A. 
+- **Os dados serão persistidos em um Banco de Dados Relacional (SQL), estruturado para garantir a integridade entre tabelas de usuários, questões, perfis e histórico de pontuações. A interface será uma Aplicação Web (SPA) responsiva e um PWA (Progressive Web App), permitindo acesso via navegador em diferentes dispositivos e suporte ao funcionamento offline.**
+
+### 5. Analise de modelo de entrega 
+- **a**. Centralização de Manutenção e Atualização
+Diferente de um modelo IaaS (onde o professor ou a escola precisariam configurar servidores, bancos de dados e firewalls), no SaaS o provedor gerencia toda a infraestrutura. Quando uma nova funcionalidade é lançada ou um bug é corrigido, todos os usuários recebem a atualização simultaneamente via navegador, sem necessidade de baixar patches ou reinstalar o sistema.
+
+- ### B.
+**O sistema será oferecido como SaaS (Software as a Service), com acesso direto via navegador e suporte a PWA (Progressive Web App).** 
+
+- **Acesso Imediato e Ubíquo: O professor não precisa realizar instalações locais ou configurar VPNs. Ele pode cadastrar questões e gerenciar turmas de qualquer dispositivo com navegador, seja na faculdade, em casa ou em trânsito.**
+
+- **Abstração de Manutenção: O docente fica isento de preocupações técnicas como backups de banco de dados, atualizações de segurança ou correções de bugs. O sistema está sempre na versão mais recente (2.0) de forma transparente**.
+
+- **Foco Pedagógico: Elimina o desvio de função. O professor atua estritamente na gestão do conteúdo e na análise de desempenho dos alunos, sem precisar gerenciar a infraestrutura de servidores (o que seria necessário no IaaS)**.
+
+- **Confiabilidade em Picos de Acesso: Em períodos de exames, a infraestrutura SaaS escala automaticamente para suportar o volume de alunos, garantindo que o sistema do professor não fique lento ou indisponível durante a aplicação da prova**.
+
+## 6. Oque o sistema NÃO faz
+- **Correção de Questões Discursivas: O motor de avaliação processa apenas questões de múltipla escolha (objetivas). Não há análise de texto ou processamento de linguagem natural (NLP) para respostas abertas**.
+
+- **Monitoramento Anti-Cola (Proctoring): O sistema não realiza bloqueio de abas do navegador, gravação de tela ou reconhecimento facial via webcam durante a execução do quiz**.
+
+- **Geração Automática de Conteúdo por IA: O sistema não cria enunciados ou alternativas sozinho; toda a base de conhecimento deve ser inserida manualmente pelo Professor (US01)**.
+
+- **Gestão Financeira ou de Matrículas: O app não processa pagamentos, vendas de cursos ou controle de mensalidades; o escopo é estritamente pedagógico e avaliativo**.
+
+- **Gamificação com Recompensas Físicas: O Leaderboard (US08) é estritamente informativo e digital; o sistema não gerencia a logística de prêmios ou brindes reais**.
+
+
+
+
