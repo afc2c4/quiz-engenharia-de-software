@@ -32,7 +32,7 @@ alternativas, resposta correta e explicação para que, com a boa organização,
 
 - **RF14**: O sistema deve usar as ferramentas Markdown e Syntax Highlighting na área de cadastro e leitura para que os usuários "Professor" quando cadastrarem uma nova questão que contém um snippet de código não passem por problemas.  
 
-- **RF15**: No sistema de interface dos usuários "Aluno", deve aparecer uma opção de fazer dowload das questões selecinadas e serem armazenadas para serem acessadas quando os usuários quiserem.
+- **RF15**: No sistema de interface dos usuários, deve aparecer uma opção de fazer dowload das questões selecinadas e serem armazenadas para serem acessadas quando os usuários quiserem.
 
 ### 2. Requesitos Não Funcionais
 
@@ -62,10 +62,33 @@ alternativas, resposta correta e explicação para que, com a boa organização,
 
 - **RNF13**: O sistema tem que gerar uma opção de compartilhar o progresso que o usuário teve nas questões, caso tenha passado dos 80% de sucesso, para o feed de sua escolha.
 
-- **RNF14**: 
+- **RNF14**: O sistema irá usar as ferramentas Markdown e Syntax Highlighting para fazerem um sistema de cadastramento e de leitura para fazer as próximas formatações de novas questões, que contenham snippet código, não falhem.
 
-- **RNF15**:
+- **RNF15**: O sistema irá baixar os dados das questões selecionadas pelo usuário para que quando o usuário quiser, possa acessálas offline.
 
 
+### 3. Regras de negócio: 
+### a) Quais funcionalidades são o "coração" do app (o que ele faz, independente de tecnologia)?
+
+R- O app foi feito para gerar questionários que são criados por alguém para que outros, que vão usar desses questionários, possam revisar os assuntos passados. Gerar perguntas criadas a serem respondidas.
+
+### 4. Detalhes (Acessórios):
+### a) Onde os dados serão guardados ou como será a interface?
+### b) (Lembre-se que, para a engenharia, isso é secundário à lógica do problema).
+
+R- A interface deve ser gerada de uma forma onde qualquer um que for ver, consiga saber onde ir e o que está fazendo. A interface tem que ser, essencialmente, interativa, para que a experiência do usuário seja a melhor possível. Os dados serão guardados no banco de dados do app. 
+
+### 5. Análise de Modelo de Entrega (Cloud):
+### a) Decida como o "Mestre da Engenharia de Software 2.0" será entregue aos usuários finais:
+### b) Escolha um modelo:
+### i. O app será oferecido como SaaS (acesso via navegador sem instalação), ou a escola deve contratar um IaaS para hospedar sua própria infraestrutura?
+### ii. Justifique com base na conveniência para o Professor.
+
+R- Se a pessoa quiser algo que já esteja pronto para poder ser usado, e se quiser adaptar alguams coisas, o SaaS acaba sendo a melhor opção, caso a pessoa já queira algo feito. Mas se o dono quiser começar do começo já tendo uma estrutura, será ótimo para ela moldar a estrutura do jeito que ele quiser, então, IaaS.
+
+### 6. O que o sistema NÃO faz:
+### a) Defina um limite para o escopo desta versão (Ex: O sistema não fará correção automática de provas discursivas).
+
+R- Depende, pois o que não for colocado no sistema, será aquilo o que não faz. No entanto, um dos limites que esta versão não tem seria um temporizador, para medir em quanto tempo eu faço as questões.
 
 
