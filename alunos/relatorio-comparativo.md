@@ -21,6 +21,7 @@
 | **josuel-pereira** | ⚠️ Apenas US01–US03 (estrutura diferente) | ⚠️ Apenas US01–US03 | ❌ | ❌ | ❌ | ❌ | 🔴 Incompleto |
 | **marcus-vinicius** | ❌ Apenas "marcusvinicius" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
 | **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
+| **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
 | **rafael-braga** | ✅ RF01–RF15 (falta RF14) | ✅ RNF01–RNF09 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟡 Parcial |
 | **theo22** | ✅ US01–US15 | ✅ US01–US15 | ⚠️ Parcial | ✅ Detalhado | ✅ SaaS + PWA justificado | ✅ 4 limites | 🟢 Completo |
 
@@ -243,6 +244,25 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 
 ---
 
+### 🌿 nycollas-rodrigues
+
+**Arquivo**: `alunos/nyckzx.md`  
+**Status**: 🟢 Completo — RF perfeitos, cobertura completa e precisa
+
+#### Destaques:
+- **Único aluno a obter 30/30 nos RF** — todos os 15 RF mapeados às User Stories com detalhes técnicos corretos, incluindo os mais exigentes: níveis de dificuldade como "Junior, Pleno, Senior" (não "Fácil/Médio/Difícil"), limiar ≥80% no compartilhamento do LinkedIn, e PWA no modo offline.
+- 11 RNF listados com categorias bem nomeadas (Desempenho, Segurança, Usabilidade, Escalabilidade, Interoperabilidade, Portabilidade, etc.).
+- Regras de Negócio: identifica as regras principais (correção automática, registro de desempenho, controle de acesso), mas sem análise do código-fonte.
+- Modelo Cloud: **SaaS** — justificativa centrada no professor (sem configurar servidores), com atualizações automáticas e acesso remoto.
+- O que NÃO faz: **7 limites** corretos e sem contradições (melhor cobertura desta seção).
+
+#### Diferenças em relação ao gabarito:
+- RNF05 do gabarito (usabilidade: botão reportar erro diretamente no QuizCard) não foi mapeado como RNF.
+- RNF07 do gabarito (suporte a Markdown e Syntax Highlighting como restrição de qualidade) ausente como RNF.
+- Regras de Negócio não analisam o código-fonte para extrair o motor de quiz (embaralhamento, cálculo de desempenho) e a regra das exatamente 10 questões no Gerador de Provas.
+
+---
+
 ### 🌿 theo22
 
 **Arquivo**: `alunos/Theo22` (sem extensão .md)  
@@ -277,6 +297,7 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 | josuel-pereira | ~3 | ⚠️ 20% | Incompleto |
 | marcus-vinicius | 0 | ❌ 0% | Não entregue |
 | nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
+| nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
 | rafael-braga | 14 | ⚠️ 93% | Faltou RF14 (Markdown) |
 | theo22 | 15 | ✅ 100% | Alinhado ao gabarito |
 
@@ -294,6 +315,7 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 | josuel-pereira | — | Não entregue |
 | marcus-vinicius | — | Não entregue |
 | nicolas-vinicius | SaaS | Justificativa presente |
+| nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
 | rafael-braga | SaaS | Justificativa superficial |
 | theo22 | SaaS + PWA | 4 argumentos voltados ao professor (mais detalhado que o gabarito) |
 
@@ -307,12 +329,13 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 |---|---|---|---|
 | 🥇 1º | **José-Reginaldo** | **92** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
-| 🥉 3º | **theo22** | **75** | Bom |
-| 4º | **Gabriel-Ernandes** | **62** | Regular |
-| 5º | **adriano-dmarco.md** | **43** | Insuficiente |
-| 6º | **rafael-braga** | **37** | Insuficiente |
-| 7º | **franky-jr** | **18** | Reprovado |
-| 8º | **josuel-pereira** | **7** | Reprovado |
-| 9º | **Bruna-Oliveira** | **5** | Reprovado |
-| 10º | **esdras-fernando** | **0** | Não entregue |
-| 10º | **marcus-vinicius** | **0** | Não entregue |
+| 🥉 3º | **nycollas-rodrigues** | **79** | Ótimo |
+| 4º | **theo22** | **75** | Bom |
+| 5º | **Gabriel-Ernandes** | **62** | Regular |
+| 6º | **adriano-dmarco.md** | **43** | Insuficiente |
+| 7º | **rafael-braga** | **37** | Insuficiente |
+| 8º | **franky-jr** | **18** | Reprovado |
+| 9º | **josuel-pereira** | **7** | Reprovado |
+| 10º | **Bruna-Oliveira** | **5** | Reprovado |
+| 11º | **esdras-fernando** | **0** | Não entregue |
+| 11º | **marcus-vinicius** | **0** | Não entregue |

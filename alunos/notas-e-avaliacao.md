@@ -39,6 +39,7 @@ A prova tem 6 seções. Os pontos foram distribuídos proporcionalmente ao peso 
 | alexandre-ferreira *(gabarito)* | 30 | 20 | 20 | 10 | 10 | 10 | **100** |
 | **José-Reginaldo** | 28 | 20 | 17 | 8 | 10 | 9 | **92** |
 | **nicolas-vinicius** | 28 | 16 | 14 | 9 | 10 | 10 | **87** |
+| **nycollas-rodrigues** | 30 | 13 | 9 | 8 | 9 | 10 | **79** |
 | **theo22** | 29 | 15 | 4 | 7 | 10 | 10 | **75** |
 | **Gabriel-Ernandes** | 25 | 8 | 8 | 6 | 7 | 8 | **62** |
 | **adriano-dmarco.md** | 24 | 10 | 3 | 2 | 3 | 1 | **43** |
@@ -152,6 +153,93 @@ SaaS com 5 justificativas para professor. Menciona PWA. Excelente.
 #### Seção 6 — O que NÃO faz: 10/10 🟢 Preciso
 
 6 limites corretos, específicos e sem contradições. O melhor desta seção junto com o gabarito.
+
+---
+
+### 🟢 nycollas-rodrigues — **79/100**
+
+**Arquivo**: `alunos/nyckzx.md`  
+**Branch**: `nycollas-rodrigues`
+
+#### Seção 1 — RF: 30/30 🟢 Preciso (melhor nota desta seção)
+
+Todos os 15 RF mapeados 1-a-1 com as User Stories, com linguagem técnica precisa e detalhes corretos.
+
+| RF | Avaliação | Nota |
+|---|---|---|
+| US01 — Cadastro de questões | Preciso: "enunciado, alternativas, resposta correta e explicação" | 2/2 |
+| US02 — Cronômetro | Preciso: "cronômetro regressivo configurável antes de iniciar um quiz" | 2/2 |
+| US03 — PDF | Preciso: "PDF com formatação e cabeçalho institucional" | 2/2 |
+| US04 — Autenticação | Preciso: "autenticar usuários e restringir o acesso à área de professor ao perfil 'Docente'" | 2/2 |
+| US05 — Estatísticas | Preciso: detalha os 3 indicadores — "Histórico de pontuação, Taxa de acerto por tópico, Tempo médio por questão" | 2/2 |
+| US06 — Export erros | Preciso: "exportar questões erradas em formato CSV e/ou APKG (Anki)" | 2/2 |
+| US07 — Reportar erro | Preciso: "reportar erros em questões por meio de um botão no quiz" | 2/2 |
+| US08 — Ranking | Preciso: "leaderboard global, semanal e mensal" | 2/2 |
+| US09 — Favoritar | Preciso: "favoritar/salvar questões para revisão posterior" | 2/2 |
+| US10 — Filtro dificuldade | Preciso: usa os níveis corretos **"Junior, Pleno, Senior"** ✅ | 2/2 |
+| US11 — Comentários | Preciso: "comentários/discussões em cada questão (thread)" | 2/2 |
+| US12 — API LMS | Preciso: "API REST ou webhook para exportação de resultados para sistemas externos (LMS)" | 2/2 |
+| US13 — LinkedIn | Preciso: "compartilhar resultados em redes sociais quando o desempenho for **≥ 80%**" ✅ | 2/2 |
+| US14 — Markdown | Preciso: "suporte a Markdown e syntax highlighting" | 2/2 |
+| US15 — Offline | Preciso: "uso offline com download de quizzes para realização sem internet **(PWA)**" ✅ | 2/2 |
+
+Nota: único aluno (além do gabarito) a obter 30/30 nos RF — acertou os detalhes técnicos mais exigentes: níveis corretos de dificuldade, limiar ≥80% no LinkedIn e menção ao PWA no modo offline.
+
+#### Seção 2 — RNF: 13/20 🟡 Aceitável
+
+11 RNF listados com categorias bem nomeadas (Desempenho, Segurança, Usabilidade, Escalabilidade, etc.). Cobertura do gabarito:
+
+| RNF do Gabarito | Coberto por Nycollas | Avaliação |
+|---|---|---|
+| RNF01 — Carregamento instantâneo do painel | RNF01 (Desempenho, US05) | ✅ Coberto, mas sem métrica mensurável |
+| RNF02 — Segurança / acesso "Docente" | RNF02 (Segurança, US04) | ✅ Coberto (menciona RBAC implicitamente) |
+| RNF03 — Portabilidade / Offline (PWA) | RNF06 (Portabilidade, US15) | ✅ Preciso |
+| RNF04 — Formatação específica PDF (logo + cabeçalho) | RNF09 (Performance de Exportação) | ⚠️ Parcial: menciona velocidade mas não o cabeçalho institucional |
+| RNF05 — Usabilidade: botão reportar no QuizCard | ❌ Não coberto | ❌ Faltou |
+| RNF06 — Interoperabilidade API REST/webhooks LMS | RNF05 (Interoperabilidade, US12) | ✅ Coberto |
+| RNF07 — Suporte a Markdown e Syntax Highlighting | ❌ Não coberto como RNF | ❌ Faltou |
+
+**Desconto (-7 pts):** RNF05 (usabilidade do botão reportar) e RNF07 (Markdown/Syntax como restrição de qualidade) ausentes. RNF04 parcialmente incorreto (foca em velocidade, não em formatação institucional). Vários RNF adicionais corretos mas genéricos (acessibilidade, responsividade, confiabilidade) sem vínculo específico às US do projeto.
+
+#### Seção 3 — Regras de Negócio: 9/20 🟡 Aceitável
+
+Identifica as regras de forma narrativa. Pontos corretos:
+- Correção automática das respostas com feedback/explicação ✅
+- Registro de desempenho ao longo do tempo ✅
+- Acesso às funcionalidades administrativas restrito a professores ✅
+- Recursos de apoio: revisão de erros, favoritar, ranking, exportação ✅
+
+O que faltou:
+- Motor de resolução de quizzes: **embaralhamento dinâmico** de questões e alternativas, **cálculo de nível de desempenho** (Junior → Pleno → Sênior)
+- Gerador de Provas: **regra das exatamente 10 questões**, seleção/filtragem do banco de questões, geração automática de gabarito
+- Estrutura abstrata de domínio: entidade questão com id, tópico, pergunta, alternativas, resposta correta e explicação — derivada do código-fonte
+
+**Desconto (-11 pts):** Não analisou o código-fonte; descreve funcionamento em nível alto sem extrair as regras de negócio internas do sistema.
+
+#### Seção 4 — Detalhes/Acessórios: 8/10 🟢 Preciso
+
+Descreve banco de dados com entidades relevantes (usuários, questões, respostas, desempenho), interface web com telas específicas (cadastro, quizzes, estatísticas, ranking), responsividade e recursos extras (Markdown, gráficos, PWA). Correto e bem estruturado.
+
+**Desconto (-2 pts):** Não discute estado temporário em memória vs. persistência em banco de dados (distinção importante para entender a arquitetura atual do app).
+
+#### Seção 5 — Modelo Cloud: 9/10 🟢 Preciso
+
+SaaS escolhido com justificativa centrada no professor ("não precisará configurar servidores ou infraestrutura, podendo apenas acessar o sistema e utilizá-lo imediatamente"). Benefícios adicionais: atualizações automáticas, acesso remoto, menor custo.
+
+**Desconto (-1 pt):** Não vincula explicitamente à arquitetura SPA/React/Vite do projeto.
+
+#### Seção 6 — O que NÃO faz: 10/10 🟢 Preciso
+
+7 limites corretos e bem definidos, todos sem contradições com os RF listados:
+1. Correção automática de questões discursivas ✅
+2. Criação automática de questões por IA ✅
+3. Gestão acadêmica completa (matrícula, frequência, boletim) ✅
+4. Aplicação de provas presenciais com leitura de gabarito físico (OCR) ✅
+5. Moderação avançada de comentários ✅
+6. Personalização avançada de layout de provas ✅
+7. Integração com todos os sistemas externos (apenas via API básica) ✅
+
+Nota máxima — melhor resultado desta seção junto com nicolas-vinicius.
 
 ---
 
@@ -504,6 +592,9 @@ O arquivo `alunos/marcus-vinicius.md` contém apenas a palavra `"marcusvinicius"
 | **Gabriel-Ernandes** | RF08 não especifica formatos .apkg ou .csv | RF | 🟡 Médio |
 | **Gabriel-Ernandes** | RF12 usa "iniciante, intermediário e avançado" em vez de "Junior, Pleno, Sênior" | RF | 🟡 Médio |
 | **Gabriel-Ernandes** | RNF genéricos não mapeados às User Stories do projeto | RNF | 🟠 Significativo |
+| **nycollas-rodrigues** | RNF04 cobre velocidade de exportação mas omite formatação com cabeçalho institucional | RNF | 🟡 Médio |
+| **nycollas-rodrigues** | RNF05 (usabilidade botão reportar no QuizCard) e RNF07 (Markdown/Syntax Highlighting) ausentes como RNF | RNF | 🟡 Médio |
+| **nycollas-rodrigues** | Regras de Negócio não analisam código-fonte; falta quiz engine (shuffling) e regra das 10 questões | RNs | 🟠 Significativo |
 | **nicolas-vinicius** | RNF04 classifica restrição de acesso como RNF em vez de RF/política | RNF | 🟢 Leve |
 | **theo22** | Regras de Negócio com apenas 1 frase — seção criticamente incompleta | RNs | 🔴 Grave |
 | **theo22** | RNF15 é duplicata exata do RF15 | RNF | 🟡 Médio |
@@ -520,12 +611,13 @@ O arquivo `alunos/marcus-vinicius.md` contém apenas a palavra `"marcusvinicius"
 |---|---|---|---|
 | 🥇 1º | **José-Reginaldo** | **92/100** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87/100** | Ótimo |
-| 🥉 3º | **theo22** | **75/100** | Bom |
-| 4º | **Gabriel-Ernandes** | **62/100** | Regular |
-| 5º | **adriano-dmarco.md** | **43/100** | Insuficiente |
-| 6º | **rafael-braga** | **37/100** | Insuficiente |
-| 7º | **franky-jr** | **18/100** | Reprovado |
-| 8º | **josuel-pereira** | **7/100** | Reprovado |
-| 9º | **Bruna-Oliveira** | **5/100** | Reprovado |
-| 10º | **esdras-fernando** | **0/100** | Não entregue |
-| 10º | **marcus-vinicius** | **0/100** | Não entregue |
+| 🥉 3º | **nycollas-rodrigues** | **79/100** | Ótimo |
+| 4º | **theo22** | **75/100** | Bom |
+| 5º | **Gabriel-Ernandes** | **62/100** | Regular |
+| 6º | **adriano-dmarco.md** | **43/100** | Insuficiente |
+| 7º | **rafael-braga** | **37/100** | Insuficiente |
+| 8º | **franky-jr** | **18/100** | Reprovado |
+| 9º | **josuel-pereira** | **7/100** | Reprovado |
+| 10º | **Bruna-Oliveira** | **5/100** | Reprovado |
+| 11º | **esdras-fernando** | **0/100** | Não entregue |
+| 11º | **marcus-vinicius** | **0/100** | Não entregue |
