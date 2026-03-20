@@ -19,7 +19,7 @@
 | **esdras-fernando** | ❌ Apenas "esdras" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
 | **franky-jr** | ⚠️ RF01–RF14 (genérico, não baseado nas US) | ✅ RNF01–RNF13 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 6 limites | 🟡 Parcial |
 | **josuel-pereira** | ⚠️ Apenas US01–US03 (estrutura diferente) | ⚠️ Apenas US01–US03 | ❌ | ❌ | ❌ | ❌ | 🔴 Incompleto |
-| **marcus-vinicius** | ❌ Apenas "marcusvinicius" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
+| **marcus-vinicius** | ✅ RF01–RF15 (falta RF05 completo) | ✅ RNF01–RNF10 | ✅ 7 regras específicas | ✅ Presente | ✅ SaaS | ✅ 8 limites | 🟢 Completo |
 | **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
 | **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
 | **rafael-braga** | ✅ RF01–RF15 (falta RF14) | ✅ RNF01–RNF09 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟡 Parcial |
@@ -202,9 +202,24 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 ### 🌿 marcus-vinicius
 
 **Arquivo**: `alunos/marcus-vinicius.md`  
-**Status**: 🔴 Não entregue
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções
 
-O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preenchida.
+> ⚠️ **Correção:** Avaliação anterior registrava "arquivo contém apenas 'marcusvinicius'" — isso estava incorreto. O arquivo contém uma submissão completa.
+
+#### Destaques:
+- RF e RNF mapeados 1-a-1 com as 15 User Stories (US01–US15), usando linguagem de analista ("identifiquei que...", "verifico que...").
+- Detalhes técnicos corretos: níveis **"Júnior, Pleno, Sênior"** ✅, limiar **80%** no LinkedIn ✅, formato **.apkg/.csv** na exportação ✅, **PWA** no modo offline ✅.
+- 10 RNF com categorias bem nomeadas (Segurança, Usabilidade, Desempenho, Disponibilidade, Confiabilidade, Portabilidade, Interoperabilidade, Privacidade, Manutenibilidade, Acessibilidade).
+- 7 regras de negócio específicas, incluindo regras de governança relevantes: revisão de erros reportados por administrador (regra 4) e ranking apenas com quizzes completados sincronizados (regra 5).
+- Modelo Cloud: **SaaS** com 4 argumentos centrados no professor — uma das melhores justificativas desta seção.
+- O que NÃO faz: **8 limites** válidos, todos sem contradições com os RF.
+
+#### Diferenças em relação ao gabarito:
+- RF05 (US05 — painel de estatísticas) omite o 3º indicador: "tempo médio por questão".
+- RNF01 do gabarito (desempenho do painel de estatísticas) não coberto — RNF03 de Marcus cobre velocidade de PDF, não do painel.
+- RNF05 do gabarito (usabilidade: botão reportar no QuizCard) não mapeado.
+- Regras de Negócio sem análise do código-fonte; faltam as regras do motor de quiz (embaralhamento, cálculo de nível) e do Gerador de Provas (exatamente 10 questões).
+- Detalhes/Acessórios genéricos, sem tech stack ou entidades do banco de dados.
 
 ---
 
@@ -295,7 +310,7 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 | esdras-fernando | 0 | ❌ 0% | Não entregue |
 | franky-jr | 14 | ❌ 0% das US | Genérico, não baseado nas US |
 | josuel-pereira | ~3 | ⚠️ 20% | Incompleto |
-| marcus-vinicius | 0 | ❌ 0% | Não entregue |
+| marcus-vinicius | 15 | ✅ 97% | RF05 incompleto (falta "tempo médio por questão") |
 | nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
 | nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
 | rafael-braga | 14 | ⚠️ 93% | Faltou RF14 (Markdown) |
@@ -313,7 +328,7 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 | esdras-fernando | — | Não entregue |
 | franky-jr | SaaS | Justificativa presente, simplificada |
 | josuel-pereira | — | Não entregue |
-| marcus-vinicius | — | Não entregue |
+| marcus-vinicius | SaaS | 4 argumentos focados no professor (excelente justificativa) |
 | nicolas-vinicius | SaaS | Justificativa presente |
 | nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
 | rafael-braga | SaaS | Justificativa superficial |
@@ -330,12 +345,12 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 | 🥇 1º | **José-Reginaldo** | **92** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
 | 🥉 3º | **nycollas-rodrigues** | **79** | Ótimo |
-| 4º | **theo22** | **75** | Bom |
-| 5º | **Gabriel-Ernandes** | **62** | Regular |
-| 6º | **adriano-dmarco.md** | **43** | Insuficiente |
-| 7º | **rafael-braga** | **37** | Insuficiente |
-| 8º | **franky-jr** | **18** | Reprovado |
-| 9º | **josuel-pereira** | **7** | Reprovado |
-| 10º | **Bruna-Oliveira** | **5** | Reprovado |
-| 11º | **esdras-fernando** | **0** | Não entregue |
-| 11º | **marcus-vinicius** | **0** | Não entregue |
+| 4º | **marcus-vinicius** | **77** | Bom |
+| 5º | **theo22** | **75** | Bom |
+| 6º | **Gabriel-Ernandes** | **62** | Regular |
+| 7º | **adriano-dmarco.md** | **43** | Insuficiente |
+| 8º | **rafael-braga** | **37** | Insuficiente |
+| 9º | **franky-jr** | **18** | Reprovado |
+| 10º | **josuel-pereira** | **7** | Reprovado |
+| 11º | **Bruna-Oliveira** | **5** | Reprovado |
+| 12º | **esdras-fernando** | **0** | Não entregue |

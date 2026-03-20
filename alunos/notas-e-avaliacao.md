@@ -40,6 +40,7 @@ A prova tem 6 seções. Os pontos foram distribuídos proporcionalmente ao peso 
 | **José-Reginaldo** | 28 | 20 | 17 | 8 | 10 | 9 | **92** |
 | **nicolas-vinicius** | 28 | 16 | 14 | 9 | 10 | 10 | **87** |
 | **nycollas-rodrigues** | 30 | 13 | 9 | 8 | 9 | 10 | **79** |
+| **marcus-vinicius** | 29 | 14 | 11 | 5 | 9 | 9 | **77** |
 | **theo22** | 29 | 15 | 4 | 7 | 10 | 10 | **75** |
 | **Gabriel-Ernandes** | 25 | 8 | 8 | 6 | 7 | 8 | **62** |
 | **adriano-dmarco.md** | 24 | 10 | 3 | 2 | 3 | 1 | **43** |
@@ -48,7 +49,6 @@ A prova tem 6 seções. Os pontos foram distribuídos proporcionalmente ao peso 
 | **josuel-pereira** | 4 | 3 | 0 | 0 | 0 | 0 | **7** |
 | **Bruna-Oliveira** | 5 | 0 | 0 | 0 | 0 | 0 | **5** |
 | **esdras-fernando** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
-| **marcus-vinicius** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
 
 ---
 
@@ -560,9 +560,101 @@ O arquivo `alunos/esdras-fernando.md` contém apenas a palavra `"esdras"`. **Nen
 
 ---
 
-### ⚫ marcus-vinicius — **0/100**
+### 🟡 marcus-vinicius — **77/100**
 
-O arquivo `alunos/marcus-vinicius.md` contém apenas a palavra `"marcusvinicius"`. **Nenhuma seção foi entregue.**
+**Arquivo**: `alunos/marcus-vinicius.md`  
+**Branch**: `marcus-vinicius`
+
+> ⚠️ **Correção:** Avaliação anterior registrou "arquivo contém apenas 'marcusvinicius'" — isso estava incorreto. O arquivo contém uma submissão completa e estruturada com todas as 6 seções.
+
+#### Seção 1 — RF: 29/30 🟢 Preciso
+
+Todos os 15 RF mapeados 1-a-1 com as User Stories, usando linguagem técnica na voz de analista. Detalhes corretos:
+
+| RF | Avaliação | Nota |
+|---|---|---|
+| US01 — Cadastro de questões | Preciso: "enunciado, alternativas, resposta correta e explicação" | 2/2 |
+| US02 — Cronômetro | Preciso: "cronômetro regressivo com tempos configuráveis (15, 30 ou 60 minutos)" | 2/2 |
+| US03 — PDF | Preciso: "PDF, com formatação e cabeçalho/logo da instituição" | 2/2 |
+| US04 — Autenticação | Preciso: "autenticação e autorização que restrinja o acesso... apenas a usuários com perfil 'Docente'" | 2/2 |
+| US05 — Estatísticas | Aceitável: "painel de estatísticas semanais... histórico de pontuações e taxa de acerto por tópico" — faltou **"tempo médio por questão"** | 1/2 |
+| US06 — Export erros | Preciso: "exportem as questões que erraram... em formato compatível com Anki (.apkg ou .csv)" | 2/2 |
+| US07 — Reportar erro | Preciso: "botão 'Reportar Erro' em cada questão" | 2/2 |
+| US08 — Ranking | Preciso: "ranking global semanal e mensal" | 2/2 |
+| US09 — Favoritar | Preciso: "marquem questões como 'Favoritas' e acessem posteriormente uma lista com essas questões salvas" | 2/2 |
+| US10 — Filtro dificuldade | Preciso: usa os níveis corretos **"Júnior, Pleno, Sênior"** ✅ | 2/2 |
+| US11 — Comentários | Preciso: "seção de comentários em cada questão para discussão entre os usuários" | 2/2 |
+| US12 — API LMS | Preciso: "API REST para exportação automática de notas dos alunos, permitindo integração com sistemas LMS" | 2/2 |
+| US13 — LinkedIn | Preciso: "compartilhamento no LinkedIn quando o aluno atingir pontuação superior a 80%" ✅ | 2/2 |
+| US14 — Markdown | Preciso: "formatação Markdown e syntax highlighting no cadastro e exibição de questões" | 2/2 |
+| US15 — Offline | Preciso: "funcionar como PWA, permitindo que alunos baixem conjuntos de questões e respondam offline" ✅ | 2/2 |
+
+#### Seção 2 — RNF: 14/20 🟡 Aceitável
+
+10 RNF listados com categorias bem definidas (Segurança, Usabilidade, Desempenho, Disponibilidade, Confiabilidade, Portabilidade, Interoperabilidade, Privacidade, Manutenibilidade, Acessibilidade). Cobertura do gabarito:
+
+| RNF do Gabarito | Coberto por Marcus | Avaliação |
+|---|---|---|
+| RNF01 — Painel de estatísticas carrega rapidamente | ❌ Não coberto (RNF03 cobre velocidade de PDF, não do painel) | ❌ Faltou |
+| RNF02 — Segurança / acesso "Docente" | RNF01 (Segurança) ✅ | ✅ Coberto |
+| RNF03 — Portabilidade / Offline (PWA) | RNF04 (Disponibilidade) + RNF06 (Portabilidade) ✅ | ✅ Coberto |
+| RNF04 — Formatação específica PDF (logo + cabeçalho) | RNF03 cobre velocidade, não a formatação institucional | ⚠️ Parcial |
+| RNF05 — Usabilidade: botão reportar no QuizCard | ❌ Não coberto (RNF02 cobre formatação de código) | ❌ Faltou |
+| RNF06 — Interoperabilidade API REST/webhooks LMS | RNF07 (Interoperabilidade) ✅ | ✅ Coberto |
+| RNF07 — Suporte a Markdown e Syntax Highlighting | RNF02 (Usabilidade: "suporte a formatação de código") ✅ | ✅ Coberto |
+
+**Desconto (-6 pts):** RNF01 (carregamento do painel) e RNF05 (botão reportar como restrição de usabilidade) ausentes. RNF04 (PDF) parcialmente coberto (aspecto de velocidade, mas não de formatação institucional). 5 RNF adicionais (Privacidade, Manutenibilidade, Confiabilidade, Acessibilidade, outros) corretos e bem categorizados, sem contradições.
+
+#### Seção 3 — Regras de Negócio: 11/20 🟡 Aceitável
+
+7 regras de negócio específicas listadas, com foco em governança e controle de acesso:
+
+1. Apenas usuários "Professor" podem cadastrar, editar ou excluir questões ✅
+2. Apenas usuários "Professor" podem acessar o gerador de provas e exportar PDFs ✅
+3. O sistema diferencia perfis: Aluno, Professor e Administrador ✅ (introduz Admin além de Docente/Aluno)
+4. Questões reportadas como erradas devem ser revisadas por administradores antes de qualquer alteração ✅ (boa regra de workflow)
+5. O ranking considera apenas quizzes completados, sem respostas offline não sincronizadas ✅ (regra específica e relevante)
+6. O conteúdo das questões é de responsabilidade dos professores ✅
+7. Comentários em questões devem ser moderados para evitar conteúdo impróprio ✅
+
+O que faltou:
+- Motor de quiz: **embaralhamento dinâmico** de questões e alternativas, **cálculo de desempenho** (limiar Junior → Pleno → Sênior)
+- Gerador de Provas: **exatamente 10 questões**, seleção do banco de questões
+- Análise do código-fonte para derivar as regras do domínio (entidade questão com id, tópico, alternativas, resposta correta)
+
+**Desconto (-9 pts):** Regras de negócio válidas e específicas (regra 4 e 5 se destacam), mas sem análise do código-fonte; faltam as regras do motor de resolução e do gerador de provas.
+
+#### Seção 4 — Detalhes/Acessórios: 5/10 🟠 Insuficiente
+
+Menciona: banco de dados centralizado na nuvem, interface web acessível via navegador, e suporte offline limitado. Correto mas muito genérico.
+
+**Desconto (-5 pts):** Faltou descrever a stack tecnológica (React/Vite/TypeScript), entidades do banco de dados (questão, usuário, tópico, resultado), telas específicas da interface (cadastro de questões, painel de estatísticas, ranking), e recursos visuais (gráficos, editor Markdown).
+
+#### Seção 5 — Modelo Cloud: 9/10 🟢 Preciso
+
+Escolha: **SaaS**. Justificativa com 4 argumentos focados no professor:
+1. "Acesso imediato via navegador sem necessidade de instalação, configuração ou manutenção de infraestrutura própria" ✅
+2. "Professores podem utilizar a plataforma de qualquer lugar (escola, casa, laboratório) e em qualquer dispositivo" ✅
+3. "Atualizações e correções feitas centralmente garantem que todos usem a versão mais recente sem esforço adicional" ✅
+4. "Escolas não precisam arcar com custos de servidores ou equipe de TI especializada" ✅
+
+Justificativa excelente, entre as melhores desta seção.
+
+**Desconto (-1 pt):** Não vincula explicitamente à arquitetura SPA/React/Vite do projeto.
+
+#### Seção 6 — O que NÃO faz: 9/10 🟢 Preciso
+
+8 limites definidos, todos corretos e sem contradições com os RF listados:
+1. Não corrige provas discursivas ✅
+2. Não oferece videoconferência ou aulas ao vivo ✅
+3. Não substitui completamente um LMS ✅ (consistente com US12 — integração, não substituição)
+4. Não permite edição colaborativa em tempo real ✅
+5. Não possui suporte a múltiplos idiomas ✅
+6. Não gera questões automaticamente por IA ✅
+7. Não permite upload de vídeos nas questões ✅
+8. Não valida automaticamente o conteúdo das questões ✅ (consistente com RF07 — reporte manual, não automático)
+
+**Desconto (-1 pt):** Alguns limites são genéricos (videoconferência, múltiplos idiomas) em vez de focados nas fronteiras específicas do sistema de quiz.
 
 ---
 
@@ -601,7 +693,9 @@ O arquivo `alunos/marcus-vinicius.md` contém apenas a palavra `"marcusvinicius"
 | **josuel-pereira** | Apenas US01–US02 completas; restante não entregue | Todas | 🔴 Grave |
 | **Bruna-Oliveira** | Apenas US01–US05 parcialmente listadas; restante não entregue | Todas | 🔴 Grave |
 | **esdras-fernando** | Arquivo contém apenas "esdras" | Todas | ⚫ Crítico |
-| **marcus-vinicius** | Arquivo contém apenas "marcusvinicius" | Todas | ⚫ Crítico |
+| **marcus-vinicius** | RF05 omite "tempo médio por questão" (3º indicador do painel de estatísticas) | RF | 🟡 Médio |
+| **marcus-vinicius** | RNF01 (desempenho painel stats) e RNF05 (usabilidade botão reportar) ausentes | RNF | 🟡 Médio |
+| **marcus-vinicius** | Regras de Negócio não analisam código-fonte; falta motor de quiz (shuffling) e regra das 10 questões | RNs | 🟠 Significativo |
 
 ---
 
@@ -612,12 +706,12 @@ O arquivo `alunos/marcus-vinicius.md` contém apenas a palavra `"marcusvinicius"
 | 🥇 1º | **José-Reginaldo** | **92/100** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87/100** | Ótimo |
 | 🥉 3º | **nycollas-rodrigues** | **79/100** | Ótimo |
-| 4º | **theo22** | **75/100** | Bom |
-| 5º | **Gabriel-Ernandes** | **62/100** | Regular |
-| 6º | **adriano-dmarco.md** | **43/100** | Insuficiente |
-| 7º | **rafael-braga** | **37/100** | Insuficiente |
-| 8º | **franky-jr** | **18/100** | Reprovado |
-| 9º | **josuel-pereira** | **7/100** | Reprovado |
-| 10º | **Bruna-Oliveira** | **5/100** | Reprovado |
-| 11º | **esdras-fernando** | **0/100** | Não entregue |
-| 11º | **marcus-vinicius** | **0/100** | Não entregue |
+| 4º | **marcus-vinicius** | **77/100** | Bom |
+| 5º | **theo22** | **75/100** | Bom |
+| 6º | **Gabriel-Ernandes** | **62/100** | Regular |
+| 7º | **adriano-dmarco.md** | **43/100** | Insuficiente |
+| 8º | **rafael-braga** | **37/100** | Insuficiente |
+| 9º | **franky-jr** | **18/100** | Reprovado |
+| 10º | **josuel-pereira** | **7/100** | Reprovado |
+| 11º | **Bruna-Oliveira** | **5/100** | Reprovado |
+| 12º | **esdras-fernando** | **0/100** | Não entregue |
