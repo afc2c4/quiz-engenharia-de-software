@@ -2,6 +2,8 @@
 
 > Comparação das respostas de cada aluno em relação ao gabarito (branch `gabarito`).
 > O arquivo de referência completo está em `alunos/alexandre-ferreira.md` na branch `gabarito`.
+>
+> 📊 **Para notas detalhadas com rubrica proporcional, identificação de lero lero e erros específicos, veja [`notas-e-avaliacao.md`](./notas-e-avaliacao.md)**
 
 ---
 
@@ -297,19 +299,20 @@ O arquivo contém apenas o texto `"marcusvinicius"`. Nenhuma seção foi preench
 
 ---
 
-## Pontuação de Completude (estimativa)
+## Pontuação Final (rubrica proporcional de 100 pts)
 
-| Aluno | Completude |
-|---|---|
-| alexandre-ferreira (gabarito) | ⭐⭐⭐⭐⭐ 100% |
-| José-Reginaldo | ⭐⭐⭐⭐⭐ ~98% |
-| nicolas-vinicius | ⭐⭐⭐⭐⭐ ~95% |
-| theo22 | ⭐⭐⭐⭐ ~90% |
-| Gabriel-Ernandes | ⭐⭐⭐⭐ ~85% |
-| adriano-dmarco.md | ⭐⭐⭐⭐ ~85% |
-| rafael-braga | ⭐⭐⭐ ~70% |
-| franky-jr | ⭐⭐⭐ ~65% (conteúdo genérico) |
-| Bruna-Oliveira | ⭐ ~20% |
-| josuel-pereira | ⭐ ~15% |
-| esdras-fernando | ☆ ~1% |
-| marcus-vinicius | ☆ ~1% |
+> Detalhamento completo com critérios, erros e classificação de qualidade em [`notas-e-avaliacao.md`](./notas-e-avaliacao.md)
+
+| Posição | Aluno | Nota /100 | Conceito |
+|---|---|---|---|
+| 🥇 1º | **José-Reginaldo** | **92** | Excelente |
+| 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
+| 🥉 3º | **theo22** | **75** | Bom |
+| 4º | **Gabriel-Ernandes** | **62** | Regular |
+| 5º | **adriano-dmarco.md** | **43** | Insuficiente |
+| 6º | **rafael-braga** | **37** | Insuficiente |
+| 7º | **franky-jr** | **18** | Reprovado |
+| 8º | **josuel-pereira** | **7** | Reprovado |
+| 9º | **Bruna-Oliveira** | **5** | Reprovado |
+| 10º | **esdras-fernando** | **0** | Não entregue |
+| 10º | **marcus-vinicius** | **0** | Não entregue |
