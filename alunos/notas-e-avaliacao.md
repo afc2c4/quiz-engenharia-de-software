@@ -39,16 +39,17 @@ A prova tem 6 seções. Os pontos foram distribuídos proporcionalmente ao peso 
 | alexandre-ferreira *(gabarito)* | 30 | 20 | 20 | 10 | 10 | 10 | **100** |
 | **José-Reginaldo** | 28 | 20 | 17 | 8 | 10 | 9 | **92** |
 | **nicolas-vinicius** | 28 | 16 | 14 | 9 | 10 | 10 | **87** |
+| **Bruna-Oliveira** | 27 | 19 | 13 | 5 | 10 | 10 | **84** |
 | **nycollas-rodrigues** | 30 | 13 | 9 | 8 | 9 | 10 | **79** |
 | **marcus-vinicius** | 29 | 14 | 11 | 5 | 9 | 9 | **77** |
 | **theo22** | 29 | 15 | 4 | 7 | 10 | 10 | **75** |
 | **Gabriel-Ernandes** | 25 | 8 | 8 | 6 | 7 | 8 | **62** |
+| **josuel-pereira** | 26 | 13 | 0 | 4 | 1 | 0 | **44** |
 | **adriano-dmarco.md** | 24 | 10 | 3 | 2 | 3 | 1 | **43** |
 | **rafael-braga** | 20 | 7 | 3 | 4 | 3 | 0 | **37** |
 | **franky-jr** | 0 | 5 | 0 | 5 | 7 | 1 | **18** |
-| **josuel-pereira** | 4 | 3 | 0 | 0 | 0 | 0 | **7** |
-| **Bruna-Oliveira** | 5 | 0 | 0 | 0 | 0 | 0 | **5** |
 | **esdras-fernando** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
+| **iago-marinho** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
 
 ---
 
@@ -516,41 +517,170 @@ Esses erros mostram que o aluno definiu limites de escopo que eliminam funcional
 
 ---
 
-### 🔴 josuel-pereira — **7/100**
+### 🟠 josuel-pereira — **44/100**
 
-#### Seção 1 — RF: 4/30 🔴 Incompleto
+**Arquivo**: `alunos/josuel-pereira.md`
 
-- US01: RF correto e completo (2/2)
-- US02: RF correto (2/2)  
-- US03: Apenas o título foi listado, sem desenvolvimento (0/2)
-- US04–US15: **Não entregues** (0 pts)
+> ⚠️ **Correção:** Avaliação anterior registrou "apenas US01–US02 completas; restante não entregue" — isso estava incorreto. O arquivo contém todas as 15 User Stories com RF e RNF completos.
 
-#### Seção 2 — RNF: 3/20 🔴 Incompleto
+#### Seção 1 — RF: 26/30 🟡 Aceitável
 
-- US01 RNF: adequado mas genérico (1,5/2)
-- US02 RNF: correto (1,5/2)
-- US03–US15: **Não entregues** (0 pts)
+Todos os 15 RF mapeados 1-a-1 com as User Stories. Linguagem objetiva e clara.
 
-#### Seções 3–6: 0/50 ⚫ Não entregue
+| RF | Avaliação | Nota |
+|---|---|---|
+| US01 — Cadastro de questões | Preciso: "enunciado, alternativas, resposta correta, explicação" | 2/2 |
+| US02 — Cronômetro | Preciso: "cronômetro regressivo... (ex: 15, 30 ou 60 minutos)" | 2/2 |
+| US03 — PDF | Preciso: "PDF... logotipo e cabeçalho da instituição" | 2/2 |
+| US04 — Autenticação | Preciso: "restringir o acesso... apenas a usuários com perfil 'Docente'" | 2/2 |
+| US05 — Estatísticas | Completo: "histórico de pontuações", "taxa de acerto por tópico", "tempo médio de resposta por questão" ✅ | 2/2 |
+| US06 — Export erros | Preciso: ".apkg e .csv" ✅ | 2/2 |
+| US07 — Reportar erro | Preciso: "botão 'Reportar Erro' em cada questão (QuizCard)" — usa nome correto "QuizCard" ✅ | 2/2 |
+| US08 — Ranking | Preciso: "semanal e mensal" ✅ | 2/2 |
+| US09 — Favoritar | Preciso: "marcar questões como favoritas... lista de questões favoritas" ✅ | 2/2 |
+| US10 — Filtro dificuldade | ❌ Usa "Fácil, Médio, Difícil" em vez de **"Júnior, Pleno, Sênior"** — níveis errados | 1/2 |
+| US11 — Comentários | Preciso: "thread de comentários associada a cada questão" ✅ | 2/2 |
+| US12 — API LMS | Preciso: "API ou webhook... integração com sistemas externos como o Moodle" ✅ | 2/2 |
+| US13 — LinkedIn | Aceitável: "LinkedIn quando o usuário atingir desempenho superior a... (ex: 80%)" ✅ | 2/2 |
+| US14 — Markdown | Preciso: "formatação em Markdown" + "syntax highlighting em trechos de código" ✅ | 2/2 |
+| US15 — Offline | Completo: "baixar conjunto de questões... responder sem conexão... sincronizar dados" ✅ | 1/2 |
+
+**Desconto (-4 pts):** US10 usa nomenclatura de dificuldade genérica ("Fácil/Médio/Difícil") em vez dos níveis de senioridade do domínio ("Júnior/Pleno/Sênior"). US15 menciona os 3 aspectos corretos mas de forma mecânica sem mencionar PWA explicitamente.
+
+#### Seção 2 — RNF: 13/20 🟡 Aceitável
+
+15 RNF mapeados, um por US. Qualidade variada — alguns técnicos, outros genéricos.
+
+| RNF do Gabarito | Coberto por Josuel | Avaliação |
+|---|---|---|
+| RNF01 — Desempenho painel stats | RNF-US05: "carregar instantaneamente, independentemente do volume de dados" ✅ | ✅ Coberto |
+| RNF02 — Segurança/Docente | RNF-US04: "garantir que usuários não autorizados não acessem" + "mecanismos seguros de autenticação" ✅ | ✅ Coberto |
+| RNF03 — Portabilidade/Offline | RNF-US15: "funcionar mesmo sem conexão... suporte PWA... sincronizar corretamente" ✅ | ✅ Coberto |
+| RNF04 — Formatação PDF | RNF-US03: "manter formatação consistente" — genérico, sem PDF/A ou logotipo ⚠️ | ⚠️ Parcial |
+| RNF05 — Usabilidade botão reportar | RNF-US07: "facilmente acessível durante o quiz" + "armazenar relatórios com informações para identificação da questão" ✅ | ✅ Coberto |
+| RNF06 — Interoperabilidade API | RNF-US12: "compatível com APIs externas e padrões de integração" ✅ | ✅ Coberto |
+| RNF07 — Markdown | RNF-US14: "suporte a padrões comuns de Markdown", "destaque de sintaxe para diferentes linguagens" ✅ | ✅ Coberto |
+
+6 de 7 gabarito RNF cobertos; alguns RNF adicionais são genéricos ("simples de usar", "fácil acesso") mas não há contradições.
+
+#### Seção 3 — Regras de Negócio: 0/20 ⚫ Não entregue
+
+Não há seção dedicada a Regras de Negócio. A única menção é no RNF-US01 ("Apenas usuários com perfil de professor podem cadastrar questões"), que está na seção errada e é insuficiente.
+
+#### Seção 4 — Detalhes/Acessórios: 4/10 🟠 Insuficiente
+
+Menciona: banco de dados na nuvem, dados offline sincronizados, interface web acessível por navegador. Correto mas muito genérico.
+
+**Desconto (-6 pts):** Sem stack tecnológica, sem entidades do banco de dados, sem descrição de telas ou recursos visuais.
+
+#### Seção 5 — Modelo Cloud: 1/10 🔴 Insuficiente
+
+Apenas o rótulo: **"Software as a Service (SaaS)"** — sem nenhuma justificativa.
+
+#### Seção 6 — O que NÃO faz: 0/10 ⚫ Não entregue
+
+Seção não presente no arquivo.
 
 ---
 
-### 🔴 Bruna-Oliveira — **5/100**
+### 🟢 Bruna-Oliveira — **84/100**
 
-#### Seção 1 — RF: 5/30 🔴 Incompleto
+**Arquivo primário**: `alunos/Bruna-Oliveiraa.md` (com 'aa' duplo)  
+**Branch**: `Bruna-Oliveira`
 
-Apenas US01–US05 entregues, sem descrição técnica (apenas títulos/frases curtas). Cada item recebe 1/2 pt por estar identificado corretamente mas sem detalhamento.
+> ⚠️ **Correção:** Avaliação anterior registrou "apenas US01–US05" com 5/100 baseada em `Bruna-Oliveira.md` (incompleto). A branch também contém `Bruna-Oliveiraa.md` com submissão completa de todas as 6 seções. Este arquivo é a entrega real do aluno.
 
-| RF | Avaliação |
-|---|---|
-| US01 — Cadastro questões | Breve: "Autonomia para o professor cadastrar e detalhar questões" — sem especificar campos obrigatórios | 1/2 |
-| US02 — Cronômetro | Breve: "Cronômetro configurável para treinar agilidade" — sem mencionar tempos específicos | 1/2 |
-| US03 — PDF | Breve: "Geração automática de PDFs formatados com identidade visual" — sem especificar logotipo/cabeçalho | 1/2 |
-| US04 — Autenticação | Breve: "Restrição de áreas administrativas apenas para perfil 'Docente'" — correto | 1/2 |
-| US05 — Estatísticas | Breve: "Painel visual de estatísticas e taxas de acerto por tópico com alta performance" — correto | 1/2 |
-| US06–US15 | **Não entregues** | 0 |
+#### Seção 1 — RF: 27/30 🟢 Preciso
 
-#### Seções 2–6: 0/70 ⚫ Não entregue
+15 RF entregues em formato de benefícios para o usuário, com linguagem orientada a valor. Destaques: usa os níveis corretos "Jr/Pl/Sr" em US10.
+
+| RF | Avaliação | Nota |
+|---|---|---|
+| US01 — Cadastro de questões | "Autonomia para o professor cadastrar e detalhar questões e explicações diretamente na interface" — correto | 2/2 |
+| US02 — Cronômetro | "Cronômetro configurável para treinar agilidade e controle de tempo sob condições de prova" — correto | 2/2 |
+| US03 — PDF | "Geração automática de PDFs formatados com identidade visual da instituição para uso offline" ✅ | 2/2 |
+| US04 — Autenticação | "Restrição de áreas administrativas apenas para o perfil 'Docente'" ✅ | 2/2 |
+| US05 — Estatísticas | "Painel visual de estatísticas e taxas de acerto por tópico com alta performance" — menciona stats e tópicos, **falta "tempo médio"** | 1/2 |
+| US06 — Export erros | "Exportação de erros para ferramentas de repetição espaçada (Anki) via arquivos .apkg ou .csv" ✅ | 2/2 |
+| US07 — Reportar erro | "Canal direto para reportar inconsistências em questões, garantindo a integridade do banco de dados" ✅ | 2/2 |
+| US08 — Ranking | "Ranking global (Leaderboard) para estimular a competitividade e o engajamento dos alunos" ✅ | 2/2 |
+| US09 — Favoritar | "Recurso de 'Favoritos' para salvar questões complexas em uma lista personalizada de revisão" ✅ | 2/2 |
+| US10 — Filtro dificuldade | "Classificação de questões por senioridade (Jr/Pl/Sr)" ✅ — usa termos corretos do domínio | 2/2 |
+| US11 — Comentários | "Seção de comentários para discussão colaborativa e esclarecimento de dúvidas entre pares" ✅ | 2/2 |
+| US12 — API LMS | "API REST/Webhooks para exportação automatizada de notas para sistemas externos (LMS)" ✅ | 2/2 |
+| US13 — LinkedIn | "Botão de compartilhamento de desempenho no LinkedIn para visibilidade profissional" — **falta o limiar de 80%** | 1/2 |
+| US14 — Markdown | "Suporte a Markdown e Syntax Highlighting para formatação adequada de blocos de código" ✅ | 2/2 |
+| US15 — Offline | "Implementação de PWA para permitir o download de questões e resolução em modo offline" ✅ | 2/2 |
+
+#### Seção 2 — RNF: 19/20 🟢 Excelente
+
+15 RNF mapeados 1-a-1 com as US. Nível técnico excepcionalmente alto — o melhor RNF desta turma.
+
+| RNF | Destaque técnico | Avaliação |
+|---|---|---|
+| RNF-US02 | "Persistência do estado do tempo mesmo em caso de refresh da página ou oscilação de conexão" | ✅ Preciso |
+| RNF-US03 | "Geração de arquivos no padrão **PDF/A** com preservação de elementos visuais (logotipo) e fontes institucionais" | ✅ Excelente |
+| RNF-US05 | "Carregamento de gráficos em **< 2 segundos**, independente do tamanho do histórico (uso de cache/indexação)" | ✅ Excelente (= RNF01 gabarito) |
+| RNF-US07 | "Rastreabilidade automática de metadados (ID da questão, versão, contexto do erro) no momento do envio" | ✅ Excelente |
+| RNF-US10 | "Filtragem dinâmica (sem recarregamento total) e padronização da taxonomia (Junior/Pleno/Senior)" | ✅ Preciso |
+| RNF-US11 | "Sanitização de inputs (prevenção de XSS) e carregamento assíncrono (Lazy Loading) das threads" | ✅ Excelente |
+| RNF-US12 | "Disponibilização de endpoints RESTful documentados (Swagger) e política de Rate Limiting" | ✅ Excelente |
+| RNF-US15 | "Uso de **Service Workers** e **IndexedDB** para funcionamento total sem rede e sincronização posterior" | ✅ Excelente |
+
+Todos os 7 gabarito RNF cobertos. **Desconto (-1 pt):** RNF-US13 não menciona a restrição do limiar de 80%.
+
+#### Seção 3 — Regras de Negócio: 13/20 🟡 Aceitável
+
+3 "pilares" conceituais bem fundamentados:
+
+1. **"Curadoria de Conhecimento Estruturado"**: Professor cria questões com "porquê" (explicação) e "régua" (nível de dificuldade). Foco em banco de dados pedagógico.
+2. **"Simulação de Desempenho Sob Pressão"**: Coloca o estudante em cenário de desafio com limite de tempo — treina agilidade mental.
+3. **"Ciclo de Feedback e Diagnóstico"**: Confronta a resposta com o gabarito, explica o erro no momento exato, mapeia lacunas de conhecimento via estatísticas.
+
+Os 3 pilares capturam a essência do sistema de forma insightful. **Desconto (-7 pts):** Faltam as regras técnicas derivadas do código-fonte: motor de quiz (embaralhamento), cálculo de nível (Junior→Pleno→Sênior), gerador de provas (10 questões exatas), e a regra de acesso "apenas Docente".
+
+#### Seção 4 — Detalhes/Acessórios: 5/10 🟠 Insuficiente
+
+Menciona: dados centralizados em nuvem resiliente com espelhamento local para offline, PWA agnóstica a dispositivos. Correto mas brevíssimo.
+
+**Desconto (-5 pts):** Sem stack tecnológica (React/Vite/TypeScript), sem entidades do banco de dados (questão, usuário, tópico, resultado), sem descrição de telas específicas.
+
+#### Seção 5 — Modelo Cloud: 10/10 🟢 Excelente
+
+Apresenta **dois níveis de análise**:
+- **Seção A** (Arquitetura de Entrega): Analisa PWA como modelo de distribuição (atalho sem App Store), CDN para Syntax Highlighting + PDFs, e interoperabilidade via exportações — visão arquitetural que nenhum outro aluno apresentou.
+- **Seção B** (Justificativa SaaS): 4 argumentos centrados no professor:
+  1. "Fricção Zero na Adoção" — acesso sem instalação ✅
+  2. "Centralização e Sincronização de Ativos" — dado salvo na nuvem imediatamente ✅
+  3. "Simplicidade na Exportação e Integração" — PDF + Anki padronizados no SaaS ✅
+  4. "Manutenção Invisível" — atualizações transparentes ✅
+
+**Justificativa mais completa e estruturada da turma.**
+
+#### Seção 6 — O que NÃO faz: 10/10 🟢 Excelente
+
+6 limites bem escolhidos, com "Justificativa do Analista" explicando o porquê das duas primeiras restrições:
+
+1. "Não fará correção automática de provas discursivas" ✅
+2. "Não executará código em tempo real (Sandboxing)" ✅ — muito específico!
+3. "Não fará o controle de matrículas ou gestão financeira" ✅
+4. "Não possui monitoramento antifraude (Proctoring)" ✅ — muito específico!
+5. "Não fará a curadoria automática de conteúdo (IA)" ✅
+6. "Não é uma ferramenta de comunicação síncrona" ✅ (comentários são assíncronos)
+
+**Justificativa do Analista**: "Ao definir que o sistema não corrige provas discursivas e não executa código, garantimos que o motor de feedback seja extremamente rápido e que o Modo Offline (US15) permaneça funcional."
+
+---
+
+### ⚫ iago-marinho — **0/100**
+
+**Arquivo**: `alunos/iago-marinho.md`  
+**Branch**: `iago-marinho`
+
+O arquivo `alunos/iago-marinho.md` contém apenas o texto do template padrão:
+> *"# Estou criando um nvo\n\nVou escrever minhas respostas aqui."*
+
+O blob é idêntico ao `alunos/novo-aluno.md` (template). **Nenhuma seção foi entregue.**
 
 ---
 
@@ -690,9 +820,13 @@ Justificativa excelente, entre as melhores desta seção.
 | **nicolas-vinicius** | RNF04 classifica restrição de acesso como RNF em vez de RF/política | RNF | 🟢 Leve |
 | **theo22** | Regras de Negócio com apenas 1 frase — seção criticamente incompleta | RNs | 🔴 Grave |
 | **theo22** | RNF15 é duplicata exata do RF15 | RNF | 🟡 Médio |
-| **josuel-pereira** | Apenas US01–US02 completas; restante não entregue | Todas | 🔴 Grave |
-| **Bruna-Oliveira** | Apenas US01–US05 parcialmente listadas; restante não entregue | Todas | 🔴 Grave |
+| **josuel-pereira** | US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior" | RF | 🟠 Significativo |
+| **josuel-pereira** | Seções Regras de Negócio e O que NÃO faz ausentes; Cloud sem justificativa | RNs/Cloud/Escopo | 🔴 Grave |
+| **Bruna-Oliveira** | US05 omite "tempo médio por questão"; US13 omite o limiar de 80% | RF | 🟡 Médio |
+| **Bruna-Oliveira** | Regras de Negócio conceptuais (3 pilares), sem regras técnicas do código-fonte | RNs | 🟠 Significativo |
+| **Bruna-Oliveira** | Detalhes sem stack tecnológica (React/Vite) ou entidades do banco de dados | Detalhes | 🟡 Médio |
 | **esdras-fernando** | Arquivo contém apenas "esdras" | Todas | ⚫ Crítico |
+| **iago-marinho** | Arquivo contém apenas o texto do template — nenhuma seção entregue | Todas | ⚫ Crítico |
 | **marcus-vinicius** | RF05 omite "tempo médio por questão" (3º indicador do painel de estatísticas) | RF | 🟡 Médio |
 | **marcus-vinicius** | RNF01 (desempenho painel stats) e RNF05 (usabilidade botão reportar) ausentes | RNF | 🟡 Médio |
 | **marcus-vinicius** | Regras de Negócio não analisam código-fonte; falta motor de quiz (shuffling) e regra das 10 questões | RNs | 🟠 Significativo |
@@ -705,13 +839,14 @@ Justificativa excelente, entre as melhores desta seção.
 |---|---|---|---|
 | 🥇 1º | **José-Reginaldo** | **92/100** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87/100** | Ótimo |
-| 🥉 3º | **nycollas-rodrigues** | **79/100** | Ótimo |
-| 4º | **marcus-vinicius** | **77/100** | Bom |
-| 5º | **theo22** | **75/100** | Bom |
-| 6º | **Gabriel-Ernandes** | **62/100** | Regular |
-| 7º | **adriano-dmarco.md** | **43/100** | Insuficiente |
-| 8º | **rafael-braga** | **37/100** | Insuficiente |
-| 9º | **franky-jr** | **18/100** | Reprovado |
-| 10º | **josuel-pereira** | **7/100** | Reprovado |
-| 11º | **Bruna-Oliveira** | **5/100** | Reprovado |
+| 🥉 3º | **Bruna-Oliveira** | **84/100** | Ótimo |
+| 4º | **nycollas-rodrigues** | **79/100** | Bom |
+| 5º | **marcus-vinicius** | **77/100** | Bom |
+| 6º | **theo22** | **75/100** | Bom |
+| 7º | **Gabriel-Ernandes** | **62/100** | Regular |
+| 8º | **josuel-pereira** | **44/100** | Insuficiente |
+| 9º | **adriano-dmarco.md** | **43/100** | Insuficiente |
+| 10º | **rafael-braga** | **37/100** | Insuficiente |
+| 11º | **franky-jr** | **18/100** | Reprovado |
 | 12º | **esdras-fernando** | **0/100** | Não entregue |
+| 12º | **iago-marinho** | **0/100** | Não entregue |

@@ -12,13 +12,14 @@
 | Aluno (Branch) | RF (1–15) | RNF | Regras de Negócio | Detalhes/Acessórios | Modelo Cloud | O que NÃO faz | Status |
 |---|---|---|---|---|---|---|---|
 | **alexandre-ferreira** (gabarito) | ✅ RF01–RF15 | ✅ RNF01–RNF07 | ✅ Detalhado | ✅ Detalhado | ✅ SaaS — justificado | ✅ 6 limites definidos | 🟢 Completo |
-| **Bruna-Oliveira** | ⚠️ US01–US05 (incompleto) | ❌ Não entregue | ❌ Não entregue | ❌ Não entregue | ❌ Não entregue | ❌ Não entregue | 🔴 Incompleto |
+| **Bruna-Oliveira** | ✅ RF01–RF15 (falta US05 "tempo médio"; US13 sem 80%) | ✅ RNF01–RNF15 (excelentes) | ✅ 3 pilares conceituais | ✅ Presente | ✅ SaaS + Arquitetura PWA | ✅ 6 limites + justificativa | 🟢 Completo |
 | **Gabriel-Ernandes** | ✅ RF01–RF17 | ✅ RNF01–RNF06 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟢 Completo |
 | **José-Reginaldo** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado (3 pilares) | ✅ Presente | ✅ SaaS + PWA justificado | ✅ 3 limites | 🟢 Completo |
 | **adriano-dmarco.md** | ✅ RF01–RF15 | ✅ RNF01–RNF15 | ✅ Presente | ✅ Presente | ✅ SaaS ou IaaS | ✅ Presente | 🟢 Completo |
 | **esdras-fernando** | ❌ Apenas "esdras" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
 | **franky-jr** | ⚠️ RF01–RF14 (genérico, não baseado nas US) | ✅ RNF01–RNF13 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 6 limites | 🟡 Parcial |
-| **josuel-pereira** | ⚠️ Apenas US01–US03 (estrutura diferente) | ⚠️ Apenas US01–US03 | ❌ | ❌ | ❌ | ❌ | 🔴 Incompleto |
+| **iago-marinho** | ❌ Apenas template ("Estou criando um nvo") | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
+| **josuel-pereira** | ✅ US01–US15 (US10 com níveis errados) | ✅ US01–US15 (mista) | ❌ Sem seção | ✅ Presente | ⚠️ Apenas rótulo SaaS | ❌ Sem seção | 🟡 Parcial |
 | **marcus-vinicius** | ✅ RF01–RF15 (falta RF05 completo) | ✅ RNF01–RNF10 | ✅ 7 regras específicas | ✅ Presente | ✅ SaaS | ✅ 8 limites | 🟢 Completo |
 | **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
 | **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
@@ -88,17 +89,24 @@
 
 ### 🌿 Bruna-Oliveira
 
-**Arquivo**: `alunos/Bruna-Oliveira.md`  
-**Status**: 🔴 Incompleto — apenas 5 requisitos funcionais entregues
+**Arquivo**: `alunos/Bruna-Oliveiraa.md` (com duplo 'aa')  
+**Branch**: `Bruna-Oliveira`  
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções
 
-#### RF entregues (incompleto — apenas US01–US05):
-- US01 — Cadastro de questões pelo professor ✅
-- US02 — Cronômetro configurável ✅
-- US03 — Geração de PDF formatado ✅
-- US04 — Restrição de acesso ao perfil "Docente" ✅
-- US05 — Painel de estatísticas com alta performance ✅
+> ⚠️ **Correção:** Avaliação anterior foi baseada em `Bruna-Oliveira.md` (incompleto, US01–US05 apenas). A branch também contém `Bruna-Oliveiraa.md` com a submissão real e completa.
 
-**Seções ausentes**: RNF, Regras de Negócio, Detalhes, Modelo Cloud, O que NÃO faz.
+#### Destaques:
+- RF01–RF15 todos entregues em formato de benefícios para o usuário ("Autonomia para o professor…", "Canal direto para reportar…").
+- RNF01–RNF15 **excepcionalmente técnicos**: PDF/A, XSS sanitization, IndexedDB, Service Workers, Rate Limiting com Swagger, Open Graph, Lazy Loading — nível mais alto desta turma.
+- Regras de Negócio: 3 pilares conceituais: "Curadoria de Conhecimento Estruturado", "Simulação de Desempenho Sob Pressão", "Ciclo de Feedback e Diagnóstico".
+- Modelo Cloud: **SaaS** com análise de dois níveis — arquitetura PWA (PWA delivery + CDN) + 4 argumentos para o professor.
+- O que NÃO faz: 6 limites específicos (Sandboxing, Proctoring, IA) + "Justificativa do Analista".
+
+#### Diferenças em relação ao gabarito:
+- RF05 omite "tempo médio por questão" (3º indicador do painel de estatísticas).
+- RF13 omite o limiar de 80% explícito no LinkedIn.
+- Regras de Negócio são conceptuais (3 pilares), sem derivação técnica do código-fonte.
+- Detalhes/Acessórios muito breve, sem stack tecnológica.
 
 ---
 
@@ -185,17 +193,35 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 
 ---
 
+### 🌿 iago-marinho
+
+**Arquivo**: `alunos/iago-marinho.md`  
+**Branch**: `iago-marinho`  
+**Status**: 🔴 Não entregue
+
+O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo — Vou escrever minhas respostas aqui."* Blob idêntico ao `novo-aluno.md`. **Nenhuma seção foi preenchida.**
+
+---
+
 ### 🌿 josuel-pereira
 
 **Arquivo**: `alunos/josuel-pereira.md`  
-**Status**: 🔴 Incompleto — apenas US01–US03 foram desenvolvidas
+**Status**: 🟡 Parcial — RF e RNF completos (US01–US15), mas sem Regras, Cloud justificado, ou Escopo
 
-#### O que foi entregue:
-- US01: RF + RNF para cadastro de questões pelo professor ✅
-- US02: RF + RNF para cronômetro regressivo ✅
-- US03: apenas o título foi listado (sem desenvolvimento)
+> ⚠️ **Correção:** Avaliação anterior registrou "apenas US01–US03 desenvolvidas" — isso estava incorreto. O arquivo contém todas as 15 User Stories com RF e RNF.
 
-**Seções ausentes**: US04–US15, Regras de Negócio, Detalhes, Modelo Cloud, O que NÃO faz.
+#### Destaques:
+- US01–US15 todos presentes com RF e RNF bem estruturados por User Story.
+- US05 completo — menciona "tempo médio de resposta por questão" ✅ (que muitos alunos omitiram).
+- US07 usa o nome correto "QuizCard" ✅.
+- US13 menciona o limiar de 80% ✅.
+
+#### Diferenças em relação ao gabarito:
+- US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior" — nomenclatura genérica, não do domínio.
+- Sem seção "Regras de Negócio" — completamente ausente.
+- Cloud: apenas o rótulo "Software as a Service (SaaS)" sem nenhuma justificativa.
+- Sem seção "O que NÃO faz".
+- Detalhes/Acessórios brevíssimos (banco de dados na nuvem + interface web).
 
 ---
 
@@ -303,13 +329,14 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 | Aluno | Quantidade de RF | Cobertura das 15 US | Observação |
 |---|---|---|---|
 | alexandre-ferreira (gabarito) | 15 | ✅ 100% | Referência |
-| Bruna-Oliveira | 5 | ⚠️ 33% | Incompleto |
+| Bruna-Oliveira | 15 | ✅ 97% | Falta "tempo médio" em US05 e limiar 80% em US13 |
 | Gabriel-Ernandes | 17 | ✅ ~100% | Extras genéricos adicionados |
+| iago-marinho | 0 | ❌ 0% | Apenas template |
 | José-Reginaldo | 15 | ✅ 100% | Alinhado ao gabarito |
 | adriano-dmarco.md | 15 | ✅ 100% | Alinhado |
 | esdras-fernando | 0 | ❌ 0% | Não entregue |
 | franky-jr | 14 | ❌ 0% das US | Genérico, não baseado nas US |
-| josuel-pereira | ~3 | ⚠️ 20% | Incompleto |
+| josuel-pereira | 15 | ✅ 95% | US10 com níveis de dificuldade errados (Fácil/Médio/Difícil) |
 | marcus-vinicius | 15 | ✅ 97% | RF05 incompleto (falta "tempo médio por questão") |
 | nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
 | nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
@@ -321,13 +348,14 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 | Aluno | Escolha | Justificativa |
 |---|---|---|
 | alexandre-ferreira (gabarito) | SaaS | Baseada no código-fonte (SPA/React/Vite), praticidade para professor |
-| Bruna-Oliveira | — | Não entregue |
+| Bruna-Oliveira | SaaS | 2 níveis: arquitetura PWA (CDN, interoperabilidade) + 4 argumentos para o professor |
 | Gabriel-Ernandes | SaaS | Praticidade, sem instalação, atualizações automáticas |
+| iago-marinho | — | Não entregue |
 | José-Reginaldo | SaaS + PWA | Justificativa técnica mais completa (CDN, CI/CD, Offline-First, API Portal) |
 | adriano-dmarco.md | SaaS ou IaaS | Resposta dúbia sem conclusão definitiva |
 | esdras-fernando | — | Não entregue |
 | franky-jr | SaaS | Justificativa presente, simplificada |
-| josuel-pereira | — | Não entregue |
+| josuel-pereira | SaaS | Apenas rótulo, sem justificativa |
 | marcus-vinicius | SaaS | 4 argumentos focados no professor (excelente justificativa) |
 | nicolas-vinicius | SaaS | Justificativa presente |
 | nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
@@ -344,13 +372,14 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 |---|---|---|---|
 | 🥇 1º | **José-Reginaldo** | **92** | Excelente |
 | 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
-| 🥉 3º | **nycollas-rodrigues** | **79** | Ótimo |
-| 4º | **marcus-vinicius** | **77** | Bom |
-| 5º | **theo22** | **75** | Bom |
-| 6º | **Gabriel-Ernandes** | **62** | Regular |
-| 7º | **adriano-dmarco.md** | **43** | Insuficiente |
-| 8º | **rafael-braga** | **37** | Insuficiente |
-| 9º | **franky-jr** | **18** | Reprovado |
-| 10º | **josuel-pereira** | **7** | Reprovado |
-| 11º | **Bruna-Oliveira** | **5** | Reprovado |
+| 🥉 3º | **Bruna-Oliveira** | **84** | Ótimo |
+| 4º | **nycollas-rodrigues** | **79** | Bom |
+| 5º | **marcus-vinicius** | **77** | Bom |
+| 6º | **theo22** | **75** | Bom |
+| 7º | **Gabriel-Ernandes** | **62** | Regular |
+| 8º | **josuel-pereira** | **44** | Insuficiente |
+| 9º | **adriano-dmarco.md** | **43** | Insuficiente |
+| 10º | **rafael-braga** | **37** | Insuficiente |
+| 11º | **franky-jr** | **18** | Reprovado |
 | 12º | **esdras-fernando** | **0** | Não entregue |
+| 12º | **iago-marinho** | **0** | Não entregue |
