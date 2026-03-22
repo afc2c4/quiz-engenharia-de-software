@@ -2,33 +2,35 @@
 
 ### 1. Requisitos Funcionais
 
-- **RF01**: O sistema deve permitir o cadastro de usuários com informações básicas (nome, e-mail e senha).
+- **US01**: Cadastro de questões (enunciado, alternativas, resposta, explicação).  
 
-- **RF02**: O sistema deve permitir que usuários realizem login utilizando e-mail e senha cadastrados.
+- **US02** : Seleção e disparo de cronômetro regressivo (15, 30, 60 min).
 
-- **RF03**: O sistema deve permitir a recuperação de senha por meio do e-mail do usuário.
+- **US03** : Exportação de provas em PDF com template institucional (Logo/Cabeçalho).
 
-- **RF04**: O sistema deve permitir que o usuário edite seus dados cadastrais.\
+- **US04** : Controle de acesso por perfil (RBAC) restringindo área de "Professor".
 
-- **RF05**: O sistema deve permitir a exclusão da conta do usuário.
+- **US05** : Dashboard semanal de desempenho (taxa de acerto e tempo médio).
 
-- **RF06**: O sistema deve permitir o cadastro de dados específicos relacionados ao objetivo do sistema (ex: produtos, tarefas, serviços, etc.).
+- **US06** : Exportação de questões erradas nos formatos .apkg ou .csv.
 
-- **RF07**: O sistema deve permitir a visualização de todos os registros cadastrados pelo usuário.
+- **US07**: Botão de "Reportar Erro" diretamente na interface da questão.
 
-- **RF08**: O sistema deve permitir a edição dos registros cadastrados.
+- **US08** : Leaderboard (Ranking) global dividido por períodos (semanal/mensal).
 
-- **RF09**: O sistema deve permitir a exclusão dos registros cadastrados.
+- **US09**: Funcionalidade de "Favoritar/Estrear" questões para revisão.
 
-- **RF10**: O sistema deve permitir a busca e filtragem de informações cadastradas.
+- **US10**: Filtro de questões por nível de senioridade (Junior, Pleno, Senior).
 
-- **RF11**: O sistema deve gerar relatórios com base nos dados armazenados.
+- **US11**: Seção de comentários/threads em cada questão para debate.
 
-- **RF12**: O sistema deve permitir diferentes níveis de acesso (ex: administrador e usuário comum).
+- **US12**: API REST/Webhooks para exportação de notas para sistemas LMS.
 
-- **RF13**: O sistema deve registrar logs das ações realizadas pelos usuários.
+- **US13** : Botão de compartilhamento no LinkedIn para resultados > 80%.
 
-- **RF14**: O sistema deve enviar notificações ao usuário (ex: e-mail ou dentro do sistema).
+- **US14**: Renderização de Markdown e Syntax Highlighting em códigos.
+
+- **US15**: Modo offline (PWA) para download de questões e uso sem sinal.
 
 ### 2. Requisitos Não Funcionais
 
@@ -60,8 +62,26 @@
 
 ### 3. Regras de Negócio 
 
-As Regras de Negócio representam o “coração” do aplicativo, ou seja, descrevem o que o sistema faz de fato e quais regras ele segue para funcionar corretamente, sem depender de linguagem de programação, banco de dados ou qualquer tecnologia específica.
+Simulação de Desempenho Sob Pressão: O app não é apenas para leitura, é para teste.
+O que faz: Coloca o estudante em um cenário de desafio onde ele precisa tomar decisões rápidas dentro de um limite de tempo.
 
+- **Simulação de Desempenho Sob Pressão**: O app não é apenas para leitura, é para teste.
+
+O que faz: Coloca o estudante em um cenário de desafio onde ele precisa tomar decisões rápidas dentro de um limite de tempo.
+
+Essência: Treinar a agilidade mental e a retenção de conteúdo através da simulação de exames reais.
+
+- **Ciclo de Feedback e Diagnóstico**: O app atua como um tutor, não apenas como um juiz.
+
+O que faz: Confronta a escolha do aluno com a verdade técnica (gabarito) e, mais importante, explica o erro no exato momento em que ele ocorre. Além disso, mostra onde o aluno está falhando (estatísticas).
+
+Essência: Transformar o erro em aprendizado imediato e mapear lacunas de conhecimento.
+
+- **Curadoria de Conhecimento Estruturado**: O app não é um "bloco de notas", é um banco de dados pedagógico.
+
+O que faz: Permite que um especialista (professor) crie questões que tenham obrigatoriamente um "porquê" (explicação) e uma "régua" (nível de dificuldade).
+
+Essência: Organizar o caos da informação em itens de avaliação claros e explicativos.
 ### 4. Detalhes (Acessórios):
 #### a
 Os dados do sistema serão armazenados em um banco de dados digital, podendo ser local ou em nuvem, garantindo segurança e organização das informações.
