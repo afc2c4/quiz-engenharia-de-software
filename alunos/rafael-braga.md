@@ -1,6 +1,6 @@
-# Rafael Braga
+# Rafael Braga :alien:
 
-## 1. Requisitos Funcionais
+## 1. Requisitos Funcionais :dvd:
 
  - (US01)RF01: Usuario PROFESSOR poder cadastrar atividades atraves da interface.
 
@@ -36,7 +36,7 @@
 
 
 
-## 2. Requisistos Não Funcionais
+## 2. Requisistos Não Funcionais ⚙️
 
  - (US01)RNF01: Na interface, será possivel entrada de dados em barras de inserção de texto para ser utilizado para adicionar questões. 
 
@@ -69,7 +69,7 @@
  - (US15)RNF15: Uso sem internet.
 
 
-## 3. Regras de Negócio
+## 3. Regras de Negócio 📜
 
   1. Gestão e Tutoria do Conhecimento: O Aplicativo é um meio dos Professores utilizarem seus conteúdos para avaliação de seus alunos. Através de questões e comentários, se é medido o conhecimento de seus alunos e o que pode ser corrigido para o melhor desempenho dos mesmos.
 
@@ -77,16 +77,16 @@
 
   3. Atuação do Sistema na Avaliação: O Aplicativo será o meio que irá auxiliar ambos Alunos e Professores. Ele sendo responsável, na parte dos Professores, a apresentar os resultados dos alunos e salvar suas correções no sistema, além de guardar novas questões. Já, na parte dos alunos, apresentar aos alunos as questões, corrigir-las e auxiliar no desenvolvimento dos alunos através de novas tentativas e possiveis dicas para melhor desempenho.
         
-## 4. Detalhes(Acessórios)
+## 4. Detalhes(Acessórios) ☑️
 
     - A interface terá um login, onde será colocado os dados do usuários. E, após logar e autenticar o tipo de usuário que está logando, entrará na tela com o menu referente ao perfil do usuário. Esses dados estarão guardados em um banco de dados SQL, onde estará bem organizado com suas tabelas especificas e que conversam entre si, e utilizando esses dados do banco de dados com uma conexão com uma linguagem de programação, teremos a autenticação correta. Essa interface estará numa aplicação web responsiva (SPA).
 
-## 5. Análise de Modelo de Entrega (Cloud)
+## 5. Análise de Modelo de Entrega (Cloud) ☁️
 
     - Os usuários poderam acessar o "Mestre da Engenharia de Software 2.0" através de um host, a qual ainda será designado. O modelo escolhido será o SaaS. Assim, os usuários não terão que se preocupar com a infraestrutura do site, apenas em usar conforme desejado. O Modelo será o PWA (Aplicação Web Progressiva), pois se trata de uma aplicação com tecnologias web, mas que oferece ao usuário uma experiencia como um app de plataforma. Isso melhora a interação do usuário com o App e o tempo de resposta do mesmo.
 
 
-## 6. O que o sistema NãO faz
+## 6. O que o sistema NãO faz ✖️
 
   1. O sistema não corrige as provas discursivas de forma automatica. Por apenas estar "treinada" para apresentar respostas de questões de multipla escolha, o sistema ainda não tem algum tipo de analise de dados para correção de prova discursiva. Por isso, essa parte será inteiramente responsavel ao usuário "PROFESSOR", quem irá ler as respostas e dar suas notas de acordo com o que foi analisado.
 
