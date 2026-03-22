@@ -3,34 +3,33 @@
 
 ### 1. Requisitos Funcionais
 
-- **RF01**: O sistema do usuário precisa que na interface haja opções de cadastramento de questões que sejam salvos e possuam enunciado,
-alternativas, resposta correta e explicação para que, com a boa organização, o usuário "Professor" consiga analisar os conteúdos passados por ele mesmo.
+- **RF01**: O sistema do usuário precisa que na interface haja opções de cadastramento de questões que sejam salvos e possuam enunciado, alternativas, resposta correta e explicação para que, com a boa organização.
 
-- **RF02**: O sistema deve ter a opção de começar o quiz, mas antes com a opção perguntando se o usuário gostaria de usar e poder configurar o tempo do conômetro, e depois de configurar, ter a opção de iniciar o quiz, que deverá gerar perguntas e respostas rapidamente. 
+- **RF02**: Os usuários tem que ter, em sua interface, a opção de configurar e iniciar um cronômetro antes de começar o quiz. 
 
-- **RF03**: O sistema precisa dar a opção na interface do usuário "Professor" para que o conteúdo "prova", do usuário, gerado pelo "Gerador de provas" deva ser exportado diretamente para um PDF, já formatado e com logotipo da instituição do usuário.
+- **RF03**: O usuário "Professor" precisa de uma opção em sua interface que faça com que as provas sejam exportadas diretamente para um arquivo PDF, ja formatado e com o logotipo da insttituição desse usuário.
 
 - **RF04**: O sistema deve ter uma restrição de acesso á área dos "Professores", exclusicamente para usuários autenticados e validados com perfil "docente".
 
-- **RF05**: O sistema deve fazer aparecer um painel de visualização de estatísticas ao final de cada semana que mostre o histórico de pontuação, que mostre a taxa de acerto por cada tópico e que mostre o tempo médio de resposta por questão.
+- **RF05**: No painel de visualização de estatísticas ao final de cada semana, deve mostrar o histórico de pontuação, a taxa de acerto por cada tópico e o tempo médio de resposta por questão.
 
-- **RF06**: O sistema deve fazer aparecer na interface uma opção para o usuário poder baixar questões que errou no quiz em formato ".apkg" ou ".csv" quando quiser.
+- **RF06**: A interface precisa que apareça uma opção para o usuário poder baixar questões que errou no quiz em formato ".apkg" ou ".csv" quando quiser.
 
-- **RF07**: O sistema deve ter uma opção no "QuizCard" que sirva para reportar erros, caso o usuário encontrar algum na questão, que irá notificar de imediato os admins/professores sobre os erros reportados.
+- **RF07**: Colocando uma opção no "QuizCard" que sirva para reportar erros caso um usuário encontre, assim notificando de imediato os admins/professores sobre os erros reportados.
 
 - **RF08**: O sistema deve ter e mostrar uma tabela de rank, semanal e mensal, de pontos global e que todos da comunidade possam ver a tabela.
 
 - **RF09**: Deve-se ter uma opção no sistema onde o usuário possa salvar a questão de preferência e um local onde ela ficará armazenada as questões escolhidas como favoritas e somente o usuário poderá ver.
 
-- **RF10**: Antes de começar um quiz e de aparecer a opção de conômetro, na interface do sistema deve surgir uma opção de seleção de dificuldade, assim as questões estarão mais adaptadas para o usuário que escolher certa dificuldade.
+- **RF10**: Antes de começar um quiz, deve aparecer a opção de cronômetro e também na interface deve surgir uma opção de seleção de dificuldade que adapte as questões.
 
 - **RF11**: O sistema tem que fazer aparecer em cada questão uma thread de comentários onde todos possam comentar sobre a questão livremente.
 
-- **RF12**: No sistema, é ideial que haja uma opção onde o usuário "Professor" possa usar e com isso fazer uma exportação automática das notas dos usuários "Aluno" para um outro local.
+- **RF12**: No sistema, é ideal que haja uma opção onde o usuário "Professor" possa usar para fazer uma exportação automática das notas dos usuários "Aluno" para um outro local.
 
-- **RF13**: O sistema, quando o usuário "Aluno" conseguir um desempenho acima de 80% nos resultados, deve mostra uma opção de poder compartilhar o perfil para que outros usuários possam ver em um feed. 
+- **RF13**: Quando o usuário "Aluno" conseguir um desempenho acima de 80% nos resultados, deve mostra uma opção de conseguir compartilhar o perfil para que outros usuários possam ver em um feed. 
 
-- **RF14**: O sistema deve usar as ferramentas Markdown e Syntax Highlighting na área de cadastro e leitura para que os usuários "Professor" quando cadastrarem uma nova questão que contém um snippet de código não passem por problemas.  
+- **RF14**: O sistema deve usar as ferramentas Markdown e Syntax Highlighting na área de cadastro e leitura para que os usuários "Professor" quando cadastrarem uma nova questão que contém um snippet de código.  
 
 - **RF15**: No sistema de interface dos usuários, deve aparecer uma opção de fazer dowload das questões selecinadas e serem armazenadas para serem acessadas quando os usuários quiserem.
 
@@ -38,9 +37,9 @@ alternativas, resposta correta e explicação para que, com a boa organização,
 
 - **RNF01**: O sistema deve carregar instanâneamente todos os enunciados, todas as alternativas, respostas e explicações dos questionários, além de ter que carregar a página rapidamente.
 
-- **RNF02**: O Cronômetro do sistema deve ser cronometrado com o mínimo de deley (se possível) e não pode travar ou falhar durante o momento que o usuário está respondendo e deve encerrar ao final do questionário feito e começar ao entrar em um questionário.
+- **RNF02**: O Cronômetro do sistema tem que ter o mínimo de deley e não pode travar ou falhar durante o momento que o usuário está respondendo e deve encerrar ao final do questionário feito e começar ao entrar em um questionário.
 
-- **RNF03**: No sistema, quando o usuário "Professor" for fazer a exportação da prova usando a opção, que deve ocorrer sem deley e com rapidez, a prova tem que instantâneamente estar em arquivo PDF, formatado e com logotipo da instituição do usuário.
+- **RNF03**: Quando o usuário "Professor" for fazer a exportação da prova, a prova tem que instantâneamente estar em arquivo PDF, formatado e com logotipo da instituição do usuário ap
 
 - **RNF04**: O sistema deverá rapidamente fazer a verificação de usuário ao verificar os dados e se bater ou não os dados, dar ou não permissão ao usuário. 
 
@@ -62,7 +61,7 @@ alternativas, resposta correta e explicação para que, com a boa organização,
 
 - **RNF13**: O sistema tem que gerar uma opção de compartilhar o progresso que o usuário teve nas questões, caso tenha passado dos 80% de sucesso, para o feed de sua escolha.
 
-- **RNF14**: O sistema irá usar as ferramentas Markdown e Syntax Highlighting para fazerem um sistema de cadastramento e de leitura para fazer as próximas formatações de novas questões, que contenham snippet código, não falhem.
+- **RNF14**: O sistema irá usar as ferramentas Markdown e Syntax Highlighting para fazerem um sistema de cadastramento e de leitura para fazer as próximas formatações de novas questões com snippet código, não falhem.
 
 - **RNF15**: O sistema irá baixar os dados das questões selecionadas pelo usuário para que quando o usuário quiser, possa acessálas offline.
 
@@ -89,6 +88,6 @@ R- Se a pessoa quiser algo que já esteja pronto para poder ser usado, e se quis
 ### 6. O que o sistema NÃO faz:
 ### a) Defina um limite para o escopo desta versão (Ex: O sistema não fará correção automática de provas discursivas).
 
-R- Depende, pois o que não for colocado no sistema, será aquilo o que não faz. No entanto, um dos limites que esta versão não tem seria um temporizador, para medir em quanto tempo eu faço as questões.
+R- Não tem uma acesso de chat onde todos podem conversar livremente nesta versão.
 
 
