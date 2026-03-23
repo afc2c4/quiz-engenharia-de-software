@@ -1000,3 +1000,126 @@ Justificativa excelente, entre as melhores desta seção.
 | 11º | **adriano-dmarco.md** | **46/100** | Insuficiente |
 | 12º | **esdras-fernando** | **0/100** | Não entregue |
 | 12º | **iago-marinho** | **0/100** | Não entregue |
+
+---
+
+## Avaliação de Resposta de Aluno (Fornecida Externamente)
+
+> ⚠️ **Nota:** O conteúdo a seguir foi fornecido diretamente pelo professor para avaliação. Após busca exaustiva em todos os arquivos, todos os commits e todos os comentários de PR/issues, este conteúdo **não foi encontrado em nenhuma branch do repositório**. A avaliação foi realizada com base no conteúdo fornecido, comparado ao gabarito da branch `gabarito`. O professor deverá identificar o aluno e atribuir a nota correspondente.
+
+### 📋 Resposta Avaliada — [Aluno não identificado] — **43/100**
+
+| RF /30 | RNF /20 | Regras /20 | Detalhes /10 | Cloud /10 | NÃO faz /10 | **TOTAL /100** |
+|---|---|---|---|---|---|---|
+| 22 | 5 | 2 | 4 | 3 | 7 | **43** |
+
+---
+
+#### Seção 1 — RF: 22/30 🟡 Aceitável (todos os 15 mapeados, mas muito superficiais)
+
+O aluno listou os 15 RF corretamente mapeados às 15 User Stories. O mapeamento está correto, mas **todos** os RF são extremamente breves — uma linha cada — sem especificar os detalhes técnicos que o gabarito exige.
+
+| US | RF do aluno | Avaliação vs Gabarito | Nota |
+|---|---|---|---|
+| US01 — Cadastro | "O sistema deve permitir que o professor cadastre novas questões" | ⚠️ Correto mas sem detail: falta **enunciado, alternativas, resposta correta, explicação** | 1/2 |
+| US02 — Cronômetro | "O sistema deve permitir que o aluno configure e utilize um cronômetro em quizzes" | ⚠️ Falta **regressivo** e os tempos específicos **(15, 30 ou 60 min)** | 1/2 |
+| US03 — PDF | "O sistema deve gerar provas e permitir exportação em PDF formatado" | ⚠️ Falta o detalhe crucial: **logotipo e cabeçalho institucional** | 1/2 |
+| US04 — Autenticação | "O sistema deve controlar acesso, permitindo apenas professores na área docente" | ✅ Correto — menciona "apenas professores" + "área docente" | 1.5/2 |
+| US05 — Estatísticas | "O sistema deve mostrar estatísticas de desempenho do aluno" | ⚠️ Falta os **3 indicadores**: histórico de pontuações, taxa de acerto por tópico, tempo médio | 1/2 |
+| US06 — Export erros | "O sistema deve permitir exportar questões erradas em CSV ou formato do Anki" | ✅ Menciona ambos os formatos (**CSV** e **Anki**) | 2/2 |
+| US07 — Reportar erro | "O sistema deve permitir reportar erros nas questões" | ⚠️ Falta o **botão** diretamente no **QuizCard** | 1/2 |
+| US08 — Ranking | "O sistema deve exibir ranking de alunos (leaderboard)" | ⚠️ Falta os períodos **semanal e mensal** | 1/2 |
+| US09 — Favoritar | "O sistema deve permitir favoritar questões para revisão" | ✅ Correto | 2/2 |
+| US10 — Filtro dificuldade | "O sistema deve permitir filtrar questões por nível de dificuldade" | ⚠️ Genérico — falta os níveis específicos: **Júnior, Pleno, Sênior** | 1/2 |
+| US11 — Comentários | "O sistema deve permitir comentários nas questões" | ⚠️ Falta o conceito de **thread** (discussão encadeada) | 1.5/2 |
+| US12 — API LMS | "O sistema deve disponibilizar API para exportar resultados" | ⚠️ Genérico — falta **webhook**, **LMS** e **Moodle** | 1/2 |
+| US13 — LinkedIn | "O sistema deve permitir compartilhar resultados no LinkedIn" | ⚠️ Falta o limiar: **desempenho superior a 80%** | 1/2 |
+| US14 — Markdown | "O sistema deve suportar Markdown e destaque de código nas questões" | ✅ Preciso — menciona "Markdown e destaque de código" | 2/2 |
+| US15 — Offline | "O sistema deve funcionar offline (modo PWA com quizzes baixados)" | ✅ Menciona **PWA** e "quizzes baixados" | 2/2 |
+
+**Destaques positivos:** US06 (menciona ambos .csv e Anki), US14 (Markdown + destaque de código), US15 (PWA explícito).
+**Destaques negativos:** US01 sem detalhes, US05 sem os 3 indicadores, US08 sem semanal/mensal, US10 sem Júnior/Pleno/Sênior.
+
+#### Seção 2 — RNF: 5/20 🔴 Genérico (sem vinculação às US do projeto)
+
+15 RNF listados, mas **todos** são atributos de qualidade genéricos para qualquer sistema — sem nenhuma conexão com as 15 US específicas do "Mestre da Engenharia de Software 2.0":
+
+| RNF do aluno | Análise | Cobre RNF do Gabarito? |
+|---|---|---|
+| RNF01: "bom desempenho" | Genérico, sem métrica (ex: "<2s") | ⚠️ Parcialmente o Gabarito RNF01 |
+| RNF02: "seguro" | Genérico — Gabarito exige "apenas usuários Docente" | ⚠️ Parcialmente o Gabarito RNF02 |
+| RNF03: "fácil de usar" | Usabilidade genérica | ❌ |
+| RNF04: "funcionar em diferentes dispositivos" | Responsividade, sem PWA | ❌ Gabarito RNF03 exige PWA explícito |
+| RNF05: "disponível na maior parte do tempo" | Disponibilidade genérica, sem SLA | ❌ |
+| RNF06: "suportar muitos usuários" | Escalabilidade genérica | ❌ |
+| RNF07: "integração com outros sistemas" | Interoperabilidade genérica | ⚠️ Parcialmente o Gabarito RNF06 |
+| RNF08: "funcionar como aplicativo web" | **Isso é RF, não RNF** | ❌ |
+| RNF09: "confiável" | 1 palavra — demasiado genérico | ❌ |
+| RNF10: "sincronizar dados corretamente após uso offline" | ✅ Conecta ao US15 — o único RNF específico! | ✅ Cobre Gabarito RNF03 |
+| RNF11: "proteger os dados dos usuários" | LGPD genérica | ❌ |
+| RNF12: "tempo de resposta rápido" | Performance, sem contexto (painel stats) | ⚠️ Parcialmente Gabarito RNF01 |
+| RNF13: "fácil manutenção e atualização" | Manutenibilidade | ❌ |
+| RNF14: "boa compatibilidade com navegadores modernos" | Portabilidade/compatibilidade | ❌ |
+| RNF15: "garantir integridade dos dados" | Integridade, muito vago | ❌ |
+
+Apenas 1 RNF específico (RNF10). Os demais são rótulos de categorias de qualidade sem aplicação ao projeto.
+
+#### Seção 3 — Regras de Negócio: 2/20 ⚫ Insuficiente (apenas papéis, sem regras)
+
+> "O sistema é uma plataforma de avaliação e aprendizado baseada em quizzes. Professores são responsáveis por: Criar questões, Gerar provas, Acompanhar resultados. Alunos são responsáveis por: Responder quizzes, Acompanhar desempenho, Revisar conteúdos."
+
+⚠️ **ERRO:** O aluno descreveu **papéis/responsabilidades** — não Regras de Negócio. Regras de Negócio são a **lógica central do sistema** (o que o código faz), não quem usa o sistema.
+
+O gabarito exige análise do código-fonte, identificando:
+- **Motor de Quiz** (embaralhamento dinâmico de perguntas e alternativas, anti-decoreba)
+- **Correção e Feedback em Tempo Real** (avaliação imediata + exibição da resposta correta + explicação)
+- **Cálculo de Desempenho** (pontuação em % → nível Junior/Pleno/Sênior/Arquiteto)
+- **Gerador de Provas** (exatamente 10 questões, embaralhamento, gabarito automático)
+- **Estrutura de Domínio** (entidade Questão com id, tópico, enunciado, alternativas, índice correto, explicação)
+
+Nenhuma dessas regras foi identificada.
+
+#### Seção 4 — Detalhes/Acessórios: 4/10 🟠 Insuficiente
+
+O aluno mencionou:
+- "Banco de dados relacional ou NoSQL para: Usuários, Questões, Resultados, Estatísticas" ✅ (boas entidades!)
+- "Armazenamento de arquivos: PDFs, Exportações" ✅
+- "Web app responsivo + Dashboard para alunos e professores" ✅
+
+O que falta:
+- Stack real: **React + Vite + TypeScript + Tailwind CSS**
+- Estado atual: **não há banco de dados real** — os dados estão hardcoded em `constants.ts` (QUIZ_DATABASE) e o estado do usuário é em memória com `useState` (se recarregar a página, tudo se perde)
+- Componentes específicos da interface (QuizCard, ExamBuilder, Header)
+
+#### Seção 5 — Modelo Cloud: 3/10 🔴 Erro Fundamental (escolheu IaaS em vez de SaaS)
+
+> "Escolha: IaaS (Porque?) — Professores não precisam gerenciar infraestrutura; Acesso imediato via navegador; Atualizações automáticas; Integrações mais simples (ex: API com LMS); Reduz custo e complexidade para instituições"
+
+⚠️ **ERRO CRÍTICO DE CONFUSÃO DE MODELOS:** O aluno escolheu **IaaS** mas deu justificativas 100% corretas para **SaaS**!
+
+- **IaaS** = Infraestrutura como Serviço → a escola AINDA gerencia servidores, OS, configurações. Ex: AWS EC2, Google Cloud VMs.
+- **SaaS** = Software como Serviço → acesso via navegador sem instalação, sem gerenciar servidores, atualizações automáticas.
+
+Os 5 argumentos dados ("não precisam gerenciar infraestrutura", "acesso via navegador", "atualizações automáticas", "integrações mais simples", "reduz custo e complexidade") são exatamente os argumentos que o **gabarito usa para SaaS**!
+
+O aluno claramente confundiu os **nomes dos modelos** — não se trata de um simples erro de digitação, mas de uma confusão conceitual entre IaaS e SaaS. A lógica está completamente correta para SaaS, mas foi rotulada incorretamente como IaaS. **Crédito parcial concedido (3/10) pela argumentação correta, apesar da escolha de modelo errada.**
+
+#### Seção 6 — O que NÃO faz: 7/10 🟢 Bom
+
+5 limites definidos, todos válidos e sem contradições com os RF listados:
+
+| Item | Avaliação |
+|---|---|
+| "Correção automática de questões discursivas" | ✅ Item 1 do gabarito — perfeito |
+| "Inteligência artificial para geração automática de questões" | ✅ Válido — não está nas 15 US |
+| "Moderação automatizada de comentários" | ✅ Válido — US11 tem comentários mas não moderação automática |
+| "Sistema de pagamento ou monetização" | ✅ Item 6 do gabarito — perfeito |
+| "Provas com supervisão" (proctoring) | ✅ Válido e específico — proctoring está fora do escopo |
+
+5 itens, todos corretos. Boa seleção de limites. Nenhum contradiz os RF apresentados.
+
+**Desconto (-3 pts):** Seção bem construída, mas podia ser mais específica ao projeto (ex: importação de turmas do LMS, OCR de gabaritos em papel, chat em tempo real, upload de vídeos).
+
+---
+
+> 📌 **Para o professor:** Esta avaliação usa os mesmos critérios aplicados aos demais alunos. A nota de **43/100** coloca este aluno na posição de **12º lugar** (entre adriano-dmarco com 46/100 e os alunos com 0/100). O erro mais significativo é a **confusão entre IaaS e SaaS** (seção 5) e as **Regras de Negócio completamente ausentes** (apenas papéis descritos). Os RF estão corretamente mapeados às 15 US mas são muito superficiais. O aluno demonstra entendimento básico do projeto mas sem profundidade técnica.
