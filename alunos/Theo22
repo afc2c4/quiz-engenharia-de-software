@@ -67,12 +67,17 @@
 
 ### 3. Regras de Negócio 
 
-- **a** : Gestão de Banco de Questões: Criação, armazenamento e categorização de perguntas, alternativas e gabaritos. 
+- **a** : As regras de negócio, que representam o "coração" do sistema independentemente da tecnologia utilizada, consistem na Gestão de Banco de Questões, que permite a criação, edição, armazenamento e categorização de perguntas por nível de dificuldade e tópico; no Mecanismo de Avaliação, responsável pelo processamento lógico das respostas submetidas pelo usuário em comparação direta com o gabarito oficial para gerar resultados; no Controle de Cronometragem, que gerencia janelas temporais fixas e regras de encerramento automático para a realização dos simulados; na Análise de Desempenho e Evolução, que executa o cálculo matemático de métricas de proficiência, tempo médio e taxas de acerto baseadas no histórico de tentativas; e na Hierarquia de Permissões de Acesso, que estabelece a diferenciação funcional entre o provedor de conteúdo acadêmico (Professor) e o consumidor submetido à avaliação (Aluno). 
 
 ### 4. Detalhes (Acessórios) 
 
 ### A. 
-- **Os dados serão persistidos em um Banco de Dados Relacional (SQL), estruturado para garantir a integridade entre tabelas de usuários, questões, perfis e histórico de pontuações. A interface será uma Aplicação Web (SPA) responsiva e um PWA (Progressive Web App), permitindo acesso via navegador em diferentes dispositivos e suporte ao funcionamento offline.**
+- **.Persistência de dados : Os dados serão guardados em um Banco de Dados Relacional (como PostgreSQL), dada a necessidade de integridade entre Questões, Respostas e Usuários.** 
+
+- **.Interface(GUI) : A interface será uma Single Page Application (SPA) responsiva, utilizando React ou Vue, permitindo que o cronômetro e os gráficos de estatísticas funcionem sem recarregar a página constantemente.** 
+
+- **.Exportação: O motor de geração de PDF é um detalhe de saída, tratando a conversão de HTML/Markdown para o formato de impressão.**
+
 
 ### 5. Analise de modelo de entrega 
 - **a**. Centralização de Manutenção e Atualização
