@@ -44,10 +44,10 @@ A prova tem 6 seções. Os pontos foram distribuídos proporcionalmente ao peso 
 | **marcus-vinicius** | 29 | 14 | 11 | 5 | 9 | 9 | **77** |
 | **theo22** | 29 | 15 | 4 | 7 | 10 | 10 | **75** |
 | **Gabriel-Ernandes** | 25 | 8 | 8 | 6 | 7 | 8 | **62** |
-| **josuel-pereira** | 26 | 13 | 0 | 4 | 1 | 0 | **44** |
+| **josuel-pereira** | 29 | 14 | 12 | 5 | 9 | 8 | **77** |
 | **adriano-dmarco.md** | 26 | 10 | 3 | 2 | 3 | 2 | **46** |
 | **rafael-braga** | 22 | 12 | 7 | 5 | 5 | 4 | **55** |
-| **franky-jr** | 0 | 5 | 0 | 5 | 7 | 1 | **18** |
+| **franky-jr** | 29 | 8 | 10 | 5 | 8 | 4 | **64** |
 | **esdras-fernando** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
 | **iago-marinho** | 0 | 0 | 0 | 0 | 0 | 0 | **0** |
 
@@ -531,116 +531,200 @@ SaaS ✅ + PWA ✅ corretamente identificados. Argumento de conveniência ("não
 
 ---
 
-### 🔴 franky-jr — **18/100**
+### 🟡 franky-jr — **64/100**
 
-#### Seção 1 — RF: 0/30 ⚫ Errado (fora do escopo do projeto)
+**Arquivo**: `alunos/franky-rossy.md`  
+**Branch**: `franky-jr`
 
-Os 14 RF listados **não se referem ao projeto**. São requisitos genéricos de qualquer sistema CRUD:
-- RF01–RF05: cadastro, login, recuperação de senha, edição de cadastro, exclusão de conta
-- RF06–RF09: CRUD de dados genéricos
-- RF10–RF14: busca, relatórios, níveis de acesso, logs, notificações
+> ⚠️ **Atualização (busca profunda):** A avaliação anterior analisou o arquivo `alunos/franky-jr.md`, que continha RF genéricos de um CRUD padrão sem relação com as 15 US do projeto. Esse arquivo foi SUBSTITUÍDO por `alunos/franky-rossy.md` nos commits `5d7ea07` ("requisitos") e `b2e0ded` ("trabalho"). O arquivo atual contém uma submissão completa mapeada corretamente para as 15 User Stories.
 
-**⚠️ ERRO FUNDAMENTAL:** Nenhum dos 14 RF reflete as 15 User Stories do "Mestre da Engenharia de Software 2.0". Não há menção a Cronômetro, PDF com logotipo, Leaderboard, Favoritos, Markdown, Modo Offline, Reportar Erro, Exportar para Anki/CSV, ou API LMS.
+#### Seção 1 — RF: 29/30 🟢 Preciso
 
-O aluno aparentemente escreveu requisitos para um sistema genérico sem analisar as User Stories fornecidas.
-
-#### Seção 2 — RNF: 5/20 🟠 Genérico (mas demonstra conhecimento)
-
-13 RNF com boas práticas de qualidade de software (HTTPS, LGPD, tempo de resposta, backup, portabilidade). Demonstra conhecimento de RNF. Porém são completamente genéricos e não se referem ao projeto.
-
-**Nota parcial:** O aluno demonstra conhecimento do conceito de RNF, porém aplicado ao sistema errado.
-
-#### Seção 3 — Regras de Negócio: 0/20 🔴 Lero Lero
-
-A resposta é: *"As Regras de Negócio representam o 'coração' do aplicativo, ou seja, descrevem o que o sistema faz de fato e quais regras ele segue para funcionar corretamente, sem depender de linguagem de programação, banco de dados ou qualquer tecnologia específica."*
-
-**⚠️ LERO LERO:** O aluno copiou/parafraseou a **definição do conceito de Regras de Negócio** sem listar nenhuma regra real do sistema. Não há nenhuma regra de negócio aplicada ao projeto.
-
-#### Seção 4 — Detalhes/Acessórios: 5/10 🟡 Aceitável
-
-Menciona banco de dados (local ou em nuvem), interface via navegador ou mobile, telas simples. Correto no básico.
-
-#### Seção 5 — Modelo Cloud: 7/10 🟡 Aceitável
-
-SaaS com 4 argumentos (sem instalação, acesso remoto, atualizações automáticas, menor custo). Boa justificativa, porém desconectada do projeto.
-
-#### Seção 6 — O que NÃO faz: 1/10 ⚫ Com erros graves
-
-**⚠️ ERRO 1 — Contradição com RF/US15:**
-*"NS02: O sistema não funcionará sem conexão com a internet (modo offline não disponível)."*
-**Contradição direta com US15** (Modo Offline / PWA) que **deveria** estar no RF (mas não foi listado por este aluno).
-
-**⚠️ ERRO 2 — Contradição com RF/US12:**
-*"NS03: O sistema não fará integração com plataformas externas."*
-**Contradição direta com US12** (API LMS/Moodle) que também deveria estar nos RF.
-
-Esses erros mostram que o aluno definiu limites de escopo que eliminam funcionalidades que a própria especificação do projeto exige.
-
----
-
-### 🟠 josuel-pereira — **44/100**
-
-**Arquivo**: `alunos/josuel-pereira.md`
-
-> ⚠️ **Correção:** Avaliação anterior registrou "apenas US01–US02 completas; restante não entregue" — isso estava incorreto. O arquivo contém todas as 15 User Stories com RF e RNF completos.
-
-#### Seção 1 — RF: 26/30 🟡 Aceitável
-
-Todos os 15 RF mapeados 1-a-1 com as User Stories. Linguagem objetiva e clara.
+Todos os 15 RF mapeados 1-a-1 com as User Stories. Destaques positivos: usa os níveis corretos "Junior, Pleno, Senior" em US10 (um dos poucos alunos a acertar), e cita "API REST/Webhooks para exportação de notas para sistemas LMS" (US12 — preciso!).
 
 | RF | Avaliação | Nota |
 |---|---|---|
-| US01 — Cadastro de questões | Preciso: "enunciado, alternativas, resposta correta, explicação" | 2/2 |
-| US02 — Cronômetro | Preciso: "cronômetro regressivo... (ex: 15, 30 ou 60 minutos)" | 2/2 |
-| US03 — PDF | Preciso: "PDF... logotipo e cabeçalho da instituição" | 2/2 |
-| US04 — Autenticação | Preciso: "restringir o acesso... apenas a usuários com perfil 'Docente'" | 2/2 |
-| US05 — Estatísticas | Completo: "histórico de pontuações", "taxa de acerto por tópico", "tempo médio de resposta por questão" ✅ | 2/2 |
-| US06 — Export erros | Preciso: ".apkg e .csv" ✅ | 2/2 |
-| US07 — Reportar erro | Preciso: "botão 'Reportar Erro' em cada questão (QuizCard)" — usa nome correto "QuizCard" ✅ | 2/2 |
-| US08 — Ranking | Preciso: "semanal e mensal" ✅ | 2/2 |
-| US09 — Favoritar | Preciso: "marcar questões como favoritas... lista de questões favoritas" ✅ | 2/2 |
-| US10 — Filtro dificuldade | ❌ Usa "Fácil, Médio, Difícil" em vez de **"Júnior, Pleno, Sênior"** — níveis errados | 1/2 |
-| US11 — Comentários | Preciso: "thread de comentários associada a cada questão" ✅ | 2/2 |
-| US12 — API LMS | Preciso: "API ou webhook... integração com sistemas externos como o Moodle" ✅ | 2/2 |
-| US13 — LinkedIn | Aceitável: "LinkedIn quando o usuário atingir desempenho superior a... (ex: 80%)" ✅ | 2/2 |
-| US14 — Markdown | Preciso: "formatação em Markdown" + "syntax highlighting em trechos de código" ✅ | 2/2 |
-| US15 — Offline | Completo: "baixar conjunto de questões... responder sem conexão... sincronizar dados" ✅ | 1/2 |
+| US01 — Cadastro de questões | "Cadastro de questões (enunciado, alternativas, resposta, explicação)" ✅ | 2/2 |
+| US02 — Cronômetro | "Seleção e disparo de cronômetro regressivo (15, 30, 60 min)" ✅ | 2/2 |
+| US03 — PDF | "Exportação de provas em PDF com template institucional (Logo/Cabeçalho)" ✅ | 2/2 |
+| US04 — Autenticação | "Controle de acesso por perfil (RBAC) restringindo área de 'Professor'" ✅ | 2/2 |
+| US05 — Estatísticas | "Dashboard semanal de desempenho (taxa de acerto e tempo médio)" — **falta "histórico de pontuações"** | 1,5/2 |
+| US06 — Export erros | "Exportação de questões erradas nos formatos .apkg ou .csv" ✅ | 2/2 |
+| US07 — Reportar erro | "Botão de 'Reportar Erro' diretamente na interface da questão" ✅ | 2/2 |
+| US08 — Ranking | "Leaderboard (Ranking) global dividido por períodos (semanal/mensal)" ✅ | 2/2 |
+| US09 — Favoritar | "Funcionalidade de 'Favoritar/Estrear' questões para revisão" ✅ | 2/2 |
+| US10 — Filtro dificuldade | "Filtro de questões por nível de senioridade **(Junior, Pleno, Senior)**" ✅ — acerta os níveis corretos! | 2/2 |
+| US11 — Comentários | "Seção de comentários/threads em cada questão para debate" ✅ | 2/2 |
+| US12 — API LMS | "API REST/Webhooks para exportação de notas para sistemas LMS" ✅ | 2/2 |
+| US13 — LinkedIn | "Botão de compartilhamento no LinkedIn para resultados > 80%" ✅ | 2/2 |
+| US14 — Markdown | "Renderização de Markdown e Syntax Highlighting em códigos" ✅ | 2/2 |
+| US15 — Offline | "Modo offline (PWA) para download de questões e uso sem sinal" ✅ | 2/2 |
 
-**Desconto (-4 pts):** US10 usa nomenclatura de dificuldade genérica ("Fácil/Médio/Difícil") em vez dos níveis de senioridade do domínio ("Júnior/Pleno/Sênior"). US15 menciona os 3 aspectos corretos mas de forma mecânica sem mencionar PWA explicitamente.
+**Desconto (-1 pt):** US05 omite "histórico de pontuações" (apenas taxa de acerto + tempo médio).
 
-#### Seção 2 — RNF: 13/20 🟡 Aceitável
+#### Seção 2 — RNF: 8/20 🔴 Genérico (sem vinculação às US do projeto)
 
-15 RNF mapeados, um por US. Qualidade variada — alguns técnicos, outros genéricos.
+13 RNF listados com boas categorias (Desempenho, Disponibilidade, Segurança, Usabilidade, Confiabilidade, Manutenibilidade, Portabilidade, Escalabilidade, Legal). Demonstram conhecimento do conceito de RNF. Porém nenhum está mapeado às 15 US específicas do projeto.
+
+| RNF do Gabarito | Coberto por Franky | Avaliação |
+|---|---|---|
+| RNF01 — Carregamento painel stats | ❌ Não coberto | ❌ Faltou |
+| RNF02 — Segurança/acesso Docente | RNF06: "controle de acesso baseado em níveis de permissão" ⚠️ | ⚠️ Parcial (genérico) |
+| RNF03 — Portabilidade/Offline PWA | ❌ Não coberto como RNF | ❌ Faltou |
+| RNF04 — Formatação PDF (logo) | ❌ Não coberto | ❌ Faltou |
+| RNF05 — Usabilidade botão QuizCard | RNF07: "interface intuitiva e de fácil navegação" ⚠️ | ⚠️ Muito genérico |
+| RNF06 — Interoperabilidade API REST | ❌ Não coberto | ❌ Faltou |
+| RNF07 — Suporte Markdown/Syntax | ❌ Não coberto | ❌ Faltou |
+
+Destaques positivos: RNF01 ("3 segundos de resposta"), RNF03 (99% disponibilidade), RNF04 (senhas criptografadas), RNF05 (HTTPS), RNF09 (backups diários), RNF13 (LGPD). São bons RNF de qualidade mas desconectados das US.
+
+**Nota parcial (8/20):** Demonstra conhecimento do conceito de RNF com 13 itens organizados por categoria, porém não cobre os RNF específicos do projeto.
+
+#### Seção 3 — Regras de Negócio: 10/20 🟡 Aceitável
+
+3 pilares conceituais bem formulados:
+
+1. **"Simulação de Desempenho Sob Pressão"**: App coloca o estudante em cenário de desafio com limite de tempo. Treina agilidade mental e retenção de conteúdo através de simulação de exames.
+2. **"Ciclo de Feedback e Diagnóstico"**: Confronta a escolha do aluno com a verdade técnica (gabarito), explica o erro no momento exato, e mostra onde o aluno falha via estatísticas.
+3. **"Curadoria de Conhecimento Estruturado"**: App é um banco pedagógico, não um "bloco de notas". Professor cria questões com obrigatoriamente um "porquê" (explicação) e uma "régua" (nível de dificuldade).
+
+Os 3 pilares são insightful e capturam o propósito central do sistema. Pilar 2 mapeia ao "Motor de Resolução de Quizzes" do gabarito (feedback em tempo real + diagnóstico). Pilar 3 mapeia à "Estrutura Abstrata de Domínio" (entidade questão com explicação e nível).
+
+**Desconto (-10 pts):** Faltam as regras técnicas derivadas do código-fonte: motor de quiz (embaralhamento dinâmico de questões e alternativas), cálculo de nível de desempenho (porcentagem → classificação), e gerador de provas (regra das exatamente 10 questões).
+
+#### Seção 4 — Detalhes/Acessórios: 5/10 🟠 Insuficiente
+
+"Os dados do sistema serão armazenados em um banco de dados digital, podendo ser **local ou em nuvem**... A interface será desenvolvida de forma simples e intuitiva, podendo ser acessada via **navegador (sistema web) ou aplicativo mobile**."
+
+Também inclui reflexão sobre a natureza secundária dos detalhes: "Na engenharia de software, o mais importante é a definição das regras de negócio... A tecnologia utilizada pode ser alterada sem modificar a lógica central do sistema." — correto conceitualmente.
+
+**Desconto (-5 pts):** Não identifica a stack atual (React/Vite/TypeScript/Tailwind CSS), não menciona o estado temporário em memória (dados hardcoded em constants.ts, useState), nem as entidades específicas do domínio.
+
+#### Seção 5 — Modelo Cloud: 8/10 🟢 Preciso
+
+SaaS escolhido ✅ com 4 argumentos centrados no professor/escola:
+1. "Não exige instalação de software em computadores" ✅
+2. "Pode ser acessado de qualquer lugar (casa, escola, celular)" ✅
+3. "Reduz problemas técnicos e necessidade de suporte" ✅
+4. "Atualizações são automáticas, sem interromper o uso" ✅
+
+**Desconto (-2 pts):** Não vincula à arquitetura SPA/React/Vite do projeto.
+
+#### Seção 6 — O que NÃO faz: 4/10 🟠 Insuficiente (2 contradições graves)
+
+| Item | Conteúdo | Avaliação |
+|---|---|---|
+| NS01 | "não realizará correção automática de provas discursivas" ✅ | ✅ Válido |
+| NS02 | "não funcionará sem conexão com a internet (modo offline não disponível)" | ❌ **CONTRADIÇÃO com US15/RF15** (Modo Offline PWA) |
+| NS03 | "não fará integração com plataformas externas (ex: sistemas acadêmicos)" | ❌ **CONTRADIÇÃO com US12/RF12** (API REST/LMS/Moodle) |
+| NS04 | "não permitirá personalização avançada da interface pelo usuário" ✅ | ✅ Válido |
+| NS05 | "não enviará notificações em tempo real por aplicativos externos (ex: SMS ou WhatsApp)" ✅ | ✅ Válido |
+| NS06 | "não realizará análise avançada de desempenho com inteligência artificial" ✅ | ✅ Válido |
+
+4 válidos, 2 com contradições diretas. NS02 nega US15 (que o próprio aluno listou como RF15: "Modo offline PWA"). NS03 nega US12 (que o próprio aluno listou como RF12: "API REST/Webhooks para LMS").
+
+---
+
+### 🟢 josuel-pereira — **77/100**
+
+**Arquivo**: `alunos/josuel-pereira.md`  
+**Branch**: `josuel-pereira`
+
+> ⚠️ **Atualização (busca profunda):** Nova submissão completa encontrada no commit `8667396` ("josuel-pereira.md"). A versão anterior tinha RF e RNF por US mas estava totalmente sem Regras de Negócio, Cloud e O que NÃO faz. A nova versão entrega todas as 6 seções com qualidade — nota aumentada de 44 para 77.
+
+#### Seção 1 — RF: 29/30 🟢 Preciso
+
+15 RF mapeados, um por US, com linguagem clara e objetiva. Todos os itens corretos exceto US10.
+
+| RF | Avaliação | Nota |
+|---|---|---|
+| US01 — Cadastro de questões | "enunciado, alternativas, resposta correta e explicação" ✅ | 2/2 |
+| US02 — Cronômetro | "cronômetro regressivo... configurar o tempo (ex: 15, 30 ou 60 minutos)" ✅ | 2/2 |
+| US03 — PDF | "exportar provas para PDF... logotipo e cabeçalho da instituição" ✅ | 2/2 |
+| US04 — Autenticação | "restringir o acesso às funcionalidades de professor apenas a usuários com perfil 'Docente'" ✅ | 2/2 |
+| US05 — Estatísticas | "histórico de pontuações... taxa de acerto por tópico (ex: Git, Nuvem)... tempo médio de resposta por questão" ✅ | 2/2 |
+| US06 — Export erros | "questões respondidas incorretamente... formatos .apkg e .csv" ✅ | 2/2 |
+| US07 — Reportar erro | "botão 'Reportar Erro' em cada questão (QuizCard)" — usa o nome correto "QuizCard" ✅ | 2/2 |
+| US08 — Ranking | "ranking global... semanal e mensal" ✅ | 2/2 |
+| US09 — Favoritar | "marque questões como favoritas... lista de questões favoritas... acesse posteriormente" ✅ | 2/2 |
+| US10 — Filtro dificuldade | "Fácil, Médio, Difícil" — ❌ deveria ser **"Júnior, Pleno, Sênior"** | 1/2 |
+| US11 — Comentários | "thread de comentários associada a cada questão" ✅ | 2/2 |
+| US12 — API LMS | "API ou webhook... integração com sistemas externos como o Moodle" ✅ | 2/2 |
+| US13 — LinkedIn | "compartilhamento no LinkedIn... desempenho superior a... (ex: 80%)" ✅ | 2/2 |
+| US14 — Markdown | "cadastro utilizando formatação em Markdown... syntax highlighting em trechos de código" ✅ | 2/2 |
+| US15 — Offline | "baixar conjunto de questões para uso offline... sincronizar dados... PWA" ✅ | 2/2 |
+
+**Desconto (-1 pt):** US10 usa "Fácil, Médio, Difícil" em vez dos níveis corretos do domínio ("Júnior, Pleno, Sênior").
+
+#### Seção 2 — RNF: 14/20 🟡 Aceitável
+
+15 RNF mapeados 1-a-1 com as US. Cobertura dos 7 gabarito RNF:
 
 | RNF do Gabarito | Coberto por Josuel | Avaliação |
 |---|---|---|
-| RNF01 — Desempenho painel stats | RNF-US05: "carregar instantaneamente, independentemente do volume de dados" ✅ | ✅ Coberto |
-| RNF02 — Segurança/Docente | RNF-US04: "garantir que usuários não autorizados não acessem" + "mecanismos seguros de autenticação" ✅ | ✅ Coberto |
-| RNF03 — Portabilidade/Offline | RNF-US15: "funcionar mesmo sem conexão... suporte PWA... sincronizar corretamente" ✅ | ✅ Coberto |
-| RNF04 — Formatação PDF | RNF-US03: "manter formatação consistente" — genérico, sem PDF/A ou logotipo ⚠️ | ⚠️ Parcial |
-| RNF05 — Usabilidade botão reportar | RNF-US07: "facilmente acessível durante o quiz" + "armazenar relatórios com informações para identificação da questão" ✅ | ✅ Coberto |
-| RNF06 — Interoperabilidade API | RNF-US12: "compatível com APIs externas e padrões de integração" ✅ | ✅ Coberto |
-| RNF07 — Markdown | RNF-US14: "suporte a padrões comuns de Markdown", "destaque de sintaxe para diferentes linguagens" ✅ | ✅ Coberto |
+| RNF01 — Carregamento painel stats | RNF-US05: "Os gráficos do painel devem carregar instantaneamente, independentemente do volume de dados" ✅ | ✅ Coberto (texto idêntico ao gabarito!) |
+| RNF02 — Segurança/acesso Docente | RNF-US04: "garantir que usuários não autorizados não acessem... mecanismos seguros de autenticação" ✅ | ✅ Coberto |
+| RNF03 — Portabilidade/Offline PWA | RNF-US15: "funcionar sem conexão... suportar funcionamento como PWA... dados sincronizados" ✅ | ✅ Coberto |
+| RNF04 — Formatação PDF (logo) | RNF-US03: "formatação consistente" — sem logotipo/cabeçalho explícito | ⚠️ Parcial |
+| RNF05 — Usabilidade botão QuizCard | RNF-US07: "facilmente acessível durante o quiz" + "armazenar relatórios com informações para identificação da questão" | ✅ Coberto |
+| RNF06 — Interoperabilidade API REST | RNF-US12: "compatível com APIs externas e padrões de integração" ✅ | ✅ Coberto |
+| RNF07 — Suporte Markdown/Syntax | RNF-US14: "suporte a padrões comuns de Markdown... destaque de sintaxe para diferentes linguagens" ✅ | ✅ Coberto |
 
-6 de 7 gabarito RNF cobertos; alguns RNF adicionais são genéricos ("simples de usar", "fácil acesso") mas não há contradições.
+6 de 7 cobertos; RNF04 parcial (formato consistente mas sem logotipo/cabeçalho institucional). Alguns RNF adicionais são genéricos ("simples e acessível") mas sem contradições. Um item em US01 RNF é RF em vez de RNF ("Apenas usuários com perfil de professor podem cadastrar questões").
 
-#### Seção 3 — Regras de Negócio: 0/20 ⚫ Não entregue
+#### Seção 3 — Regras de Negócio: 12/20 🟡 Aceitável
 
-Não há seção dedicada a Regras de Negócio. A única menção é no RNF-US01 ("Apenas usuários com perfil de professor podem cadastrar questões"), que está na seção errada e é insuficiente.
+Regras de Negócio entregues de forma distribuída, embutidas em cada US (15 conjuntos de RN). São específicas e corretas:
 
-#### Seção 4 — Detalhes/Acessórios: 4/10 🟠 Insuficiente
+Destaques:
+- US02 RN: "Quando o tempo acabar o quiz deve ser finalizado automaticamente ou bloqueado para respostas. A ativação do cronômetro deve ser **opcional**." ✅
+- US04 RN: "Usuários com perfil de aluno não podem visualizar **gabaritos** e banco de questões" ✅ (regra de sigilo)
+- US06 RN: "A exportação deve conter enunciado, alternativas, resposta correta e explicação" ✅
+- US12 RN: "A exportação pode ser automática (via webhook) ou sob demanda" ✅
+- US015 RN: "Deve haver um **limite de questões baixadas (ex: 50 por vez)**" ✅ — coincide com o gabarito!
+- US013 RN: "O botão de compartilhamento deve aparecer apenas quando o usuário atingir **desempenho mínimo (ex: 80%)**" ✅
 
-Menciona: banco de dados na nuvem, dados offline sincronizados, interface web acessível por navegador. Correto mas muito genérico.
+**Desconto (-8 pts):** Faltam as regras técnicas derivadas do código-fonte: motor de quiz (embaralhamento dinâmico de questões e alternativas), cálculo de nível de desempenho (% → Junior/Pleno/Sênior), e gerador de provas (regra das **exatamente 10 questões** + gabarito gerado automaticamente com novo embaralhamento).
 
-**Desconto (-6 pts):** Sem stack tecnológica, sem entidades do banco de dados, sem descrição de telas ou recursos visuais.
+#### Seção 4 — Detalhes/Acessórios: 5/10 🟠 Insuficiente
 
-#### Seção 5 — Modelo Cloud: 1/10 🔴 Insuficiente
+"Os dados (usuários, questões, respostas, estatísticas) devem ser armazenados em **banco de dados na nuvem**. Dados offline podem ser armazenados **localmente** no dispositivo do usuário e **sincronizados** posteriormente."
+"O sistema deve possuir **interface web** acessível por navegador. A interface deve ser intuitiva."
 
-Apenas o rótulo: **"Software as a Service (SaaS)"** — sem nenhuma justificativa.
+Cloud DB + offline local + sync + web interface — direção correta ✅.
 
-#### Seção 6 — O que NÃO faz: 0/10 ⚫ Não entregue
+**Desconto (-5 pts):** Não menciona a stack atual (React/Vite/TypeScript/Tailwind CSS), não identifica que os dados estão hardcoded em constants.ts (sem banco real), e não descreve as telas ou componentes específicos.
 
-Seção não presente no arquivo.
+#### Seção 5 — Modelo Cloud: 9/10 🟢 Preciso
+
+Escolha: **SaaS** ✅ com 4 argumentos centrados no professor + seção explícita "Por que NÃO IaaS":
+
+*Argumentos SaaS:*
+1. "O professor pode acessar o sistema diretamente pelo navegador, sem instalação" ✅
+2. "Não é necessário conhecimento técnico para configurar servidores" ✅
+3. "O acesso pode ser feito de qualquer lugar (casa, escola, trabalho)" ✅
+4. "Reduz custo e complexidade para instituições de ensino" ✅
+
+*Por que NÃO IaaS:*
+- "Exigiria que a escola gerenciasse servidores" ✅
+- "Maior custo técnico e operacional" ✅
+- "Necessidade de equipe especializada" ✅
+
+Justificativa excelente — o único aluno a incluir comparação explícita com IaaS.
+
+**Desconto (-1 pt):** Não vincula explicitamente à arquitetura SPA/React/Vite do projeto.
+
+#### Seção 6 — O que NÃO faz: 8/10 🟢 Preciso
+
+5 limites definidos, todos corretos e sem contradições:
+
+1. "O sistema não realiza correção automática de questões discursivas" ✅
+2. "O sistema não substitui o professor no processo de ensino" ✅
+3. "O sistema não funciona totalmente offline **sem download prévio de conteúdo**" ✅ (válido — apenas nega funcionalidade sem download, não contradiz US15)
+4. "O sistema não garante moderação automática perfeita de comentários" ✅
+5. "O sistema não oferece criação de conteúdos fora do escopo de quizzes e provas" ✅
+
+**Desconto (-2 pts):** Limites corretos mas alguns genéricos (item 5). Faltam limites mais específicos ao projeto (ausência de questões discursivas, proctoring, importação de turmas do LMS).
 
 ---
 
@@ -738,16 +822,20 @@ Apresenta **dois níveis de análise**:
 **Arquivo**: `alunos/iago-marinho.md`  
 **Branch**: `iago-marinho`
 
+> 🔍 **Busca profunda (deep dive):** Verificados TODOS os arquivos da branch e TODAS as mensagens de commit. Resultado: nenhum conteúdo adicional encontrado.
+
 O arquivo `alunos/iago-marinho.md` contém apenas o texto do template padrão:
 > *"# Estou criando um nvo\n\nVou escrever minhas respostas aqui."*
 
-O blob é idêntico ao `alunos/novo-aluno.md` (template). **Nenhuma seção foi entregue.**
+Mensagens de commit: "criando arquivo iago-marinho" (sem corpo). **Nenhuma seção foi entregue.**
 
 ---
 
 ### ⚫ esdras-fernando — **0/100**
 
-O arquivo `alunos/esdras-fernando.md` contém apenas a palavra `"esdras"`. **Nenhuma seção foi entregue.**
+> 🔍 **Busca profunda (deep dive):** Verificados TODOS os arquivos da branch e TODAS as mensagens de commit. Resultado: nenhum conteúdo adicional encontrado.
+
+O arquivo `alunos/esdras-fernando.md` contém apenas a palavra `"esdras"`. Mensagem de commit: "cvomiit" (sem corpo). **Nenhuma seção foi entregue.**
 
 ---
 
@@ -865,10 +953,11 @@ Justificativa excelente, entre as melhores desta seção.
 | **rafael-braga** | "Dados sensíveis não revelados" — é um RNF de segurança, não um limite de escopo | NÃO faz | 🟡 Médio |
 | **rafael-braga** | RNF03, RNF04, RNF12 são RF repetidos sem restrições de qualidade mensuráveis | RNF | 🟡 Médio |
 | **rafael-braga** | Regras de Negócio: 3 pilares conceptuais corretos mas sem derivação do código-fonte | RNs | 🟠 Significativo |
-| **franky-jr** | RF01–RF14 são de um sistema CRUD genérico, sem relação com as 15 US do projeto | RF | 🔴 Grave |
-| **franky-jr** | Regras de Negócio: copiou a definição do conceito sem listar nenhuma regra | RNs | 🔴 Grave |
-| **franky-jr** | "Não funcionará offline" — contradiz US15 (Modo Offline/PWA) | NÃO faz | 🔴 Grave |
-| **franky-jr** | "Não fará integração com plataformas externas" — contradiz US12 (API LMS) | NÃO faz | 🔴 Grave |
+| **franky-jr** | US05 omite "histórico de pontuações" | RF | 🟡 Médio |
+| **franky-jr** | RNF não mapeados às US do projeto — todos genéricos (HTTPS, backup, LGPD) | RNF | 🟠 Significativo |
+| **franky-jr** | NS02: "não funcionará offline" — contradiz RF15/US15 (Modo Offline/PWA) | NÃO faz | 🔴 Grave |
+| **franky-jr** | NS03: "não fará integração com plataformas externas" — contradiz RF12/US12 (API LMS) | NÃO faz | 🔴 Grave |
+| **franky-jr** | Regras de Negócio: 3 pilares conceituais corretos mas sem análise do código-fonte | RNs | 🟠 Significativo |
 | **Gabriel-Ernandes** | RF05 não menciona logotipo/cabeçalho institucional no PDF | RF | 🟡 Médio |
 | **Gabriel-Ernandes** | RF06 usa "autorização adequada" sem especificar perfil "Docente" | RF | 🟡 Médio |
 | **Gabriel-Ernandes** | RF08 não especifica formatos .apkg ou .csv | RF | 🟡 Médio |
@@ -881,7 +970,8 @@ Justificativa excelente, entre as melhores desta seção.
 | **theo22** | Regras de Negócio com apenas 1 frase — seção criticamente incompleta | RNs | 🔴 Grave |
 | **theo22** | RNF15 é duplicata exata do RF15 | RNF | 🟡 Médio |
 | **josuel-pereira** | US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior" | RF | 🟠 Significativo |
-| **josuel-pereira** | Seções Regras de Negócio e O que NÃO faz ausentes; Cloud sem justificativa | RNs/Cloud/Escopo | 🔴 Grave |
+| **josuel-pereira** | RNF-US03 menciona "formatação consistente" mas omite logotipo/cabeçalho institucional | RNF | 🟡 Médio |
+| **josuel-pereira** | Regras de Negócio por US: corretas mas sem código-fonte (falta motor de quiz e regra das 10 questões) | RNs | 🟠 Significativo |
 | **Bruna-Oliveira** | US05 omite "tempo médio por questão"; US13 omite o limiar de 80% | RF | 🟡 Médio |
 | **Bruna-Oliveira** | Regras de Negócio conceptuais (3 pilares), sem regras técnicas do código-fonte | RNs | 🟠 Significativo |
 | **Bruna-Oliveira** | Detalhes sem stack tecnológica (React/Vite) ou entidades do banco de dados | Detalhes | 🟡 Médio |
@@ -901,12 +991,12 @@ Justificativa excelente, entre as melhores desta seção.
 | 🥈 2º | **nicolas-vinicius** | **87/100** | Ótimo |
 | 🥉 3º | **Bruna-Oliveira** | **84/100** | Ótimo |
 | 4º | **nycollas-rodrigues** | **79/100** | Bom |
+| 5º | **josuel-pereira** | **77/100** | Bom |
 | 5º | **marcus-vinicius** | **77/100** | Bom |
-| 6º | **theo22** | **75/100** | Bom |
-| 7º | **Gabriel-Ernandes** | **62/100** | Regular |
-| 8º | **rafael-braga** | **55/100** | Regular |
-| 9º | **adriano-dmarco.md** | **46/100** | Insuficiente |
-| 10º | **josuel-pereira** | **44/100** | Insuficiente |
-| 11º | **franky-jr** | **18/100** | Reprovado |
+| 7º | **theo22** | **75/100** | Bom |
+| 8º | **franky-jr** | **64/100** | Regular |
+| 9º | **Gabriel-Ernandes** | **62/100** | Regular |
+| 10º | **rafael-braga** | **55/100** | Regular |
+| 11º | **adriano-dmarco.md** | **46/100** | Insuficiente |
 | 12º | **esdras-fernando** | **0/100** | Não entregue |
 | 12º | **iago-marinho** | **0/100** | Não entregue |

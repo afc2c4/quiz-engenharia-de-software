@@ -17,9 +17,9 @@
 | **José-Reginaldo** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado (3 pilares) | ✅ Presente | ✅ SaaS + PWA justificado | ✅ 3 limites | 🟢 Completo |
 | **adriano-dmarco.md** | ✅ RF01–RF15 (RF10 sem níveis; RF12 sem API/LMS; RF13 feed genérico) | ✅ RNF01–RNF15 (maioria = RF+adjetivo "rápido") | ⚠️ 1 frase genérica | ⚠️ Lero lero | ⚠️ SaaS ou IaaS (dúbio) | ⚠️ 1 limite válido | 🟡 Parcial |
 | **esdras-fernando** | ❌ Apenas "esdras" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
-| **franky-jr** | ⚠️ RF01–RF14 (genérico, não baseado nas US) | ✅ RNF01–RNF13 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 6 limites | 🟡 Parcial |
+| **franky-jr** | ✅ RF01–RF15 (US05 omite histórico; US10 correto: Junior/Pleno/Senior) | ✅ RNF01–RNF13 (genérico, não mapeado às US) | ✅ 3 pilares conceituais | ✅ Presente | ✅ SaaS | ⚠️ 4/6 válidos (2 contradições) | 🟡 Parcial |
 | **iago-marinho** | ❌ Apenas template ("Estou criando um nvo") | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
-| **josuel-pereira** | ✅ US01–US15 (US10 com níveis errados) | ✅ US01–US15 (mista) | ❌ Sem seção | ✅ Presente | ⚠️ Apenas rótulo SaaS | ❌ Sem seção | 🟡 Parcial |
+| **josuel-pereira** | ✅ US01–US15 (US10 níveis errados) | ✅ US01–US15 (6/7 gabarito RNF cobertos) | ✅ Por US (específicas) | ✅ Cloud + offline sync | ✅ SaaS + "Por que NÃO IaaS" | ✅ 5 limites válidos | 🟢 Completo |
 | **marcus-vinicius** | ✅ RF01–RF15 (falta RF05 completo) | ✅ RNF01–RNF10 | ✅ 7 regras específicas | ✅ Presente | ✅ SaaS | ✅ 8 limites | 🟢 Completo |
 | **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
 | **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
@@ -182,19 +182,25 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 
 ### 🌿 franky-jr
 
-**Arquivo**: `alunos/franky-jr` (sem extensão .md)  
-**Status**: 🟡 Parcial — conteúdo genérico, não baseado nas User Stories do projeto
+**Arquivo**: `alunos/franky-rossy.md`  
+**Branch**: `franky-jr`
+**Status**: 🟡 Parcial — RF corretos (US10 com níveis corretos!), RNF genéricos, NÃO faz com 2 contradições
+
+> ⚠️ **Atualização (busca profunda):** A avaliação anterior analisou `alunos/franky-jr.md` com conteúdo CRUD genérico. Esse arquivo foi SUBSTITUÍDO por `alunos/franky-rossy.md` (commits `5d7ea07` e `b2e0ded`). O atual contém submissão completa mapeada às 15 US.
 
 #### Destaques:
-- RF01–RF14 descritos, mas de forma genérica (cadastro, login, recuperação de senha, CRUD) — **não se baseou nas 15 US fornecidas**.
-- RNF01–RNF13 com boas práticas de qualidade (desempenho, segurança, LGPD).
-- Regras de Negócio: mencionadas mas não detalhadas.
-- Modelo Cloud: **SaaS** — justificativa presente.
-- O que NÃO faz: 6 limites definidos (NS01–NS06).
+- RF01–RF15 todos presentes e corretamente mapeados às US. **US10 usa "Junior, Pleno, Senior"** ✅ — um dos poucos alunos a acertar os níveis corretos do domínio.
+- US12: "API REST/Webhooks para exportação de notas para sistemas LMS" ✅ — muito preciso!
+- US13: "compartilhamento no LinkedIn para resultados > 80%" ✅
+- 3 Regras de Negócio conceituais bem formuladas (Simulação de Desempenho, Ciclo de Feedback, Curadoria de Conhecimento).
+- Cloud: SaaS com 4 argumentos centrados no usuário.
 
 #### Diferenças em relação ao gabarito:
-- Os requisitos funcionais não refletem as User Stories do projeto (RF são genéricos de um CRUD padrão).
-- Não há menção ao Cronômetro, PDF institucional, Leaderboard, Favoritos, Markdown ou Modo Offline do projeto real.
+- US05 omite "histórico de pontuações" (apenas taxa de acerto + tempo médio).
+- RNF: 13 itens bem organizados por categoria (Desempenho, Segurança, LGPD...) mas **nenhum mapeado às US específicas do projeto** — genéricos para qualquer sistema web.
+- Regras de Negócio conceituais, sem análise do código-fonte (falta motor de quiz, regra das 10 questões).
+- NS02 contradiz RF15/US15 (afirma que não funciona offline, mas listou Modo Offline como RF).
+- NS03 contradiz RF12/US12 (afirma que não integra com plataformas externas, mas listou API LMS como RF).
 
 ---
 
@@ -204,29 +210,32 @@ O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
 **Branch**: `iago-marinho`  
 **Status**: 🔴 Não entregue
 
-O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo — Vou escrever minhas respostas aqui."* Blob idêntico ao `novo-aluno.md`. **Nenhuma seção foi preenchida.**
+> 🔍 **Busca profunda (deep dive):** Verificados todos os arquivos da branch e todas as mensagens de commit. Nenhum conteúdo encontrado.
+
+O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo — Vou escrever minhas respostas aqui."* **Nenhuma seção foi preenchida.**
 
 ---
 
 ### 🌿 josuel-pereira
 
 **Arquivo**: `alunos/josuel-pereira.md`  
-**Status**: 🟡 Parcial — RF e RNF completos (US01–US15), mas sem Regras, Cloud justificado, ou Escopo
+**Branch**: `josuel-pereira`
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções entregues
 
-> ⚠️ **Correção:** Avaliação anterior registrou "apenas US01–US03 desenvolvidas" — isso estava incorreto. O arquivo contém todas as 15 User Stories com RF e RNF.
+> ⚠️ **Atualização (busca profunda):** Nova submissão completa encontrada no commit `8667396`. A versão anterior tinha RF+RNF mas sem Regras de Negócio, Cloud justificado ou O que NÃO faz.
 
 #### Destaques:
-- US01–US15 todos presentes com RF e RNF bem estruturados por User Story.
-- US05 completo — menciona "tempo médio de resposta por questão" ✅ (que muitos alunos omitiram).
-- US07 usa o nome correto "QuizCard" ✅.
-- US13 menciona o limiar de 80% ✅.
+- US01–US15 todos presentes com RF precisos. US05 completo (histórico + taxa de acerto por tópico + tempo médio) ✅. US07 usa "QuizCard" ✅. US13 inclui limiar 80% ✅. US15 menciona PWA ✅.
+- RNF por US: RNF-US05 é idêntico ao gabarito RNF01 ("carregar instantaneamente, independentemente do volume de dados"). 6 de 7 gabarito RNF cobertos.
+- Regras de Negócio embutidas por US — específicas e corretas (US015 RN: "limite de 50 questões baixadas" — coincide com gabarito!).
+- Cloud: SaaS ✅ com 4 argumentos + **seção "Por que NÃO IaaS"** (único aluno a incluir comparação explícita).
+- O que NÃO faz: 5 limites válidos, sem contradições.
 
 #### Diferenças em relação ao gabarito:
-- US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior" — nomenclatura genérica, não do domínio.
-- Sem seção "Regras de Negócio" — completamente ausente.
-- Cloud: apenas o rótulo "Software as a Service (SaaS)" sem nenhuma justificativa.
-- Sem seção "O que NÃO faz".
-- Detalhes/Acessórios brevíssimos (banco de dados na nuvem + interface web).
+- US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior".
+- RNF-US03 não menciona logotipo/cabeçalho institucional no PDF.
+- Regras de Negócio por US corretas mas sem análise do código-fonte (falta motor de quiz com embaralhamento, cálculo de nível, regra das 10 questões no gerador).
+- Detalhes/Acessórios: cloud DB + offline sync corretos mas sem stack tecnológica.
 
 ---
 
@@ -346,8 +355,8 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | José-Reginaldo | 15 | ✅ 100% | Alinhado ao gabarito |
 | adriano-dmarco.md | 15 | ✅ 97% | RF10 sem níveis, RF12 sem API/LMS, RF13 feed genérico |
 | esdras-fernando | 0 | ❌ 0% | Não entregue |
-| franky-jr | 14 | ❌ 0% das US | Genérico, não baseado nas US |
-| josuel-pereira | 15 | ✅ 95% | US10 com níveis de dificuldade errados (Fácil/Médio/Difícil) |
+| franky-jr | 15 | ✅ 97% | US05 omite histórico de pontuações; RNF genéricos (não mapeados às US) |
+| josuel-pereira | 15 | ✅ 97% | US10 com "Fácil/Médio/Difícil" em vez de "Júnior/Pleno/Sênior" |
 | marcus-vinicius | 15 | ✅ 97% | RF05 incompleto (falta "tempo médio por questão") |
 | nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
 | nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
@@ -365,8 +374,8 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | José-Reginaldo | SaaS + PWA | Justificativa técnica mais completa (CDN, CI/CD, Offline-First, API Portal) |
 | adriano-dmarco.md | SaaS ou IaaS | Resposta dúbia sem conclusão definitiva |
 | esdras-fernando | — | Não entregue |
-| franky-jr | SaaS | Justificativa presente, simplificada |
-| josuel-pereira | SaaS | Apenas rótulo, sem justificativa |
+| franky-jr | SaaS | 4 argumentos corretos (sem instalação, acesso remoto, atualizações automáticas, custo) |
+| josuel-pereira | SaaS + "Por que NÃO IaaS" | SaaS ✅ com 4 argumentos + comparação explícita com IaaS (único aluno a fazer isso) |
 | marcus-vinicius | SaaS | 4 argumentos focados no professor (excelente justificativa) |
 | nicolas-vinicius | SaaS | Justificativa presente |
 | nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
@@ -385,12 +394,12 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
 | 🥉 3º | **Bruna-Oliveira** | **84** | Ótimo |
 | 4º | **nycollas-rodrigues** | **79** | Bom |
+| 5º | **josuel-pereira** | **77** | Bom |
 | 5º | **marcus-vinicius** | **77** | Bom |
-| 6º | **theo22** | **75** | Bom |
-| 7º | **Gabriel-Ernandes** | **62** | Regular |
-| 8º | **rafael-braga** | **55** | Regular |
-| 9º | **adriano-dmarco.md** | **46** | Insuficiente |
-| 10º | **josuel-pereira** | **44** | Insuficiente |
-| 11º | **franky-jr** | **18** | Reprovado |
+| 7º | **theo22** | **75** | Bom |
+| 8º | **franky-jr** | **64** | Regular |
+| 9º | **Gabriel-Ernandes** | **62** | Regular |
+| 10º | **rafael-braga** | **55** | Regular |
+| 11º | **adriano-dmarco.md** | **46** | Insuficiente |
 | 12º | **esdras-fernando** | **0** | Não entregue |
 | 12º | **iago-marinho** | **0** | Não entregue |
