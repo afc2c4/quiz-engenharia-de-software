@@ -1,0 +1,405 @@
+# Relatório Comparativo de Respostas por Branch
+
+> Comparação das respostas de cada aluno em relação ao gabarito (branch `gabarito`).
+> O arquivo de referência completo está em `alunos/alexandre-ferreira.md` na branch `gabarito`.
+>
+> 📊 **Para notas detalhadas com rubrica proporcional, identificação de lero lero e erros específicos, veja [`notas-e-avaliacao.md`](./notas-e-avaliacao.md)**
+
+---
+
+## Resumo Geral
+
+| Aluno (Branch) | RF (1–15) | RNF | Regras de Negócio | Detalhes/Acessórios | Modelo Cloud | O que NÃO faz | Status |
+|---|---|---|---|---|---|---|---|
+| **alexandre-ferreira** (gabarito) | ✅ RF01–RF15 | ✅ RNF01–RNF07 | ✅ Detalhado | ✅ Detalhado | ✅ SaaS — justificado | ✅ 6 limites definidos | 🟢 Completo |
+| **Bruna-Oliveira** | ✅ RF01–RF15 (falta US05 "tempo médio"; US13 sem 80%) | ✅ RNF01–RNF15 (excelentes) | ✅ 3 pilares conceituais | ✅ Presente | ✅ SaaS + Arquitetura PWA | ✅ 6 limites + justificativa | 🟢 Completo |
+| **Gabriel-Ernandes** | ✅ RF01–RF17 | ✅ RNF01–RNF06 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟢 Completo |
+| **José-Reginaldo** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado (3 pilares) | ✅ Presente | ✅ SaaS + PWA justificado | ✅ 3 limites | 🟢 Completo |
+| **adriano-dmarco.md** | ✅ RF01–RF15 (RF10 sem níveis; RF12 sem API/LMS; RF13 feed genérico) | ✅ RNF01–RNF15 (maioria = RF+adjetivo "rápido") | ⚠️ 1 frase genérica | ⚠️ Lero lero | ⚠️ SaaS ou IaaS (dúbio) | ⚠️ 1 limite válido | 🟡 Parcial |
+| **esdras-fernando** | ❌ Apenas "esdras" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
+| **franky-jr** | ✅ RF01–RF15 (US05 omite histórico; US10 correto: Junior/Pleno/Senior) | ✅ RNF01–RNF13 (genérico, não mapeado às US) | ✅ 3 pilares conceituais | ✅ Presente | ✅ SaaS | ⚠️ 4/6 válidos (2 contradições) | 🟡 Parcial |
+| **iago-marinho** | ❌ Apenas template ("Estou criando um nvo") | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
+| **josuel-pereira** | ✅ US01–US15 (US10 níveis errados) | ✅ US01–US15 (6/7 gabarito RNF cobertos) | ✅ Por US (específicas) | ✅ Cloud + offline sync | ✅ SaaS + "Por que NÃO IaaS" | ✅ 5 limites válidos | 🟢 Completo |
+| **marcus-vinicius** | ✅ RF01–RF15 (falta RF05 completo) | ✅ RNF01–RNF10 | ✅ 7 regras específicas | ✅ Presente | ✅ SaaS | ✅ 8 limites | 🟢 Completo |
+| **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
+| **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
+| **rafael-braga** | ✅ RF01–RF15 (US01 vago; US05 incompleto; US10 níveis errados) | ✅ RNF01–RNF15 (cobertura total; qualidade mista) | ✅ 3 pilares conceituais | ✅ SQL + SPA | ✅ SaaS + PWA | ⚠️ 3/5 válidos (2 com erros) | 🟡 Parcial |
+| **theo22** | ✅ US01–US15 | ✅ US01–US15 | ⚠️ Parcial | ✅ Detalhado | ✅ SaaS + PWA justificado | ✅ 4 limites | 🟢 Completo |
+
+---
+
+## Gabarito — Branch `gabarito` (Alexandre Ferreira)
+
+### 1. Requisitos Funcionais (RF01–RF15)
+
+| RF | Descrição |
+|---|---|
+| RF01 | Cadastro de Questões pelo professor (enunciado, alternativas, resposta correta, explicação) |
+| RF02 | Suporte a Markdown e Syntax Highlighting na interface de cadastro/leitura |
+| RF03 | Cronômetro regressivo configurável (15, 30 ou 60 min) antes do quiz |
+| RF04 | Exportação de provas em PDF com logotipo/cabeçalho institucional |
+| RF05 | Autenticação e Controle de Acesso — apenas perfil "Docente" acessa área do professor |
+| RF06 | Painel de Estatísticas semanal (pontuações, taxa de acerto por tópico, tempo médio) |
+| RF07 | Exportação de questões erradas para .apkg (Anki) ou .csv |
+| RF08 | Botão "Reportar Erro" diretamente no QuizCard |
+| RF09 | Ranking Global (Leaderboard) com filtros semanal e mensal |
+| RF10 | Favoritar Questões para revisão posterior |
+| RF11 | Filtro por Nível de Dificuldade (Junior, Pleno, Senior) |
+| RF12 | Seção de Comentários (thread) por questão |
+| RF13 | API de Integração com LMS (ex.: Moodle) via endpoint/webhook |
+| RF14 | Compartilhamento de resultado no LinkedIn (desempenho > 80%) |
+| RF15 | Modo Offline (PWA) — download de questões para uso sem internet |
+
+### 2. Requisitos Não Funcionais (RNF01–RNF07)
+
+| RNF | Descrição |
+|---|---|
+| RNF01 | Carregamento instantâneo dos gráficos do painel de estatísticas |
+| RNF02 | Segurança — acesso à área do professor restrito a usuários "Docente" autenticados |
+| RNF03 | Portabilidade e Disponibilidade Offline (PWA) |
+| RNF04 | Formatação específica do PDF (logotipo + cabeçalho institucional) |
+| RNF05 | Usabilidade — botão de reportar erro diretamente no QuizCard |
+| RNF06 | Interoperabilidade via API REST/webhooks para integração com LMS |
+| RNF07 | Suporte a Markdown e Syntax Highlighting |
+
+### 3. Regras de Negócio
+
+- **Motor de Resolução de Quizzes**: embaralhamento dinâmico, correção e feedback em tempo real, cálculo e classificação de desempenho.
+- **Gerador de Provas**: seleção/filtragem de questões, regra de exatamente 10 questões, embaralhamento, geração automática de gabarito.
+- **Estrutura Abstrata de Domínio**: entidade questão com id, tópico, pergunta, alternativas, resposta correta e explicação.
+
+### 4. Modelo de Entrega Cloud
+
+**SaaS** — justificativa: arquitetura front-end pronta para web (SPA/React/Vite), elimina atrito técnico de instalação para o professor, acesso imediato via URL.
+
+### 5. O que o sistema NÃO faz
+
+- Não suporta questões discursivas/abertas.
+- Não corrige provas físicas (sem OCR).
+- Não importa dados do LMS (apenas exporta).
+- Não tem chat em tempo real ou DMs entre usuários.
+- Não suporta upload de vídeos/áudios nos enunciados.
+- Não faz gestão financeira ou monetização.
+
+---
+
+## Respostas por Branch
+
+---
+
+### 🌿 Bruna-Oliveira
+
+**Arquivo**: `alunos/Bruna-Oliveiraa.md` (com duplo 'aa')  
+**Branch**: `Bruna-Oliveira`  
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções
+
+> ⚠️ **Correção:** Avaliação anterior foi baseada em `Bruna-Oliveira.md` (incompleto, US01–US05 apenas). A branch também contém `Bruna-Oliveiraa.md` com a submissão real e completa.
+
+#### Destaques:
+- RF01–RF15 todos entregues em formato de benefícios para o usuário ("Autonomia para o professor…", "Canal direto para reportar…").
+- RNF01–RNF15 **excepcionalmente técnicos**: PDF/A, XSS sanitization, IndexedDB, Service Workers, Rate Limiting com Swagger, Open Graph, Lazy Loading — nível mais alto desta turma.
+- Regras de Negócio: 3 pilares conceituais: "Curadoria de Conhecimento Estruturado", "Simulação de Desempenho Sob Pressão", "Ciclo de Feedback e Diagnóstico".
+- Modelo Cloud: **SaaS** com análise de dois níveis — arquitetura PWA (PWA delivery + CDN) + 4 argumentos para o professor.
+- O que NÃO faz: 6 limites específicos (Sandboxing, Proctoring, IA) + "Justificativa do Analista".
+
+#### Diferenças em relação ao gabarito:
+- RF05 omite "tempo médio por questão" (3º indicador do painel de estatísticas).
+- RF13 omite o limiar de 80% explícito no LinkedIn.
+- Regras de Negócio são conceptuais (3 pilares), sem derivação técnica do código-fonte.
+- Detalhes/Acessórios muito breve, sem stack tecnológica.
+
+---
+
+### 🌿 Gabriel-Ernandes
+
+**Arquivo**: `alunos/Gabriel-Ernandes` (sem extensão .md)  
+**Status**: 🟢 Completo
+
+#### Destaques:
+- Listou **RF01–RF17** (2 a mais que o gabarito) — incluiu RF de responsividade e compatibilidade com navegadores.
+- RNF focados em desempenho, segurança, usabilidade e escalabilidade (RNF01–RNF06).
+- Regras de Negócio: identificou os 3 papéis (professor, aluno, sistema de pontuação).
+- Modelo Cloud: **SaaS** — justificou por praticidade e ausência de instalação.
+- O que NÃO faz: não corrige discursivas, não substitui o Moodle, não cria cursos completos.
+
+#### Diferenças em relação ao gabarito:
+- RF02 (Markdown) foi posicionado como RF16, não como RF02.
+- RF15 (Modo Offline) descrito como RF17.
+- RNF não são mapeados 1-a-1 com as User Stories (mais genéricos que o gabarito).
+
+---
+
+### 🌿 José-Reginaldo
+
+**Arquivo**: `alunos/José-Reginaldo.md`  
+**Status**: 🟢 Completo — estrutura e conteúdo alinhados com o gabarito
+
+#### Destaques:
+- Mapeou os 15 RF diretamente às User Stories (US01–US15) com precisão técnica.
+- RNF também mapeados 1-a-1 com as US, com detalhes técnicos (RBAC, PDF/A, Cache, Service Workers, Rate Limiting, Lazy Loading, Open Graph, XSS sanitization).
+- Regras de Negócio: 3 pilares — Gestão do Conhecimento, Ciclo de Avaliação, Inteligência de Desempenho.
+- Modelo Cloud: **SaaS + PWA** — justificativa mais detalhada do que o gabarito (CI/CD, CDN, Offline-First, API Portal).
+- O que NÃO faz: 3 limites bem definidos (sem discursivas, sem compilador, sem billing).
+
+#### Diferenças em relação ao gabarito:
+- Mais detalhes técnicos nos RNF (alinhamento técnico mais alto).
+- Modelo de entrega ampliado com estratégia de CI/CD e CDN.
+
+---
+
+### 🌿 adriano-dmarco.md
+
+**Arquivo**: `alunos/adriano-dmarco.md`  
+**Status**: 🟡 Parcial — RF completos com imprecisões; RNF fracos (maioria = RF repetidos); Regras/Detalhes são lero lero; Cloud dúbio
+
+> ⚠️ **Atualização:** Branch recebeu novo commit `38bc7ea` ("corrigindo error") com RF reescritos de forma mais concisa. A nota anterior sobre "não tem cronômetro" no NÃO faz era equivocada — o arquivo sempre disse "não tem acesso de chat" (válido).
+
+#### Destaques:
+- RF01–RF15 todos presentes. RF05 com os 3 indicadores corretos ✅ (histórico, taxa de acerto, tempo médio). RF07 cita corretamente "QuizCard" ✅. RF09 menciona visibilidade privada das favoritas ✅.
+- RNF01–RNF15 mapeados 1-a-1 com as US. RNF05 (painel instantâneo, independente do volume) cobre o RNF01 do gabarito ✅.
+- "O que NÃO faz": 1 limite válido ("no chat") sem contradição com nenhum RF listado.
+
+#### Diferenças em relação ao gabarito:
+- RF10 sem níveis de dificuldade específicos (Júnior/Pleno/Sênior).
+- RF12 usa "para um outro local" sem especificar API REST/LMS/Moodle.
+- RF13 descreve "compartilhar perfil em feed" em vez de "resultado no LinkedIn".
+- RNF: a maioria são RF com adjetivos de velocidade ("instantâneo", "sem delay"), sem restrições de qualidade mensuráveis. RNF06, RNF09, RNF13, RNF14, RNF15 praticamente repetem os RF.
+- Regras de Negócio: 1 frase genérica — sem analisar motor de quiz, gerador de provas ou estrutura de domínio.
+- Detalhes: lero lero — "banco de dados do app" e "interface interativa" sem nenhum detalhe técnico.
+- Cloud: "SaaS ou IaaS" — resposta dúbia sem conclusão definitiva.
+- "O que NÃO faz": apenas 1 item vs. 6+ no gabarito.
+
+---
+
+### 🌿 esdras-fernando
+
+**Arquivo**: `alunos/esdras-fernando.md`  
+**Status**: 🔴 Não entregue
+
+O arquivo contém apenas o texto `"esdras"`. Nenhuma seção foi preenchida.
+
+---
+
+### 🌿 franky-jr
+
+**Arquivo**: `alunos/franky-rossy.md`  
+**Branch**: `franky-jr`
+**Status**: 🟡 Parcial — RF corretos (US10 com níveis corretos!), RNF genéricos, NÃO faz com 2 contradições
+
+> ⚠️ **Atualização (busca profunda):** A avaliação anterior analisou `alunos/franky-jr.md` com conteúdo CRUD genérico. Esse arquivo foi SUBSTITUÍDO por `alunos/franky-rossy.md` (commits `5d7ea07` e `b2e0ded`). O atual contém submissão completa mapeada às 15 US.
+
+#### Destaques:
+- RF01–RF15 todos presentes e corretamente mapeados às US. **US10 usa "Junior, Pleno, Senior"** ✅ — um dos poucos alunos a acertar os níveis corretos do domínio.
+- US12: "API REST/Webhooks para exportação de notas para sistemas LMS" ✅ — muito preciso!
+- US13: "compartilhamento no LinkedIn para resultados > 80%" ✅
+- 3 Regras de Negócio conceituais bem formuladas (Simulação de Desempenho, Ciclo de Feedback, Curadoria de Conhecimento).
+- Cloud: SaaS com 4 argumentos centrados no usuário.
+
+#### Diferenças em relação ao gabarito:
+- US05 omite "histórico de pontuações" (apenas taxa de acerto + tempo médio).
+- RNF: 13 itens bem organizados por categoria (Desempenho, Segurança, LGPD...) mas **nenhum mapeado às US específicas do projeto** — genéricos para qualquer sistema web.
+- Regras de Negócio conceituais, sem análise do código-fonte (falta motor de quiz, regra das 10 questões).
+- NS02 contradiz RF15/US15 (afirma que não funciona offline, mas listou Modo Offline como RF).
+- NS03 contradiz RF12/US12 (afirma que não integra com plataformas externas, mas listou API LMS como RF).
+
+---
+
+### 🌿 iago-marinho
+
+**Arquivo**: `alunos/iago-marinho.md`  
+**Branch**: `iago-marinho`  
+**Status**: 🔴 Não entregue
+
+> 🔍 **Busca profunda (deep dive):** Verificados todos os arquivos da branch e todas as mensagens de commit. Nenhum conteúdo encontrado.
+
+O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo — Vou escrever minhas respostas aqui."* **Nenhuma seção foi preenchida.**
+
+---
+
+### 🌿 josuel-pereira
+
+**Arquivo**: `alunos/josuel-pereira.md`  
+**Branch**: `josuel-pereira`
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções entregues
+
+> ⚠️ **Atualização (busca profunda):** Nova submissão completa encontrada no commit `8667396`. A versão anterior tinha RF+RNF mas sem Regras de Negócio, Cloud justificado ou O que NÃO faz.
+
+#### Destaques:
+- US01–US15 todos presentes com RF precisos. US05 completo (histórico + taxa de acerto por tópico + tempo médio) ✅. US07 usa "QuizCard" ✅. US13 inclui limiar 80% ✅. US15 menciona PWA ✅.
+- RNF por US: RNF-US05 é idêntico ao gabarito RNF01 ("carregar instantaneamente, independentemente do volume de dados"). 6 de 7 gabarito RNF cobertos.
+- Regras de Negócio embutidas por US — específicas e corretas (US015 RN: "limite de 50 questões baixadas" — coincide com gabarito!).
+- Cloud: SaaS ✅ com 4 argumentos + **seção "Por que NÃO IaaS"** (único aluno a incluir comparação explícita).
+- O que NÃO faz: 5 limites válidos, sem contradições.
+
+#### Diferenças em relação ao gabarito:
+- US10 usa "Fácil, Médio, Difícil" em vez de "Júnior, Pleno, Sênior".
+- RNF-US03 não menciona logotipo/cabeçalho institucional no PDF.
+- Regras de Negócio por US corretas mas sem análise do código-fonte (falta motor de quiz com embaralhamento, cálculo de nível, regra das 10 questões no gerador).
+- Detalhes/Acessórios: cloud DB + offline sync corretos mas sem stack tecnológica.
+
+---
+
+### 🌿 marcus-vinicius
+
+**Arquivo**: `alunos/marcus-vinicius.md`  
+**Status**: 🟢 Completo — submissão completa com todas as 6 seções
+
+> ⚠️ **Correção:** Avaliação anterior registrava "arquivo contém apenas 'marcusvinicius'" — isso estava incorreto. O arquivo contém uma submissão completa.
+
+#### Destaques:
+- RF e RNF mapeados 1-a-1 com as 15 User Stories (US01–US15), usando linguagem de analista ("identifiquei que...", "verifico que...").
+- Detalhes técnicos corretos: níveis **"Júnior, Pleno, Sênior"** ✅, limiar **80%** no LinkedIn ✅, formato **.apkg/.csv** na exportação ✅, **PWA** no modo offline ✅.
+- 10 RNF com categorias bem nomeadas (Segurança, Usabilidade, Desempenho, Disponibilidade, Confiabilidade, Portabilidade, Interoperabilidade, Privacidade, Manutenibilidade, Acessibilidade).
+- 7 regras de negócio específicas, incluindo regras de governança relevantes: revisão de erros reportados por administrador (regra 4) e ranking apenas com quizzes completados sincronizados (regra 5).
+- Modelo Cloud: **SaaS** com 4 argumentos centrados no professor — uma das melhores justificativas desta seção.
+- O que NÃO faz: **8 limites** válidos, todos sem contradições com os RF.
+
+#### Diferenças em relação ao gabarito:
+- RF05 (US05 — painel de estatísticas) omite o 3º indicador: "tempo médio por questão".
+- RNF01 do gabarito (desempenho do painel de estatísticas) não coberto — RNF03 de Marcus cobre velocidade de PDF, não do painel.
+- RNF05 do gabarito (usabilidade: botão reportar no QuizCard) não mapeado.
+- Regras de Negócio sem análise do código-fonte; faltam as regras do motor de quiz (embaralhamento, cálculo de nível) e do Gerador de Provas (exatamente 10 questões).
+- Detalhes/Acessórios genéricos, sem tech stack ou entidades do banco de dados.
+
+---
+
+### 🌿 nicolas-vinicius
+
+**Arquivo**: `alunos/nicolas-melo.md`  
+**Status**: 🟢 Completo — estrutura e conteúdo alinhados com o gabarito
+
+#### Destaques:
+- RF e RNF mapeados 1-a-1 com as 15 User Stories (US01–US15) com precisão.
+- Regras de Negócio: identificou 4 pilares (Gestão de questões, Execução de quizzes, Feedback/revisão, Controle de acesso + Gamificação).
+- Modelo Cloud: **SaaS** — justificativa presente (sem necessidade de instalação, atualizações automáticas).
+- O que NÃO faz: 4 limites listados.
+
+#### Diferenças em relação ao gabarito:
+- RNF descritos como restrições de qualidade por US (similar ao gabarito em estrutura).
+- Regras de Negócio levemente mais resumidas que o gabarito.
+
+---
+
+### 🌿 rafael-braga
+
+**Arquivo**: `alunos/rafael-braga.md`  
+**Status**: 🟡 Parcial — RF e RNF completos (qualidade mista); Regras de Negócio conceituais; Cloud com SaaS+PWA; NÃO faz com 2 erros persistentes
+
+> ⚠️ **Atualização:** Branch recebeu novo commit `d95bbf9` ("Atividade") com melhorias significativas em relação à versão anterior: RF14 adicionado, RNF expandido de 9 para 15, Regras de Negócio reescritas (de lista de autenticação para 3 pilares), Detalhes com SQL + SPA, Cloud com SaaS + PWA, NÃO faz expandido.
+
+#### Destaques:
+- RF01–RF15 todos presentes. RF14 (Markdown) adicionado neste commit ✅. RF03 menciona explicitamente "GERADOR DE PROVAS" ✅. RF13 inclui o limiar de 80% e o LinkedIn ✅.
+- RNF01–RNF15 mapeados 1-a-1. Destaques: RNF09 genuinamente técnico ("gravar na nuvem, independente do dispositivo e/ou local" — aborda sincronização cross-device ✅).
+- Regras de Negócio: 3 pilares conceituais corretos (Gestão/Tutoria, Ciclo de Testes, Atuação do Sistema) — muito melhor que a lista de autenticação da versão anterior.
+- Cloud: SaaS ✅ + PWA ✅ com justificativa de conveniência para o usuário.
+- "O que NÃO faz" — item 1 corrigido: agora diz "provas discursivas" (válido ✅); item 4 (sem proctoring) ✅; item 5 (não é rede social) ✅.
+
+#### Diferenças em relação ao gabarito:
+- RF01 muito vago ("atividades" em vez de "questões com enunciado/alternativas/resposta/explicação").
+- RF04 descreve implementação ("comparar dados") em vez de requisito.
+- RF05 omite "taxa de acerto por tópico" (terceiro indicador do painel).
+- RF10 usa "Fácil/Médio/Difícil" em vez de "Júnior/Pleno/Sênior".
+- RNF: muitos são RF repetidos (RNF03 = RF03, RNF04 = RF04, RNF12 = RF12) ou muito vagos (RNF07 "facilidade", RNF14 "melhor legibilidade").
+- Regras de Negócio conceituais, sem derivação do código-fonte (motor de quiz, regra das 10 questões, cálculo de nível de desempenho).
+- "O que NÃO faz" ainda tem 2 erros: item 2 contradiz RF08 (Leaderboard), item 3 é RNF de segurança (não escopo).
+
+---
+
+### 🌿 nycollas-rodrigues
+
+**Arquivo**: `alunos/nyckzx.md`  
+**Status**: 🟢 Completo — RF perfeitos, cobertura completa e precisa
+
+#### Destaques:
+- **Único aluno a obter 30/30 nos RF** — todos os 15 RF mapeados às User Stories com detalhes técnicos corretos, incluindo os mais exigentes: níveis de dificuldade como "Junior, Pleno, Senior" (não "Fácil/Médio/Difícil"), limiar ≥80% no compartilhamento do LinkedIn, e PWA no modo offline.
+- 11 RNF listados com categorias bem nomeadas (Desempenho, Segurança, Usabilidade, Escalabilidade, Interoperabilidade, Portabilidade, etc.).
+- Regras de Negócio: identifica as regras principais (correção automática, registro de desempenho, controle de acesso), mas sem análise do código-fonte.
+- Modelo Cloud: **SaaS** — justificativa centrada no professor (sem configurar servidores), com atualizações automáticas e acesso remoto.
+- O que NÃO faz: **7 limites** corretos e sem contradições (melhor cobertura desta seção).
+
+#### Diferenças em relação ao gabarito:
+- RNF05 do gabarito (usabilidade: botão reportar erro diretamente no QuizCard) não foi mapeado como RNF.
+- RNF07 do gabarito (suporte a Markdown e Syntax Highlighting como restrição de qualidade) ausente como RNF.
+- Regras de Negócio não analisam o código-fonte para extrair o motor de quiz (embaralhamento, cálculo de desempenho) e a regra das exatamente 10 questões no Gerador de Provas.
+
+---
+
+### 🌿 theo22
+
+**Arquivo**: `alunos/Theo22` (sem extensão .md)  
+**Status**: 🟢 Completo — estrutura alinhada com o gabarito
+
+#### Destaques:
+- RF e RNF mapeados 1-a-1 com as 15 User Stories (US01–US15).
+- Regras de Negócio: mencionou apenas "Gestão do Banco de Questões" — mais resumido que o gabarito.
+- Detalhes/Acessórios: mencionou banco relacional (SQL) + SPA responsiva + PWA.
+- Modelo Cloud: **SaaS + PWA** — justificativa detalhada com 4 argumentos voltados ao professor (centralização, acesso imediato, abstração de manutenção, escalabilidade em picos).
+- O que NÃO faz: 4 limites bem definidos (sem discursivas, sem proctoring, sem geração por IA, sem gestão financeira).
+
+#### Diferenças em relação ao gabarito:
+- Regras de Negócio mais resumidas (apenas 1 pilar listado vs 3 do gabarito).
+- RNF15 é duplicado de RF15 (modo offline mencionado duas vezes).
+
+---
+
+## Análise Comparativa por Seção
+
+### Requisitos Funcionais
+
+| Aluno | Quantidade de RF | Cobertura das 15 US | Observação |
+|---|---|---|---|
+| alexandre-ferreira (gabarito) | 15 | ✅ 100% | Referência |
+| Bruna-Oliveira | 15 | ✅ 97% | Falta "tempo médio" em US05 e limiar 80% em US13 |
+| Gabriel-Ernandes | 17 | ✅ ~100% | Extras genéricos adicionados |
+| iago-marinho | 0 | ❌ 0% | Apenas template |
+| José-Reginaldo | 15 | ✅ 100% | Alinhado ao gabarito |
+| adriano-dmarco.md | 15 | ✅ 97% | RF10 sem níveis, RF12 sem API/LMS, RF13 feed genérico |
+| esdras-fernando | 0 | ❌ 0% | Não entregue |
+| franky-jr | 15 | ✅ 97% | US05 omite histórico de pontuações; RNF genéricos (não mapeados às US) |
+| josuel-pereira | 15 | ✅ 97% | US10 com "Fácil/Médio/Difícil" em vez de "Júnior/Pleno/Sênior" |
+| marcus-vinicius | 15 | ✅ 97% | RF05 incompleto (falta "tempo médio por questão") |
+| nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
+| nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
+| rafael-braga | 15 | ✅ 90% | US01 vago, US04 implementação, US05 incompleto, US10 níveis errados |
+| theo22 | 15 | ✅ 100% | Alinhado ao gabarito |
+
+### Modelo de Entrega Cloud
+
+| Aluno | Escolha | Justificativa |
+|---|---|---|
+| alexandre-ferreira (gabarito) | SaaS | Baseada no código-fonte (SPA/React/Vite), praticidade para professor |
+| Bruna-Oliveira | SaaS | 2 níveis: arquitetura PWA (CDN, interoperabilidade) + 4 argumentos para o professor |
+| Gabriel-Ernandes | SaaS | Praticidade, sem instalação, atualizações automáticas |
+| iago-marinho | — | Não entregue |
+| José-Reginaldo | SaaS + PWA | Justificativa técnica mais completa (CDN, CI/CD, Offline-First, API Portal) |
+| adriano-dmarco.md | SaaS ou IaaS | Resposta dúbia sem conclusão definitiva |
+| esdras-fernando | — | Não entregue |
+| franky-jr | SaaS | 4 argumentos corretos (sem instalação, acesso remoto, atualizações automáticas, custo) |
+| josuel-pereira | SaaS + "Por que NÃO IaaS" | SaaS ✅ com 4 argumentos + comparação explícita com IaaS (único aluno a fazer isso) |
+| marcus-vinicius | SaaS | 4 argumentos focados no professor (excelente justificativa) |
+| nicolas-vinicius | SaaS | Justificativa presente |
+| nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
+| rafael-braga | SaaS + PWA | SaaS escolhido ✅, PWA mencionado ✅, justificativa mínima ("não se preocupar com infraestrutura"), "host ainda a ser designado" |
+| theo22 | SaaS + PWA | 4 argumentos voltados ao professor (mais detalhado que o gabarito) |
+
+---
+
+## Pontuação Final (rubrica proporcional de 100 pts)
+
+> Detalhamento completo com critérios, erros e classificação de qualidade em [`notas-e-avaliacao.md`](./notas-e-avaliacao.md)
+
+| Posição | Aluno | Nota /100 | Conceito |
+|---|---|---|---|
+| 🥇 1º | **José-Reginaldo** | **92** | Excelente |
+| 🥈 2º | **nicolas-vinicius** | **87** | Ótimo |
+| 🥉 3º | **Bruna-Oliveira** | **84** | Ótimo |
+| 4º | **nycollas-rodrigues** | **79** | Bom |
+| 5º | **josuel-pereira** | **77** | Bom |
+| 5º | **marcus-vinicius** | **77** | Bom |
+| 7º | **theo22** | **75** | Bom |
+| 8º | **franky-jr** | **64** | Regular |
+| 9º | **Gabriel-Ernandes** | **62** | Regular |
+| 10º | **rafael-braga** | **55** | Regular |
+| 11º | **adriano-dmarco.md** | **46** | Insuficiente |
+| 12º | **esdras-fernando** | **0** | Não entregue |
+| 12º | **iago-marinho** | **0** | Não entregue |
