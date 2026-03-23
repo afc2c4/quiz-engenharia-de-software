@@ -20,6 +20,13 @@ O sistema deve fornecer uma interface intuitiva para cadastro de questões.
 
 Apenas usuários com perfil de professor podem cadastrar questões.
 
+## Regra de Negócio
+
+Apenas professores podem criar e gerenciar questões.
+
+Cada questão deve possuir obrigatoriamente uma alternativa correta
+
+uma explicação associada
 
 # US02
 
@@ -36,6 +43,14 @@ O sistema deve permitir que o aluno configure o tempo do cronômetro (ex: 15, 30
 O cronômetro deve ser exibido de forma clara e visível durante o quiz.
 
 O cronômetro deve funcionar com precisão em tempo real, sem atrasos perceptíveis.
+
+## Regras de Negócio
+
+O cronômetro deve iniciar ao começo do quiz.
+
+Quando o tempo acabar o quiz deve ser finalizado automaticamente ou bloqueado para respostas
+
+A ativação do cronômetro deve ser opcional.
 
 # US03
 
@@ -57,6 +72,14 @@ O arquivo PDF gerado deve ser compatível com leitores padrão.
 
 O PDF deve manter formatação consistente
 
+## Regras de Negócio
+
+Apenas professores podem exportar provas.
+
+O PDF deve refletir exatamente o conteúdo da prova gerada.
+
+O logotipo e cabeçalho devem ser aplicados automaticamente conforme configuração da instituição.
+
 # US04
 
 ### O usario administrador, quer ue apenas usuários com perfil "Docente" podem acessar área de professor.
@@ -74,6 +97,14 @@ O sistema deve restringir o acesso às funcionalidades de professor apenas a usu
 O sistema deve garantir que usuários não autorizados não acessem áreas restritas.
 
 O sistema deve utilizar mecanismos seguros de autenticação (ex: login e senha).
+
+## Regras de Negócio
+
+Apenas usuários com perfil Docente podem acessar o gerador de provas e cadastrar questões
+
+Usuários com perfil de aluno não podem visualizar gabaritos e banco de questões
+
+O acesso deve ser validado antes de qualquer ação sensível.
 
 # US05
 
@@ -95,6 +126,14 @@ Os gráficos do painel devem carregar instantaneamente, independentemente do vol
 
 O sistema deve suportar grande volume de histórico sem perda de desempenho.
 
+## Regras de Negócio
+
+As estatísticas devem ser atualizadas semanalmente.
+
+O desempenho do aluno deve ser agrupado por tópico.
+
+O tempo médio deve considerar todas as respostas do aluno no período.
+
 # US06
 
 ### O usuario quer baixar questões erradas em formato compatível com Anki (.apkg ou .csv)
@@ -110,6 +149,14 @@ O sistema deve permitir a exportação dessas questões nos formatos .(apkg e .c
 Os arquivos exportados devem ser compatíveis com o Anki.
 
 A funcionalidade de exportação deve ser simples e acessível ao usuário.
+
+## Regras de Negócio
+
+Apenas questões respondidas incorretamente devem ser incluídas na exportação.
+
+A exportação deve conter enunciado, alternativas, resposta correta e explicação
+
+A funcionalidade deve estar disponível após a finalização do quiz.
 
 # US07
 
@@ -129,6 +176,14 @@ A funcionalidade de reportar erro deve ser facilmente acessível durante o quiz.
 
 O sistema deve armazenar os relatórios com informações para identificação da questão e do problema.
 
+## Regras de Negócio
+
+Qualquer usuário (aluno ou professor) pode reportar erros.
+
+O relatório deve estar vinculado à questão específica.
+
+Os administradores/professores devem ter acesso aos relatos para revisão.
+
 # US08
 
 ### O usuario Aluno quer um sistema de ranking global (leaderboard) semanal e mensal.
@@ -147,7 +202,17 @@ O ranking deve ser atualizado e exibido rapidamente.
 
 O sistema deve suportar grande quantidade de usuários no ranking sem degradação de performance.
 
-# US09 O usuario Aluno quer favoritar questões para revisar depois.
+## Regras de Negócio
+
+O ranking deve considerar o desempenho dos usuários nos quizzes.
+
+Deve haver separação por período semanal e mensal
+
+A posição do usuário deve ser atualizada conforme novos resultados.
+
+# US09
+
+### O usuario Aluno quer favoritar questões para revisar depois.
 
 ## Requisitos Funcional, RF01
 
@@ -162,6 +227,14 @@ O sistema deve permitir que o aluno acesse posteriormente as questões salvas pa
 A funcionalidade de favoritar deve ser simples e acessível durante o quiz.
 
 As questões favoritas devem ser armazenadas para acesso futuro.
+
+## Regras de Negócio
+
+Apenas usuários autenticados podem favoritar questões.
+
+As questões favoritas devem ficar associadas ao usuário.
+
+O usuário pode adicionar e remover questões da lista de favoritos.
 
 # US010
 
@@ -178,6 +251,14 @@ O sistema deve permitir que o aluno filtre quizzes com base no nível de dificul
 O filtro por dificuldade deve ser simples de usar e facilmente acessível.
 
 As questões devem estar corretamente categorizadas para garantir resultados consistentes nos filtros.
+
+## Regras de Negócio
+
+Cada questão deve possuir um nível de dificuldade associado.
+
+O aluno pode selecionar o nível desejado antes de iniciar o quiz.
+
+O sistema deve exibir apenas questões compatíveis com o nível selecionado.
 
 # US011
 
@@ -197,6 +278,16 @@ A área de comentários deve ser de fácil acesso e leitura.
 
 As threads devem carregar rapidamente, mesmo com muitos comentários.
 
+## Regras de Negócio
+
+Os comentários devem estar vinculados a uma questão específica.
+
+Apenas usuários autenticados podem comentar.
+
+Os usuários podem visualizar comentários de outros usuários.
+
+Pode haver moderação por professores ou administradores.
+
 # US012
 
 ### O usuario Professor quer exportar notas automaticamente via API/webhook para o Moodle
@@ -215,6 +306,16 @@ O sistema deve ser compatível com APIs externas e padrões de integração.
 
 A exportação de dados deve ocorrer sem perda ou inconsistência de informações.
 
+## Regras de Negócio
+
+Apenas professores podem configurar integrações externas.
+
+Apenas dados de desempenho (notas) devem ser exportados.
+
+O sistema externo deve estar previamente configurado.
+
+A exportação pode ser automática (via webhook) ou sob demanda
+
 # US013 
 
 ## O usuário quer compartilhar resultado no LinkedIn quando tiver bom desempenho.
@@ -232,6 +333,14 @@ O sistema deve permitir o compartilhamento no LinkedIn quando o usuário atingir
 A funcionalidade de compartilhamento deve ser simples.
 
 O sistema deve ser compatível com APIs de redes sociais para compartilhamento.
+
+## Regras de Negócio
+
+O compartilhamento deve ser opcional.
+
+O botão de compartilhamento deve aparecer apenas quando o usuário atingir um desempenho mínimo (ex: 80%).
+
+O conteúdo compartilhado deve incluir pontuação e tema do quiz
 
 # US014
 
@@ -253,6 +362,14 @@ O sistema deve suportar padrões comuns de Markdown.
 
 O destaque de sintaxe deve ser visualmente adequado para diferentes linguagens de programação.
 
+## Regras de Negócio
+
+Questões podem conter texto simples ou conteúdo formatado em Markdown.
+
+Trechos de código devem ser exibidos com formatação diferenciada.
+
+A renderização deve preservar a estrutura definida pelo professor.
+
 # US015 
 
 ### O usuario Usuário quer usar o app offline (tipo PWA) e baixar questões antes.
@@ -273,9 +390,15 @@ O sistema deve suportar funcionamento como Progressive Web App (PWA).
 
 O sistema deve garantir que os dados sejam sincronizados corretamente após reconexão.
 
-# Modelo de Entrega
+## Regras de Negócio
 
-Software as a Service (SaaS)
+O download de questões deve ser feito previamente com internet.
+
+Deve haver um limite de questões baixadas (ex: 50 por vez).
+
+As respostas dadas offline devem ser armazenadas localmente até sincronização.
+
+O sistema deve evitar perda de dados durante a sincronização.
 
 # Armazenamento de dados
 
@@ -286,4 +409,40 @@ Dados offline podem ser armazenados localmente no dispositivo do usuário e sinc
 # Interface
 
 O sistema deve possuir interface web acessível por navegador.
+
+A interface deve ser intuitiva
+
+# Modelo de Entrega
+
+Software as a Service (SaaS)
+
+O modelo SaaS é o mais adequado porque
+
+O professor pode acessar o sistema diretamente pelo navegador, sem instalação.
+
+Não é necessário conhecimento técnico para configurar servidores.
+
+O acesso pode ser feito de qualquer lugar (casa, escola, trabalho).
+
+Reduz custo e complexidade para instituições de ensino.
+
+# Por que NÃO IaaS 
+
+Exigiria que a escola gerenciasse servidores
+
+Maior custo técnico e operacional
+
+Necessidade de equipe especializada
+
+# O que o sistema NÃO faz
+
+O sistema não realiza correção automática de questões discursivas.
+
+O sistema não substitui o professor no processo de ensino.
+
+O sistema não funciona totalmente offline sem download prévio de conteúdo.
+
+O sistema não garante moderação automática perfeita de comentários.
+
+O sistema não oferece criação de conteúdos fora do escopo de quizzes e provas.
 
