@@ -15,7 +15,7 @@
 | **Bruna-Oliveira** | ✅ RF01–RF15 (falta US05 "tempo médio"; US13 sem 80%) | ✅ RNF01–RNF15 (excelentes) | ✅ 3 pilares conceituais | ✅ Presente | ✅ SaaS + Arquitetura PWA | ✅ 6 limites + justificativa | 🟢 Completo |
 | **Gabriel-Ernandes** | ✅ RF01–RF17 | ✅ RNF01–RNF06 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟢 Completo |
 | **José-Reginaldo** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado (3 pilares) | ✅ Presente | ✅ SaaS + PWA justificado | ✅ 3 limites | 🟢 Completo |
-| **adriano-dmarco.md** | ✅ RF01–RF15 | ✅ RNF01–RNF15 | ✅ Presente | ✅ Presente | ✅ SaaS ou IaaS | ✅ Presente | 🟢 Completo |
+| **adriano-dmarco.md** | ✅ RF01–RF15 (RF10 sem níveis; RF12 sem API/LMS; RF13 feed genérico) | ✅ RNF01–RNF15 (maioria = RF+adjetivo "rápido") | ⚠️ 1 frase genérica | ⚠️ Lero lero | ⚠️ SaaS ou IaaS (dúbio) | ⚠️ 1 limite válido | 🟡 Parcial |
 | **esdras-fernando** | ❌ Apenas "esdras" | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
 | **franky-jr** | ⚠️ RF01–RF14 (genérico, não baseado nas US) | ✅ RNF01–RNF13 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 6 limites | 🟡 Parcial |
 | **iago-marinho** | ❌ Apenas template ("Estou criando um nvo") | ❌ | ❌ | ❌ | ❌ | ❌ | 🔴 Não entregue |
@@ -23,7 +23,7 @@
 | **marcus-vinicius** | ✅ RF01–RF15 (falta RF05 completo) | ✅ RNF01–RNF10 | ✅ 7 regras específicas | ✅ Presente | ✅ SaaS | ✅ 8 limites | 🟢 Completo |
 | **nicolas-vinicius** | ✅ US01–US15 | ✅ US01–US15 | ✅ Detalhado | ✅ Presente | ✅ SaaS | ✅ Presente | 🟢 Completo |
 | **nycollas-rodrigues** | ✅ RF01–RF15 (100%, com detalhes precisos) | ✅ RNF01–RNF11 | ✅ Presente | ✅ Presente | ✅ SaaS | ✅ 7 limites | 🟢 Completo |
-| **rafael-braga** | ✅ RF01–RF15 (falta RF14) | ✅ RNF01–RNF09 | ⚠️ Superficial | ✅ Presente | ✅ SaaS | ✅ 3 limites | 🟡 Parcial |
+| **rafael-braga** | ✅ RF01–RF15 (US01 vago; US05 incompleto; US10 níveis errados) | ✅ RNF01–RNF15 (cobertura total; qualidade mista) | ✅ 3 pilares conceituais | ✅ SQL + SPA | ✅ SaaS + PWA | ⚠️ 3/5 válidos (2 com erros) | 🟡 Parcial |
 | **theo22** | ✅ US01–US15 | ✅ US01–US15 | ⚠️ Parcial | ✅ Detalhado | ✅ SaaS + PWA justificado | ✅ 4 limites | 🟢 Completo |
 
 ---
@@ -150,19 +150,24 @@
 ### 🌿 adriano-dmarco.md
 
 **Arquivo**: `alunos/adriano-dmarco.md`  
-**Status**: 🟢 Completo
+**Status**: 🟡 Parcial — RF completos com imprecisões; RNF fracos (maioria = RF repetidos); Regras/Detalhes são lero lero; Cloud dúbio
+
+> ⚠️ **Atualização:** Branch recebeu novo commit `38bc7ea` ("corrigindo error") com RF reescritos de forma mais concisa. A nota anterior sobre "não tem cronômetro" no NÃO faz era equivocada — o arquivo sempre disse "não tem acesso de chat" (válido).
 
 #### Destaques:
-- RF01–RF15 bem descritos, com linguagem clara orientada ao usuário.
-- RNF01–RNF15 mapeados para cada RF (mais detalhados do que o gabarito nos RNF).
-- Regras de Negócio: identificou a função central do app (quiz/revisão interativo).
-- Modelo Cloud: respondeu **SaaS ou IaaS** dependendo da necessidade — justificativa menos objetiva que o gabarito.
-- O que NÃO faz: presente, mas com exemplo equivocado ("não tem cronômetro" — contradiz RF03).
+- RF01–RF15 todos presentes. RF05 com os 3 indicadores corretos ✅ (histórico, taxa de acerto, tempo médio). RF07 cita corretamente "QuizCard" ✅. RF09 menciona visibilidade privada das favoritas ✅.
+- RNF01–RNF15 mapeados 1-a-1 com as US. RNF05 (painel instantâneo, independente do volume) cobre o RNF01 do gabarito ✅.
+- "O que NÃO faz": 1 limite válido ("no chat") sem contradição com nenhum RF listado.
 
 #### Diferenças em relação ao gabarito:
-- RNF mais numerosos (15 vs 7), mas alguns são redundantes.
-- Modelo Cloud com resposta dúbia (SaaS ou IaaS) — gabarito é definitivo pelo SaaS.
-- Último ponto do "O que NÃO faz" está incorreto (o sistema sim tem cronômetro conforme RF03).
+- RF10 sem níveis de dificuldade específicos (Júnior/Pleno/Sênior).
+- RF12 usa "para um outro local" sem especificar API REST/LMS/Moodle.
+- RF13 descreve "compartilhar perfil em feed" em vez de "resultado no LinkedIn".
+- RNF: a maioria são RF com adjetivos de velocidade ("instantâneo", "sem delay"), sem restrições de qualidade mensuráveis. RNF06, RNF09, RNF13, RNF14, RNF15 praticamente repetem os RF.
+- Regras de Negócio: 1 frase genérica — sem analisar motor de quiz, gerador de provas ou estrutura de domínio.
+- Detalhes: lero lero — "banco de dados do app" e "interface interativa" sem nenhum detalhe técnico.
+- Cloud: "SaaS ou IaaS" — resposta dúbia sem conclusão definitiva.
+- "O que NÃO faz": apenas 1 item vs. 6+ no gabarito.
 
 ---
 
@@ -269,19 +274,25 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 ### 🌿 rafael-braga
 
 **Arquivo**: `alunos/rafael-braga.md`  
-**Status**: 🟡 Parcial — faltou RF14 (Markdown/Syntax Highlighting) e alguns RNF
+**Status**: 🟡 Parcial — RF e RNF completos (qualidade mista); Regras de Negócio conceituais; Cloud com SaaS+PWA; NÃO faz com 2 erros persistentes
+
+> ⚠️ **Atualização:** Branch recebeu novo commit `d95bbf9` ("Atividade") com melhorias significativas em relação à versão anterior: RF14 adicionado, RNF expandido de 9 para 15, Regras de Negócio reescritas (de lista de autenticação para 3 pilares), Detalhes com SQL + SPA, Cloud com SaaS + PWA, NÃO faz expandido.
 
 #### Destaques:
-- RF01–RF15 listados (RF14 da US14 — Markdown — foi omitido; RF15 presente).
-- RNF01–RNF09 com boa cobertura das principais restrições.
-- Regras de Negócio: superficial (apenas 6 itens genéricos de autenticação/CRUD).
-- Modelo Cloud: **SaaS** — justificado brevemente.
-- O que NÃO faz: 3 limites definidos — inclui ponto equivocado ("o sistema não ranqueará perfis" — contradiz RF09 sobre Leaderboard).
+- RF01–RF15 todos presentes. RF14 (Markdown) adicionado neste commit ✅. RF03 menciona explicitamente "GERADOR DE PROVAS" ✅. RF13 inclui o limiar de 80% e o LinkedIn ✅.
+- RNF01–RNF15 mapeados 1-a-1. Destaques: RNF09 genuinamente técnico ("gravar na nuvem, independente do dispositivo e/ou local" — aborda sincronização cross-device ✅).
+- Regras de Negócio: 3 pilares conceituais corretos (Gestão/Tutoria, Ciclo de Testes, Atuação do Sistema) — muito melhor que a lista de autenticação da versão anterior.
+- Cloud: SaaS ✅ + PWA ✅ com justificativa de conveniência para o usuário.
+- "O que NÃO faz" — item 1 corrigido: agora diz "provas discursivas" (válido ✅); item 4 (sem proctoring) ✅; item 5 (não é rede social) ✅.
 
 #### Diferenças em relação ao gabarito:
-- RF14 (US14 — Markdown e Syntax Highlighting) foi omitido na lista de RF.
-- "O que NÃO faz" inclui limite sobre ranqueamento, contradizendo o RF09 (Leaderboard) do próprio documento.
-- Regras de Negócio não analisam o código-fonte do app.
+- RF01 muito vago ("atividades" em vez de "questões com enunciado/alternativas/resposta/explicação").
+- RF04 descreve implementação ("comparar dados") em vez de requisito.
+- RF05 omite "taxa de acerto por tópico" (terceiro indicador do painel).
+- RF10 usa "Fácil/Médio/Difícil" em vez de "Júnior/Pleno/Sênior".
+- RNF: muitos são RF repetidos (RNF03 = RF03, RNF04 = RF04, RNF12 = RF12) ou muito vagos (RNF07 "facilidade", RNF14 "melhor legibilidade").
+- Regras de Negócio conceituais, sem derivação do código-fonte (motor de quiz, regra das 10 questões, cálculo de nível de desempenho).
+- "O que NÃO faz" ainda tem 2 erros: item 2 contradiz RF08 (Leaderboard), item 3 é RNF de segurança (não escopo).
 
 ---
 
@@ -333,14 +344,14 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | Gabriel-Ernandes | 17 | ✅ ~100% | Extras genéricos adicionados |
 | iago-marinho | 0 | ❌ 0% | Apenas template |
 | José-Reginaldo | 15 | ✅ 100% | Alinhado ao gabarito |
-| adriano-dmarco.md | 15 | ✅ 100% | Alinhado |
+| adriano-dmarco.md | 15 | ✅ 97% | RF10 sem níveis, RF12 sem API/LMS, RF13 feed genérico |
 | esdras-fernando | 0 | ❌ 0% | Não entregue |
 | franky-jr | 14 | ❌ 0% das US | Genérico, não baseado nas US |
 | josuel-pereira | 15 | ✅ 95% | US10 com níveis de dificuldade errados (Fácil/Médio/Difícil) |
 | marcus-vinicius | 15 | ✅ 97% | RF05 incompleto (falta "tempo médio por questão") |
 | nicolas-vinicius | 15 | ✅ 100% | Alinhado ao gabarito |
 | nycollas-rodrigues | 15 | ✅ 100% | Alinhado ao gabarito, com detalhes técnicos mais precisos |
-| rafael-braga | 14 | ⚠️ 93% | Faltou RF14 (Markdown) |
+| rafael-braga | 15 | ✅ 90% | US01 vago, US04 implementação, US05 incompleto, US10 níveis errados |
 | theo22 | 15 | ✅ 100% | Alinhado ao gabarito |
 
 ### Modelo de Entrega Cloud
@@ -359,7 +370,7 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | marcus-vinicius | SaaS | 4 argumentos focados no professor (excelente justificativa) |
 | nicolas-vinicius | SaaS | Justificativa presente |
 | nycollas-rodrigues | SaaS | Justificativa centrada no professor, sem instalação de servidores |
-| rafael-braga | SaaS | Justificativa superficial |
+| rafael-braga | SaaS + PWA | SaaS escolhido ✅, PWA mencionado ✅, justificativa mínima ("não se preocupar com infraestrutura"), "host ainda a ser designado" |
 | theo22 | SaaS + PWA | 4 argumentos voltados ao professor (mais detalhado que o gabarito) |
 
 ---
@@ -377,9 +388,9 @@ O arquivo contém apenas o texto do template padrão: *"# Estou criando um nvo �
 | 5º | **marcus-vinicius** | **77** | Bom |
 | 6º | **theo22** | **75** | Bom |
 | 7º | **Gabriel-Ernandes** | **62** | Regular |
-| 8º | **josuel-pereira** | **44** | Insuficiente |
-| 9º | **adriano-dmarco.md** | **43** | Insuficiente |
-| 10º | **rafael-braga** | **37** | Insuficiente |
+| 8º | **rafael-braga** | **55** | Regular |
+| 9º | **adriano-dmarco.md** | **46** | Insuficiente |
+| 10º | **josuel-pereira** | **44** | Insuficiente |
 | 11º | **franky-jr** | **18** | Reprovado |
 | 12º | **esdras-fernando** | **0** | Não entregue |
 | 12º | **iago-marinho** | **0** | Não entregue |
